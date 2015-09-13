@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /irc/log/
+Disallow: /rtp/

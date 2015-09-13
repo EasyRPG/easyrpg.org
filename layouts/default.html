@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<% if @item[:title] %>
+    <title>EasyRPG: <%= @item[:title] %></title>
+<% else %>
+    <title>EasyRPG</title>
+<% end %>
+    <link rel="stylesheet" href="<%= @items['/easyrpg.*'].path %>">
+    <meta name="generator" content="Nanoc <%= Nanoc::VERSION %>">
+    <meta name="description" content="Free and open source role playing game interpreter and editor compatible with RPG Maker 2000 and 2003">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body>
+    <div id="header">
+      <div class="maxwidth">
+        <h1><a href="/" title="Home">EasyRPG</a></h1>
+        <ul>
+          <li><a href="blog/">Blog</a></li>
+          <li><a href="forums/">Forums</a></li>
+          <li><a href="wiki/">Wiki</a></li>
+          <li><a href="https://github.com/EasyRPG/">Code</a></li>
+        </ul>
+      </div>
+    </div>
+<% if @item[:has_spotlight] %>
+    <%= yield %>
+<% else %>
+    <div id="spotlight">
+      <div class="maxwidth">
+        <div id="section-title">
+          <h1><%= @item[:title] %></h1>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div id="content">
+      <div class="maxwidth">
+<% if @item[:section] %>
+        <%= render '/menu.*', :section => @item[:section] %>
+<% end %>
+        <%= yield %>
+      </div>
+    </div>
+<% end %>
+  </body>
+</html>

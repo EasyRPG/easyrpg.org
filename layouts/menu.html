@@ -1,0 +1,17 @@
+<%
+# To be replaced by a filesystem helper, that generates links from actual files
+# in content/<section> folder
+%>
+<ul class="menu">
+<% if @section != "contribute" %>
+  <li><a href="/<%= @section %>">Overview</a></li>
+  <li><a href="/<%= @section %>/progress/">Progress</a></li>
+  <li><a href="/<%= @section %>/downloads/">Downloads</a></li>
+  <li><a href="/<%= @section %>/media/">Media</a></li>
+<% else %>
+  <li><a href="/contribute/programmers/">Programmers</a></li>
+  <li><a href="/contribute/artists/">Artists</a></li>
+  <li><a href="/contribute/testers/">Testers</a></li>
+  <li><a href="/contribute/translators/">Translators</a></li>
+<% end %>
+</ul>
