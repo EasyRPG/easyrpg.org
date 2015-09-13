@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+
+compile '/**/*.html' do
+  layout '/default.*'
+end
+
+compile '/**/*.md' do
+  filter :kramdown
+  layout '/default.*'
+end
+
+compile '/**/*' do
+end
+
+route '/**/*.{html,md}' do
+  if item.identifier =~ '/index.*'
+    '/index.html'
+  else
+    item.identifier.without_ext + '/index.html'
+  end
+end
+
+route '/**/*' do
+  item.identifier.to_s
+end
+
+layout '/**/*', :erb

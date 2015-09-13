@@ -1,0 +1,10 @@
+
+# nanoc
+/tmp/
+/output/
+/crash.log
+
+# bundler
+/bin/
+/vendor/
+/.bundle/
