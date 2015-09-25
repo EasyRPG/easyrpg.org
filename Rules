@@ -1,5 +1,9 @@
 #!/usr/bin/env ruby
 
+preprocess do
+  hide_items_from_sitemap
+end
+
 compile '/**/*.html' do
   layout '/default.*'
 end
@@ -7,6 +11,10 @@ end
 compile '/**/*.md' do
   filter :kramdown
   layout '/default.*'
+end
+
+compile '/sitemap.xml' do
+  filter :erb
 end
 
 compile '/**/*' do

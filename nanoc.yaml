@@ -22,7 +22,7 @@ index_filenames: [ 'index.html' ]
 # Whether or not to generate a diff of the compiled content when compiling a
 # site. The diff will contain the differences between the compiled content
 # before and after the last site compilation.
-enable_output_diff: false
+enable_output_diff: true
 
 prune:
   # Whether to automatically remove files not managed by Nanoc from the output
@@ -74,6 +74,10 @@ checks:
     #   exclude: ['^/server_status']
     exclude: [ '^blog/', '^forums/', '^wiki/', '^downloads/' ]
 
+# The base url for sitemaps/rss et al.
+base_url: https://easy-rpg.org
+
+# Location of the website on server
 deploy:
   public:
     kind: rsync

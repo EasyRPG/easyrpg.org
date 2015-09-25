@@ -2,6 +2,7 @@
 # nanoc
 /tmp/
 /output/
+/output.diff
 /crash.log
 
 # bundler
