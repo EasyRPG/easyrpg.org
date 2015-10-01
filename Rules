@@ -17,15 +17,29 @@ compile '/sitemap.xml' do
   filter :erb
 end
 
+compile '/htaccess.txt' do
+  filter :erb
+end
+
 compile '/**/*' do
 end
 
 route '/**/*.{html,md}' do
+  # homepage
   if item.identifier =~ '/index.*'
     '/index.html'
+  # error page
+  elsif item.identifier =~ '/404.html'
+    '/404.html'
+  # every other page
   else
     item.identifier.without_ext + '/index.html'
   end
+end
+
+# renames the file
+route '/htaccess.txt' do
+  '/.htaccess'
 end
 
 route '/**/*' do
