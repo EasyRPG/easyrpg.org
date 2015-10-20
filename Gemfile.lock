@@ -25,6 +25,8 @@ GEM
     colored (1.2)
     cri (2.7.0)
       colored (~> 1.2)
+    daemons (1.2.3)
+    eventmachine (1.0.8)
     ffi (1.9.10)
     formatador (0.2.5)
     guard (2.13.0)
@@ -37,6 +39,7 @@ GEM
       shellany (~> 0.0)
       thor (>= 0.18.1)
     guard-compat (1.2.1)
+    json (1.8.3)
     kramdown (1.8.0)
     listen (3.0.3)
       rb-fsevent (>= 0.9.3)
@@ -60,7 +63,14 @@ GEM
       ffi (>= 0.5.0)
     shellany (0.0.1)
     slop (3.6.0)
+    thin (1.6.4)
+      daemons (~> 1.0, >= 1.0.9)
+      eventmachine (~> 1.0, >= 1.0.4)
+      rack (~> 1.0)
     thor (0.19.1)
+    w3c_validators (1.2)
+      json
+      nokogiri
 
 PLATFORMS
   ruby
@@ -72,6 +82,8 @@ DEPENDENCIES
   kramdown
   nanoc!
   nokogiri
+  thin
+  w3c_validators
 
 BUNDLED WITH
    1.10.6
