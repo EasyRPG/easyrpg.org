@@ -72,7 +72,8 @@ checks:
     # If an internal link matches this pattern, the validity check will be skipped.
     # E.g.:
     #   exclude: ['^/server_status']
-    exclude: [ '^/blog/', '^/forums/', '^/wiki/', '^downloads/' ]
+    exclude: [ '^/blog/', '^/forums/', '^/wiki/', '^/downloads/', '/player/manual/',
+               '/player/doxydoc/' ]
 
 # The base url for sitemaps/rss et al.
 base_url: https://easy-rpg.org
