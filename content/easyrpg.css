@@ -179,6 +179,14 @@
 		text-decoration: none;
 	}
 
+	#content ul.menu li span {
+		display: inline-block;
+		height: 40px;
+		padding: 0 1em;
+		color: #66A352;
+		text-decoration: none;
+	}
+
 	#content ul.menu li a:hover {
 		color: #66A352;
 	}

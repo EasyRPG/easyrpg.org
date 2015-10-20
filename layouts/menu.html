@@ -3,19 +3,19 @@
 # in content/<section> folder
 %>
 <ul class="menu">
+  <li><a href="/about/">&#x25B2;</a></li>
 <% if @section == "contribute" %>
-  <li><a href="/contribute/programmers/">Programmers</a></li>
-  <li><a href="/contribute/artists/">Artists</a></li>
-  <li><a href="/contribute/testers/">Testers</a></li>
-  <li><a href="/contribute/translators/">Translators</a></li>
-<% elsif @section == "tools" %>
-  <li><a href="/tools/">Overview</a></li>
-  <li><a href="/tools/downloads/">Downloads</a></li>
-  <li><a href="/tools/media/">Media</a></li>
+  <li><%= link_to_unless_current("Introduction", "/contribute/") %></li>
+  <li><%= link_to_unless_current("Programmers", "/contribute/programmers/") %></li>
+  <li><%= link_to_unless_current("Artists", "/contribute/artists/") %></li>
+  <li><%= link_to_unless_current("Testers", "/contribute/testers/") %></li>
+  <li><%= link_to_unless_current("Translators", "/contribute/translators/") %></li>
 <% else %>
-  <li><a href="/<%= @section %>">Overview</a></li>
-  <li><a href="/<%= @section %>/progress/">Progress</a></li>
-  <li><a href="/<%= @section %>/downloads/">Downloads</a></li>
-  <li><a href="/<%= @section %>/media/">Media</a></li>
+  <li><%= link_to_unless_current("Overview", "/" + @section + "/") %></li>
+  <% if @section != "tools" %>
+  <li><%= link_to_unless_current("Progress", "/" + @section + "/progress/") %></li>
+  <% end %>
+  <li><%= link_to_unless_current("Downloads", "/" + @section + "/downloads/") %></li>
+  <li><%= link_to_unless_current("Media", "/" + @section + "/media/") %></li>
 <% end %>
 </ul>
