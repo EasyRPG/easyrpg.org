@@ -3,15 +3,13 @@
 # in content/<section> folder
 %>
 <ul class="menu">
-  <li><a href="/about/">&#x25B2;</a></li>
+  <li><%= link_to_upper_page("&#x25B2;") %></li>
 <% if @section == "contribute" %>
-  <li><%= link_to_unless_current("Introduction", "/contribute/") %></li>
   <li><%= link_to_unless_current("Programmers", "/contribute/programmers/") %></li>
   <li><%= link_to_unless_current("Artists", "/contribute/artists/") %></li>
   <li><%= link_to_unless_current("Testers", "/contribute/testers/") %></li>
   <li><%= link_to_unless_current("Translators", "/contribute/translators/") %></li>
 <% else %>
-  <li><%= link_to_unless_current("Overview", "/" + @section + "/") %></li>
   <% if @section != "tools" %>
   <li><%= link_to_unless_current("Progress", "/" + @section + "/progress/") %></li>
   <% end %>
