@@ -75,14 +75,19 @@ checks:
     exclude: [ '^/blog/', '^/forums/', '^/wiki/', '^/downloads/', '^/jenkins/',
                '^/player/manual/', '^/player/doxydoc/' ]
 
+  # Configuration for the “external_links” checker, which checks whether all
+  # external links are valid.
+  external_links:
+    # A list of patterns, specified as regular expressions, to exclude from the check.
+    # If an external link matches this pattern, the validity check will be skipped.
+    # E.g.:
+    #   exclude: ['^http://example.com$']
+    exclude: []
+    # A list of file patterns, specified as regular expressions, to exclude from the check.
+    # If a file matches this pattern, the links from this file will not be checked.
+    # E.g.:
+    #   exclude_files: ['blog/page']
+    exclude_files: []
+
 # The base url for sitemaps/rss et al.
 base_url: https://easy-rpg.org
-
-# Location of the website on server
-deploy:
-  public:
-    kind: rsync
-    dst:  "easyrpg@easy-rpg.org:~/public_html"
-  staging:
-    kind: rsync
-    dst:  "uberspace:domains/test.f4ke.de"

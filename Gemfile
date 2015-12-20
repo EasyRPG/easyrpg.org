@@ -1,7 +1,7 @@
 
 source 'https://rubygems.org'
 
-gem 'nanoc', github: 'nanoc/nanoc', branch: 'release-4.0.x'
+gem 'nanoc'
 gem 'kramdown'
 gem 'builder'
 
