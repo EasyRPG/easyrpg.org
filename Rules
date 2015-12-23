@@ -6,6 +6,7 @@ end
 
 compile '/**/*.html' do
   layout '/default.*'
+  filter :erb
 end
 
 compile '/**/*.md' do
