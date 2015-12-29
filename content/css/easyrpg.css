@@ -212,17 +212,17 @@
 	}
 
 	.feature#cross-platform h2 {
-		padding-bottom: 115px;
+		padding-bottom: 145px;
 		background: url(/images/cross-platform.png) center bottom no-repeat;
 	}
 
 	.feature#rpgmaker-compatible h2 {
-		padding-bottom: 115px;
+		padding-bottom: 145px;
 		background: url(/images/rpgmaker-compatible.png) center 75% no-repeat;
 	}
 
 	.feature#get-involved h2 {
-		padding-bottom: 115px;
+		padding-bottom: 145px;
 		background: url(/images/get-involved.png) center 75% no-repeat;
 	}
 
