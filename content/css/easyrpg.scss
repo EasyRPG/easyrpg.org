@@ -1,0 +1,279 @@
+@charset "utf-8";
+
+// global variables → color scheme
+$normalgreen: #66A352;
+$backgroundgreen: #3C8025;
+$lightgrey: #F5F5F5;
+$darkgrey: #202020;
+
+@media handheld, projection, screen, tv {
+
+	/* Main */
+	body {
+		background-color: $darkgrey;
+		font-family: Ubuntu, "Droid Sans", "Trebuchet MS", sans-serif;
+		font-size: 0.875em; /* 14px */
+		line-height: 1.4286em; /* 20px */
+		margin: 0;
+	}
+
+	h1 {
+		font-size: 2.2858em; /* 32px */
+		line-height: 1.25em; /* 40px */
+	}
+
+	a {
+		color: green;
+
+		img {
+			border-width: 0;
+		}
+	}
+
+	iframe {
+		border: 0;
+	}
+
+	/* Header */
+	#header {
+		background-color: $darkgrey;
+		color: #CCFFCC;
+		min-height: 50px;
+		position: relative;
+		z-index: 1;
+		text-align: right;
+
+		h1 {
+			float: left;
+			margin: 0;
+			text-align: left;
+
+			a {
+				display: block;
+				padding: 6px;
+				background-image: url(/images/easyrpg-logo.png);
+				background-repeat: no-repeat;
+				background-position: center;
+				text-indent: -200em;
+				overflow: hidden;
+				width: 140px;
+				height: 38px;
+			}
+		}
+
+		ul {
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+			white-space: nowrap;
+
+			li {
+				display: inline;
+				line-height: 50px;
+				vertical-align: middle;
+
+				a {
+					color: $lightgrey;
+					text-decoration: none;
+					font-size: 1.1429em;
+					padding: 0.98em 0.39em;
+				}
+
+				&:hover {
+					color: $normalgreen;
+				}
+			}
+		}
+	}
+
+	/* Spotlight */
+	#spotlight {
+		background-color: $backgroundgreen;
+		color: white;
+		text-align: center;
+		padding: 1.5em 0;
+
+		img {
+			vertical-align: middle;
+		}
+
+		#description {
+			display: inline-block;
+			padding: 0 1.2em;
+			max-width: 383px;
+			vertical-align: middle;
+
+			h1 {
+				text-align: center;
+			}
+
+			p {
+				font-size: 1.1429em;
+				line-height: 1.5em;
+				text-align: justify;
+
+				&#learn-more {
+					text-align: center;
+
+					a {
+						display: inline-block;
+						padding: 0.5em 1.5em;
+						background-color: #303030;
+						color: $lightgrey;
+						text-decoration: none;
+						border-bottom: 0.2em solid $darkgrey;
+
+						&:hover {
+							background-color: $darkgrey;
+						}
+					}
+				}
+			}
+		}
+
+		#section-title h1 {
+			text-align: left;
+			margin-left: 0.5em;
+			margin-right: 0.5em;
+		}
+	}
+
+	/* Content */
+	#content {
+		background-color: $lightgrey;
+		padding: 1px 0;
+
+		ul {
+			margin-top: -0.5em;
+			padding-left: 2em;
+
+			ul {
+				margin-top: 0;
+				padding-left: 1.5em;
+			}
+
+			&.menu {
+				// menu height
+				$mheight: 40px;
+
+				background-color: $darkgrey;
+				margin-top: -1px;
+				margin-bottom: 0;
+				padding: 0 0.5em;
+				display: inline-block;
+				text-align: center;
+
+				li {
+					display: inline;
+					line-height: $mheight;
+					vertical-align: middle;
+					white-space: nowrap;
+
+					a {
+						display: inline-block;
+						height: $mheight;
+						padding: 0 1em;
+						color: $lightgrey;
+						text-decoration: none;
+
+						&:hover {
+							color: $normalgreen;
+						}
+					}
+
+					span {
+						display: inline-block;
+						height: $mheight;
+						padding: 0 1em;
+						color: $normalgreen;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+
+	.features {
+		text-align: center;
+
+		.feature {
+			display: inline-block;
+			max-width: 317px;
+			margin: 1em 0;
+			text-align: left;
+			vertical-align: top;
+
+			h2 {
+				text-align: center;
+			}
+
+			h2, p {
+				padding: 0 1em;
+			}
+
+			// image height
+			$iheight: 145px;
+
+			&#cross-platform h2 {
+				padding-bottom: $iheight;
+				background: url(/images/cross-platform.png) center bottom no-repeat;
+			}
+
+			&#rpgmaker-compatible h2 {
+				padding-bottom: $iheight;
+				background: url(/images/rpgmaker-compatible.png) center 75% no-repeat;
+			}
+
+			&#get-involved h2 {
+				padding-bottom: $iheight;
+				background: url(/images/get-involved.png) center 75% no-repeat;
+			}
+		}
+	}
+
+	.info {
+		margin: 2em 1em;
+
+		h2 {
+			margin-top: 0;
+		}
+
+		h3 {
+			margin-bottom: 0em;
+		}
+
+		#introduction, #goals, #contribute {
+			display: block;
+			width: 128px;
+			height: 128px;
+			float: right;
+		}
+
+		#introduction {
+			background: url(/images/easyrpg-logo-128.png) right top no-repeat;
+		}
+
+		#goals {
+			background: url(/images/goals.png) right top no-repeat;
+		}
+
+		#contribute {
+			background: url(/images/contribute.png) right top no-repeat;
+		}
+	}
+
+	.maxwidth img, .maxwidth iframe, .maxwidth video {
+		max-width: 100%;
+	}
+
+	/* Misc */
+	.maxwidth {
+		max-width: 980px;
+		margin: 0 auto;
+	}
+
+	.clear {
+		clear: both;
+	}
+
+}

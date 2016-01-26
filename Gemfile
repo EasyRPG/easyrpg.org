@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'nanoc'
 gem 'kramdown'
 gem 'builder'
+gem 'sass'
 
 group :development do
   gem 'guard-nanoc', github: 'guard/guard-nanoc'
