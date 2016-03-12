@@ -3,103 +3,179 @@ section: player
 title: EasyRPG Player
 ---
 <% # The following variables can be quite handy ;)
-  ver="0.4.0"
-  oldver="0.3.2"
+	ver="0.4.0"
+	oldver="0.3.2"
 %>
 <div class="info">
 	<h2>Download EasyRPG Player</h2>
-	<h3>EasyRPG Player version <%= ver %> "Poison Attack" downloads</h3>
+	<h3>EasyRPG Player version <%= ver %> "Poison Attack"</h3>
 	<p>Release date: 2015-12-23.
 		<a href="/blog/2015/12/easyrpg-player-0-4-0-poison-attack/">
 			Release notes</a>,
-		<a href="https://github.com/EasyRPG/Player/compare/<%= oldver + "..." + ver %>">
-			Player changes since <%= oldver %></a>,
-		<a href="https://github.com/EasyRPG/liblcf/compare/<%= oldver + "..." + ver %>">
-			liblcf changes since <%= oldver %></a>.
+		changes since <%= oldver %>:
+		<a href="https://github.com/EasyRPG/Player/compare/<%= oldver + "..." + ver %>">Player</a>,
+		<a href="https://github.com/EasyRPG/liblcf/compare/<%= oldver + "..." + ver %>">liblcf</a>.
 	</p>
-	<h4>Binaries:</h4>
-	<ul>
-		<li>Windows:
-			<a href="/downloads/player/EasyRPG_Player-<%= ver %>-Windows.zip">32 bit</a>,
-			<a href="/downloads/player/EasyRPG_Player-<%= ver %>-Windows-x64.zip">64 bit</a>
-		</li>
-		<li>GNU/Linux:
-			<a href="/downloads/player/easyrpg-player-<%= ver %>-linux.tar.gz">64 bit</a>
-			<!--No binary packages released yet.
-			<a href="wiki/development/compiling/player/autotools">How to build player from source code</a>.-->
-		</li>
-		<li>OS X:
-			<a href="/downloads/player/easyrpg-player-<%= ver %>-osx.tar.gz">64-bit</a>
-		</li>
-		<li>Android:
-			<a href="https://play.google.com/store/apps/details?id=org.easyrpg.player">Google Play</a>
-		</li>
-	</ul>
-	<h4>Source code:</h4>
-	<ul>
-		<li>EasyRPG Player:
-			<a href="/downloads/player/easyrpg-player-<%= ver %>.tar.gz">source package</a>
-		</li>
-		<li>liblcf:
-			<a href="/downloads/player/liblcf-<%= ver %>.tar.gz">source package</a>
-		</li>
-	</ul>
-	<h4>Contributed ports:</h4>
-	<ul>
-		<li><a href="/downloads/player/EasyRPG_Player-<%= ver %>-Wii.zip">Wii</a></li>
-		<li><a href="/downloads/player/EasyRPG_Player-<%= ver %>-Windows-arm.zip">Windows RT (ARM)</a></li>
-		<li><a href="/downloads/player/EasyRPG_Player-<%= ver %>-GCW-Zero.opk">GCW Zero</a> </li>
-		<li><a href="http://repo.openpandora.org/?page=detail&amp;app=easyrpgplayer_ptitseb">Open Pandora</a> (0.3 ~git)</li>
-	</ul>
+
+	<div id="downloadtabs-release" class='tab-container'>
+		<ul class='tabbar'>
+			<li class='tab'><a href="#release-windows">Windows</a></li>
+			<li class='tab'><a href="#release-linux">GNU/Linux</a></li>
+			<li class='tab'><a href="#release-macosx">OS X</a></li>
+			<li class='tab'><a href="#release-android">Android</a></li>
+			<li class='tab'><a href="#release-other">Other</a></li>
+			<li class='tab'><a href="#release-source">Source Code</a></li>
+		</ul>
+		<div class='panel-container'>
+			<div id="release-windows">
+				<h4>Windows</h4>
+				<p>
+					<a href="/downloads/player/EasyRPG_Player-<%= ver %>-Windows.zip">Windows 32 bit executable</a>,
+					<a href="/downloads/player/EasyRPG_Player-<%= ver %>-Windows-x64.zip">Windows 64 bit executable</a>
+					<br>
+					Note: These are meant as a drop-in replacement for the RPG_RT.exe.
+				</p>
+			</div>
+			<div id="release-linux">
+				<h4>GNU/Linux</h4>
+				<p>
+					<a href="/downloads/player/easyrpg-player-<%= ver %>-linux.tar.gz">Linux amd64 executable</a>
+					<br>
+					Note: This is a debug build, it is not optimized and mainly used to find bugs. You likely want to
+					<a href="/wiki/development/compiling/player/autotools">build Player from source code</a> for faster game play.
+				</p>
+				<p>
+					<a id="obs-link" href="https://software.opensuse.org/download.html?project=home%3Aeasyrpg&amp;package=easyrpg-player&amp;bcolor=ffffff&amp;fcolor=000000&amp;hcolor=3C8025">Arch Linux, Debian, Ubuntu, Fedora and openSUSE packages</a>
+					<br>
+					These are provided by us on the Open Build Service.
+				</p>
+			</div>
+			<div id="release-macosx">
+				<h4>OS X</h4>
+				<p>
+					<a href="/downloads/player/easyrpg-player-<%= ver %>-osx.tar.gz">OS X 64-bit (Intel) executable</a>
+				</p>
+				<p>
+					Note: Player is also available on <a href="http://brew.sh">homebrew</a>, use this command in your terminal:
+					<br>
+					<code>
+						brew install homebrew/games/easyrpg-player
+					</code>
+				</p>
+			</div>
+			<div id="release-android">
+				<h4>Android</h4>
+				<p>
+					The App is hosted on <a href="https://play.google.com/store/apps/details?id=org.easyrpg.player">Google Play</a>.
+					<br>
+					You can also scan this QRCode with your device to access it directly:
+					<br>
+					<img src="/images/player/qrcode.png" alt="Google Play QRCode"/>
+				</p>
+			</div>
+			<div id="release-other">
+				<h4>Other contributed ports</h4>
+				<p>
+					<a href="/downloads/player/EasyRPG_Player-<%= ver %>-Wii.zip">Wii (.dol)</a>
+					<br>
+					Note: This needs a homebrew-enabled console with "Homebrew Channel" installed.
+				</p>
+				<p>
+					<a href="/downloads/player/EasyRPG_Player-<%= ver %>-Windows-arm.zip">Windows RT (ARM)</a>
+					<br>
+					Note: This needs a device running in test-signing mode.
+				</p>
+				<p>
+					<a href="/downloads/player/EasyRPG_Player-<%= ver %>-GCW-Zero.opk">GCW Zero (.opk)</a>
+				</p>
+				<p>
+					<a href="http://repo.openpandora.org/?page=detail&amp;app=easyrpgplayer_ptitseb">Open Pandora (.pnd)</a>
+				</p>
+			</div>
+			<div id="release-source">
+				<h4>Source Code</h4>
+				<a href="/downloads/player/easyrpg-player-<%= ver %>.tar.gz">Player source package</a>
+				<br>
+				<a href="/downloads/player/liblcf-<%= ver %>.tar.gz">liblcf source package</a>
+			</div>
+		</div>
+	</div>
+
 	<h3>EasyRPG Player continuous builds</h3>
 	<p>
-		<a href="https://github.com/EasyRPG/Player/compare/<%= ver %>...HEAD">
-			Player changes since <%= ver %></a>,
-		<a href="https://github.com/EasyRPG/liblcf/compare/<%= ver %>...HEAD">
-			liblcf changes since <%= ver %></a>.
+		Changes since <%= ver %>:
+		<a href="https://github.com/EasyRPG/Player/compare/<%= ver %>...HEAD">Player</a>,
+		<a href="https://github.com/EasyRPG/liblcf/compare/<%= ver %>...HEAD">liblcf</a>
 	</p>
 	<p>
-		Disclaimer: these are the newest builds
-		representing the current development state
-		but they might be unusable
-		and not recommended for general use:
+		Disclaimer: these are the newest builds, representing the current development state.
+		<br>
+		However, they might contain new bugs, so they are not recommended for general use.
+		<br>
+		The notes from the release builds above also apply.
 	</p>
-	<h4>Binaries:</h4>
-	<ul>
-		<li>Windows:
-			<a href="/jenkins/job/player-win32/lastSuccessfulBuild/artifact/bin/easyrpg_windows.zip">32 bit</a>,
-			<a href="/jenkins/job/player-win64/lastSuccessfulBuild/artifact/bin/easyrpg_windows_x64.zip">64 bit</a>
-		</li>
-		<li>GNU/Linux:
-			<a href="/jenkins/job/player-linux/lastSuccessfulBuild/artifact/easyrpg-player-static.tar.gz">64 bit</a>
-			<!--No binary packages released yet.
-			<a href="wiki/development/compiling/player/autotools">How to build player from source code</a>.-->
-		</li>
-		<li>OS X:
-			<a href="/jenkins/job/player-osx/ws/easyrpg-player">64 bit</a>
-		</li>
-		<li>Android:
-			<a href="/jenkins/job/player-android/lastSuccessfulBuild/artifact/builds/android/bin/EasyRpgPlayerActivity.apk">APK</a>
-		</li>
-	</ul>
-	<h4>Contributed ports:</h4>
-	<ul>
-		<li><a href="/jenkins/job/player-wii/lastSuccessfulBuild/artifact/builds/wii/easyrpg_wii.zip">Wii</a></li>
-		<li><a href="/jenkins/job/player-win-arm/lastSuccessfulBuild/artifact/bin/easyrpg_windows_arm.zip">Windows RT (ARM)</a></li>
-		<li><a href="/jenkins/job/player-gcw0/lastSuccessfulBuild/artifact/builds/opendingux/gcw-zero/EasyRPG.opk">GCW Zero</a>
-	</ul>
-	<h4>Source code:</h4>
-	<ul>
-		<li>Player:
-			<a href="/jenkins/job/player-linux/lastSuccessfulBuild/artifact/easyrpg-player-<%= ver %>.tar.gz">source package</a>
-		</li>
-		<li>liblcf:
-			<a href="/jenkins/job/liblcf-linux/lastSuccessfulBuild/artifact/liblcf-<%= ver %>.tar.gz">source package</a>
-		</li>
-	</ul>
+
+	<div id="downloadtabs-snapshot" class='tab-container'>
+		<ul class='tabbar'>
+			<li class='tab'><a href="#snapshot-windows">Windows</a></li>
+			<li class='tab'><a href="#snapshot-linux">GNU/Linux</a></li>
+			<li class='tab'><a href="#snapshot-macosx">OS X</a></li>
+			<li class='tab'><a href="#snapshot-android">Android</a></li>
+			<li class='tab'><a href="#snapshot-other">Other</a></li>
+			<li class='tab'><a href="#snapshot-source">Source Code</a></li>
+		</ul>
+		<div class='panel-container'>
+			<div id="snapshot-windows">
+				<h4>Windows</h4>
+				<p>
+					<a href="/jenkins/job/player-win32/lastSuccessfulBuild/artifact/bin/easyrpg_windows.zip">Windows 32 bit executable</a>,
+					<a href="/jenkins/job/player-win64/lastSuccessfulBuild/artifact/bin/easyrpg_windows_x64.zip">Windows 64 bit executable</a>
+				</p>
+			</div>
+			<div id="snapshot-linux">
+				<h4>GNU/Linux</h4>
+				<p>
+					<a href="/jenkins/job/player-linux/lastSuccessfulBuild/artifact/easyrpg-player-static.tar.gz">Linux amd64 executable</a>
+				</p>
+			</div>
+			<div id="snapshot-macosx">
+				<h4>OS X</h4>
+				<p>
+					<a href="/jenkins/job/player-osx/lastSuccessfulBuild/artifact/easyrpg-player-osx.tar.gz">OS X 64-bit (Intel) executable</a>
+				</p>
+			</div>
+			<div id="snapshot-android">
+				<h4>Android</h4>
+				<p>
+					<a href="/jenkins/job/player-android/lastSuccessfulBuild/artifact/builds/android/bin/EasyRpgPlayerActivity.apk">Locally hosted App (.apk)</a>
+				</p>
+			</div>
+			<div id="snapshot-other">
+				<h4>Other contributed ports</h4>
+				<p>
+					<a href="/jenkins/job/player-wii/lastSuccessfulBuild/artifact/builds/wii/easyrpg_wii.zip">Wii (.dol)</a>
+				</p>
+				<p>
+					<a href="/jenkins/job/player-win-arm/lastSuccessfulBuild/artifact/bin/easyrpg_windows_arm.zip">Windows RT (ARM)</a>
+				</p>
+			</div>
+			<div id="snapshot-source">
+				<h4>Source Code</h4>
+				<a href="/jenkins/job/player-linux/lastSuccessfulBuild/artifact/easyrpg-player-<%= ver %>.tar.gz">Player source package</a>
+				<br>
+				<a href="/jenkins/job/liblcf-linux/lastSuccessfulBuild/artifact/liblcf-<%= ver %>.tar.gz">liblcf source package</a>
+			</div>
+		</div>
+	</div>
+
 	<h2>Code repository</h2>
 	<p>
 		The <a href="https://github.com/EasyRPG/Player">Player</a> and
 		<a href="https://github.com/EasyRPG/liblcf">liblcf</a> repositories are available at GitHub.
 	</p>
 </div>
+
+<script src="/js/vendor/jquery-1.12.0.min.js"></script>
+<script src="/js/vendor/jquery.magnific-popup.min.js"></script>
+<script src="/js/vendor/jquery.easytabs.min.js"></script>
+<script src="/js/download-pages.js"></script>

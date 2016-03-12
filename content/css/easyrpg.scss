@@ -276,4 +276,57 @@ $darkgrey: #202020;
 		clear: both;
 	}
 
+	/* Download page tabs */
+	.tab-container {
+		.panel-container {
+			background: #fff;
+			border: solid #666 1px;
+			padding: 10px;
+			border-radius: 4px;
+			margin-bottom: 10px;
+		}
+
+		ul.tabbar {
+			margin: 0;
+			padding: 0;
+
+			li.tab {
+				display: inline-block;
+				background: #D1D1D1 linear-gradient(to bottom, #ECECEC 50%, #D1D1D1 100%);
+				margin: 0 -5px;
+				border: solid 1px #999;
+				border-bottom: none;
+				border-radius: 4px 4px 0 0;
+				padding: 0 10px;
+
+				&.active {
+					background: #fff;
+					padding-top: 6px;
+					position: relative;
+					top: 1px;
+					border-color: #666;
+				}
+
+				a {
+					font-size: 14px;
+					line-height: 2em;
+					display: block;
+					padding: 0 10px;
+					outline: none;
+					text-decoration: none;
+					color: #333;
+
+					&:hover {
+						text-decoration: underline;
+					}
+
+					&.active {
+						font-weight: bold;
+						color: #000;
+					}
+				}
+			}
+		}
+	}
+
 }
