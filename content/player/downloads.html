@@ -80,6 +80,14 @@ title: EasyRPG Player
 					<br>
 					This needs a homebrew-enabled console with "Homebrew Channel" installed.
 				</p>
+				<!--<p>
+					<a href="/downloads/player/EasyRPG_Player-<%= ver %>-3ds.zip">Nintendo 3DS (3dsx)</a>,
+					<a href="/downloads/player/EasyRPG_Player-<%= ver %>-3ds.cia">Nintendo 3DS (CIA)</a>
+					<br>
+					This needs a homebrew-enabled console with "Homebrew Channel" (for 3dsx) or a custom firmware (for CIA) installed. The CIA searches for games in sdcard:/3ds/easyrpg-player
+					<br>
+					Maintained by <a href="https://rinnegatamante.it/" title="Website of Rinnegatamante">Rinnegatamante</a>.
+				</p>-->
 				<p>
 					<a href="/downloads/player/EasyRPG_Player-<%= ver %>-Windows-arm.zip">Windows RT (ARM)</a>
 					<br>
@@ -113,8 +121,6 @@ title: EasyRPG Player
 		Disclaimer: these are the newest builds, representing the current development state.
 		<br>
 		However, they might contain new bugs, so they are not recommended for general use.
-		<br>
-		The notes from the release builds above also apply.
 	</p>
 
 	<div id="downloadtabs-snapshot" class='tab-container'>
@@ -140,6 +146,7 @@ title: EasyRPG Player
 				<h4>GNU/Linux</h4>
 				<p>
 					<a href="/jenkins/job/player-linux/lastSuccessfulBuild/artifact/easyrpg-player-static.tar.gz">Linux amd64 executable</a>
+					<br>
 					This is a debug build, it is not optimized and mainly used to find bugs. You likely want to
 					<a href="/wiki/development/compiling/player/autotools">build Player from source code</a> for faster game play.
 				</p>
@@ -154,6 +161,7 @@ title: EasyRPG Player
 				<h4>Android</h4>
 				<p>
 					<a href="/jenkins/job/player-android/lastSuccessfulBuild/artifact/builds/android/bin/EasyRpgPlayerActivity.apk">Locally hosted App (.apk)</a>
+					<br>
 					Installing from "unknown sources" must be activated in the Android settings.
 				</p>
 			</div>
@@ -163,6 +171,14 @@ title: EasyRPG Player
 					<a href="/jenkins/job/player-wii/lastSuccessfulBuild/artifact/builds/wii/easyrpg_wii.zip">Wii (.dol)</a>
 					<br>
 					This needs a homebrew-enabled console with "Homebrew Channel" installed.
+				</p>
+				<p>
+					<a href="/jenkins/job/player-3ds/lastSuccessfulBuild/artifact/builds/3ds/easyrpg-player-3ds.zip">Nintendo 3DS (3dsx)</a>,
+					<a href="/jenkins/job/player-3ds/lastSuccessfulBuild/artifact/builds/3ds/easyrpg-player.cia">Nintendo 3DS (CIA)</a>
+					<br>
+					This needs a homebrew-enabled console with "Homebrew Channel" (for 3dsx) or a custom firmware (for CIA) installed. The CIA searches for games in sdcard:/3ds/easyrpg-player.
+					<br>
+					Maintained by <a href="https://rinnegatamante.it/" title="Website of Rinnegatamante">Rinnegatamante</a>.
 				</p>
 				<p>
 					<a href="/jenkins/job/player-win-arm/lastSuccessfulBuild/artifact/bin/easyrpg_windows_arm.zip">Windows RT (ARM)</a>
