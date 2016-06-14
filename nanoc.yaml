@@ -72,8 +72,7 @@ checks:
     # If an internal link matches this pattern, the validity check will be skipped.
     # E.g.:
     #   exclude: ['^/server_status']
-    exclude: [ '^/blog/', '^/forums/', '^/wiki/', '^/downloads/', '^/jenkins/',
-               '^/player/manual/', '^/player/doxydoc/', '^/play/', '^/videos/' ]
+    exclude: [ '^/downloads/', '^/player/manual/', '^/player/doxydoc/', '^/play/', '^/videos/' ]
 
   # Configuration for the “external_links” checker, which checks whether all
   # external links are valid.
@@ -90,4 +89,4 @@ checks:
     exclude_files: []
 
 # The base url for sitemaps/rss et al.
-base_url: https://easy-rpg.org
+base_url: https://easyrpg.org

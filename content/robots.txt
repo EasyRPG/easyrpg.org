@@ -3,4 +3,4 @@ Disallow: /irc/log/
 Disallow: /rtp/
 Disallow: /player/doxydoc/
 
-Sitemap: https://easy-rpg.org/sitemap.xml
+Sitemap: https://easyrpg.org/sitemap.xml
