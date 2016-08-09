@@ -5,6 +5,7 @@ gem 'nanoc'
 gem 'kramdown'
 gem 'builder'
 gem 'sass'
+gem 'rake'
 
 group :development do
   gem 'guard-nanoc', github: 'guard/guard-nanoc'
