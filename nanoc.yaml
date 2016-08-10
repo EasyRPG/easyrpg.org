@@ -72,7 +72,7 @@ checks:
     # If an internal link matches this pattern, the validity check will be skipped.
     # E.g.:
     #   exclude: ['^/server_status']
-    exclude: [ '^/downloads/', '^/player/manual/', '^/player/doxydoc/', '^/play/', '^/videos/' ]
+    exclude: ['^/player/manual/', '^/player/doxydoc/', '^/play/', '^/videos/' ]
 
   # Configuration for the “external_links” checker, which checks whether all
   # external links are valid.
@@ -81,7 +81,7 @@ checks:
     # If an external link matches this pattern, the validity check will be skipped.
     # E.g.:
     #   exclude: ['^http://example.com$']
-    exclude: []
+    exclude: ['^https://www.microsoft.com/']
     # A list of file patterns, specified as regular expressions, to exclude from the check.
     # If a file matches this pattern, the links from this file will not be checked.
     # E.g.:
