@@ -1,6 +1,6 @@
-# easy-rpg.org
+# easyrpg.org
 
-Source code of the EasyRPG homepage at https://easy-rpg.org
+Source code of the EasyRPG homepage at https://easyrpg.org
 
 ## Command reference
 
