@@ -4,6 +4,7 @@
 /output/
 /output.diff
 /crash.log
+/.sass-cache/
 
 # bundler
 /bin/

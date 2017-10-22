@@ -8,7 +8,7 @@ gem 'sass'
 gem 'rake'
 
 group :development do
-  gem 'guard-nanoc', github: 'guard/guard-nanoc'
+  gem 'guard-nanoc'
   gem 'adsf'
   gem 'thin'
 end
