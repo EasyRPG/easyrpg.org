@@ -34,8 +34,3 @@ desc "Check compiled website for problems"
 task :check do
   sh('nanoc check internal_links external_links stale css html')
 end
-
-desc "Deploy website to staging webserver"
-task :deploy do
-  sh('nanoc deploy --target staging')
-end
