@@ -3,14 +3,14 @@ section: player
 title: EasyRPG Player
 ---
 <% # The following variables can be quite handy ;)
-	ver="0.5.3"
-	oldver="0.5.2"
+	ver="0.5.4"
+	oldver="0.5.3"
 %>
 <div class="info">
 	<h2>Download EasyRPG Player</h2>
-	<h3>EasyRPG Player version <%= ver %> "Stimulant"</h3>
-	<p>Release date: 2017-10-22.
-		<a href="https://blog.easyrpg.org/2017/10/easyrpg-player-0-5-3-stimulant/">
+	<h3>EasyRPG Player version <%= ver %> "Antidote"</h3>
+	<p>Release date: 2018-10-27.
+		<a href="https://blog.easyrpg.org/2018/10/easyrpg-player-0-5-4-antidote/">
 			Release notes</a>,
 		changes since <%= oldver %>:
 		<a href="https://github.com/EasyRPG/Player/compare/<%= oldver + "..." + ver %>">Player</a>,
@@ -89,9 +89,9 @@ title: EasyRPG Player
 					<a href="https://easyrpg.org/downloads/player/EasyRPG_Player-<%= ver %>-3ds.zip">Nintendo 3DS (3dsx)</a>,
 					<a href="https://easyrpg.org/downloads/player/EasyRPG_Player-<%= ver %>-3ds.cia">Nintendo 3DS (CIA)</a>
 					<br>
-					This needs a homebrew-enabled console with "Homebrew Channel" (for 3dsx) or a custom firmware (for CIA) installed. The CIA searches for games in sdcard:/3ds/easyrpg-player
+					This needs a homebrew-enabled console with "Homebrew Launcher" (for 3dsx) or a custom firmware (for CIA) installed. The CIA searches for games in sdcard:/3ds/easyrpg-player
 					<br>
-					Contributed by <a href="https://rinnegatamante.it/" title="Website of Rinnegatamante">Rinnegatamante</a>.
+					Originally contributed by <a href="https://rinnegatamante.it/" title="Website of Rinnegatamante">Rinnegatamante</a>.
 				</p>
 				<p>
 					<a href="https://easyrpg.org/downloads/player/EasyRPG_Player-<%= ver %>-Vita.vpk">PlayStation Vita</a>
@@ -100,22 +100,20 @@ title: EasyRPG Player
 					<br>
 					Contributed by <a href="https://rinnegatamante.it/" title="Website of Rinnegatamante">Rinnegatamante</a>.
 				</p>
-				<!--<p>
-					<a href="https://easyrpg.org/downloads/player/EasyRPG_Player-<%= ver %>-switch.zip">Nintendo Switch</a>
+				<p>
+					<a href="https://easyrpg.org/downloads/player/EasyRPG_Player-<%= ver %>-Switch.zip">Nintendo Switch</a>
 					<br>
 					This needs a homebrew-enabled console with "Homebrew Launcher" installed. Games are searched in the same directory as the nro.
 					<br>
 					Contributed by <a href="https://rinnegatamante.it/" title="Website of Rinnegatamante">Rinnegatamante</a>.
-				</p>-->
-				<p>
-					<a href="https://easyrpg.org/downloads/player/EasyRPG_Player-<%= ver %>-Windows-arm.zip">Windows RT (ARM)</a>
-					<br>
-					This needs a device running in test-signing mode.
 				</p>
 				<p>
-					<a href="https://easyrpg.org/downloads/player/EasyRPG_Player-0.4.1-GCW-Zero.opk">GCW Zero (.opk)</a> (0.4.1)
+					<a href="https://easyrpg.org/downloads/player/EasyRPG_Player-0.5.3-Windows-arm.zip">Windows RT (ARM)</a> (0.5.3)
 					<br>
-					Currently unmaintained. Contact us if you want to help.
+					This needs a device running in test-signing mode. 0.5.3 is the last release on this deprecated platform.
+				</p>
+				<p>
+					<a href="https://easyrpg.org/downloads/player/EasyRPG_Player-<%= ver %>-GCW-Zero.opk">GCW Zero (.opk)</a>
 				</p>
 				<p>
 					<a href="http://repo.openpandora.org/?page=detail&amp;app=easyrpgplayer_ptitseb">Open Pandora (.pnd)</a>
@@ -198,9 +196,9 @@ title: EasyRPG Player
 					<a href="https://ci.easyrpg.org/job/player-3ds/lastSuccessfulBuild/artifact/builds/3ds/easyrpg-player-3ds.zip">Nintendo 3DS (3dsx)</a>,
 					<a href="https://ci.easyrpg.org/job/player-3ds/lastSuccessfulBuild/artifact/builds/3ds/easyrpg-player.cia">Nintendo 3DS (CIA)</a>
 					<br>
-					This needs a homebrew-enabled console with "Homebrew Channel" (for 3dsx) or a custom firmware (for CIA) installed. The CIA searches for games in sdcard:/3ds/easyrpg-player.
+					This needs a homebrew-enabled console with "Homebrew Launcher" (for 3dsx) or a custom firmware (for CIA) installed. The CIA searches for games in sdcard:/3ds/easyrpg-player.
 					<br>
-					Contributed by <a href="https://rinnegatamante.it/" title="Website of Rinnegatamante">Rinnegatamante</a>.
+					Originally contributed by <a href="https://rinnegatamante.it/" title="Website of Rinnegatamante">Rinnegatamante</a>.
 				</p>
 				<p>
 					<a href="https://ci.easyrpg.org/job/player-vita/lastSuccessfulBuild/artifact/builds/psvita/EasyRPG.vpk">PlayStation Vita</a>
@@ -217,9 +215,7 @@ title: EasyRPG Player
 					Contributed by <a href="https://rinnegatamante.it/" title="Website of Rinnegatamante">Rinnegatamante</a>.
 				</p>
 				<p>
-					<a href="https://ci.easyrpg.org/job/player-win-arm/lastSuccessfulBuild/artifact/bin/easyrpg_windows_arm.zip">Windows RT (ARM)</a>
-					<br>
-					This needs a device running in test-signing mode.
+					<a href="https://ci.easyrpg.org/job/player-gcw0/lastSuccessfulBuild/artifact/builds/opendingux/gcw-zero/EasyRPG.opk">GCW Zero (.opk)</a>
 				</p>
 			</div>
 			<div id="snapshot-source">
