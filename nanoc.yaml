@@ -1,12 +1,7 @@
-# The syntax to use for patterns in the Rules file. Can be either `"glob"`
-# (default) or `"legacy"`. The former will enable glob patterns, which behave
-# like Ruby’s File.fnmatch. The latter will enable Nanoc 3.x-style patterns.
-string_pattern_type: glob
-
 # A list of file extensions that Nanoc will consider to be textual rather than
 # binary. If an item with an extension not in this list is found,  the file
 # will be considered as binary.
-text_extensions: [ 'coffee', 'css', 'erb', 'haml', 'handlebars', 'hb', 'htm', 'html', 'js', 'less', 'markdown', 'md', 'ms', 'mustache', 'php', 'rb', 'rdoc', 'sass', 'scss', 'slim', 'txt', 'xhtml', 'xml' ]
+text_extensions: [ 'adoc', 'asciidoc', 'atom', 'coffee', 'css', 'erb', 'haml', 'handlebars', 'hb', 'htm', 'html', 'js', 'less', 'markdown', 'md', 'ms', 'mustache', 'php', 'rb', 'rdoc', 'sass', 'scss', 'slim', 'tex', 'txt', 'xhtml', 'xml' ]
 
 # The path to the directory where all generated files will be written to. This
 # can be an absolute path starting with a slash, but it can also be path
@@ -39,9 +34,7 @@ prune:
 # there is only a single data source that reads data from the “content/” and
 # “layout/” directories in the site directory.
 data_sources:
-  -
-    # The type is the identifier of the data source.
-    type: filesystem
+  - type: filesystem
 
     # The path where items should be mounted (comparable to mount points in
     # Unix-like systems). This is “/” by default, meaning that items will have
@@ -57,11 +50,6 @@ data_sources:
     # The encoding to use for input files. If your input files are not in
     # UTF-8 (which they should be!), change this.
     encoding: utf-8
-
-    # The kind of identifier to use for items and layouts. The default is
-    # “full”, meaning that identifiers include file extensions. This can also
-    # be “legacy”, primarily used by older Nanoc sites.
-    identifier_type: full
 
 # Configuration for the “check” command, which run unit tests on the site.
 checks:
