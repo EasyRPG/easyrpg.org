@@ -1,0 +1,13 @@
+# Exclude files/directories from updating by rsync.
+# This is useful for keeping unversioned files in place.
+#
+# The automatic homepage update timer / jenkins trigger will not
+# delete files by default, so a manual run is required periodically.
+# e.g. /usr/local/bin/update-homepage.sh [dryrun] delete
+
+/videos/*.webm
+/downloads/
+/images/logos/
+/images/mockups/
+/rtp/
+/_h5ai/
