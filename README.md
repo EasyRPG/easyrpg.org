@@ -7,6 +7,7 @@ Source code of the EasyRPG homepage at https://easyrpg.org
 
  - [ruby]
  - [nanoc]
+ - [tidy-html5]
  - [sass gem]
  - [rake gem] (optional)
 
@@ -89,5 +90,6 @@ Included are the following 3rd party software:
 [#easyrpg at irc.freenode.net]: https://kiwiirc.com/nextclient/#ircs://irc.freenode.net/#easyrpg?nick=rpgguest??
 [ruby]: https://www.ruby-lang.org
 [nanoc]: https://nanoc.ws/
+[tidy-html5]: http://www.html-tidy.org
 [sass gem]: https://github.com/sass/ruby-sass
 [rake gem]: https://ruby.github.io/rake/

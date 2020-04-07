@@ -7,11 +7,13 @@ end
 compile '/**/*.html' do
   layout '/default.*'
   filter :erb
+  filter :tidy if ENV['NANOC_ENV'] != 'pr'
 end
 
 compile '/**/*.md' do
   filter :kramdown
   layout '/default.*'
+  filter :tidy if ENV['NANOC_ENV'] != 'pr'
 end
 
 compile '/**/*.scss' do
