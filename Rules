@@ -21,15 +21,12 @@ end
 
 compile '/sitemap.xml' do
   filter :erb
-  write item.identifier.to_s
+  write '/sitemap.xml'
 end
 
 compile '/htaccess.txt' do
   filter :erb
-end
-
-compile '/**/*' do
-  write item.identifier.to_s
+  write '/.htaccess'
 end
 
 route '/**/*.{html,md}' do
@@ -45,8 +42,6 @@ route '/**/*.{html,md}' do
   end
 end
 
-route '/htaccess.txt' do
-  '/.htaccess'
-end
+passthrough '/**/*'
 
 layout '/**/*', :erb
