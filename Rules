@@ -7,11 +7,13 @@ end
 compile '/**/*.html' do
   layout '/default.*'
   filter :erb
+  filter :tidy if ENV['NANOC_ENV'] != 'pr'
 end
 
 compile '/**/*.md' do
   filter :kramdown
   layout '/default.*'
+  filter :tidy if ENV['NANOC_ENV'] != 'pr'
 end
 
 compile '/**/*.scss' do
@@ -21,15 +23,12 @@ end
 
 compile '/sitemap.xml' do
   filter :erb
-  write item.identifier.to_s
+  write '/sitemap.xml'
 end
 
 compile '/htaccess.txt' do
   filter :erb
-end
-
-compile '/**/*' do
-  write item.identifier.to_s
+  write '/.htaccess'
 end
 
 route '/**/*.{html,md}' do
@@ -45,8 +44,6 @@ route '/**/*.{html,md}' do
   end
 end
 
-route '/htaccess.txt' do
-  '/.htaccess'
-end
+passthrough '/**/*'
 
 layout '/**/*', :erb
