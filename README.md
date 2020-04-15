@@ -59,7 +59,7 @@ rake view     # Make website available at http://localhost:3000
 Available options:
 
 * File an issue at https://github.com/EasyRPG/easyrpg.org/issues
-* Open a thread at https://community.easyrpg.org/
+* Open a thread at https://community.easyrpg.org
 * Chat with us via IRC: [#easyrpg at irc.freenode.net]
 
 
@@ -67,16 +67,16 @@ Available options:
 
 The homepage is currently provided "as-is", we are currently not able to have
 a common license for all files, as they have been cluttered over the years. We
-are going to clear that up and hope to provide it under a Creative Common
-licence later. We hope that this is in the intention of the original authors
-and designers. (See issue #5 for reference)
+are going to clear that up and hope to provide it under a Creative Commons
+license later. We hope that this is in the intention of the original authors
+and designers (see [issue #5] for reference).
 
 
 ### 3rd party software
 
 Included are the following 3rd party software:
 
-* jQuery - https://jquery.com/ - Copyright (c) JS Foundation and other contributors,
+* jQuery - https://jquery.com - Copyright (c) JS Foundation and other contributors,
   provided under the MIT license
 
 * Magnific Popup - http://dimsemenov.com/plugins/magnific-popup/ -
@@ -93,3 +93,4 @@ Included are the following 3rd party software:
 [tidy-html5]: http://www.html-tidy.org
 [sass gem]: https://github.com/sass/ruby-sass
 [rake gem]: https://ruby.github.io/rake/
+[issue #5]: https://github.com/EasyRPG/easyrpg.org/issues/5
