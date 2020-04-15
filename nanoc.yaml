@@ -69,7 +69,7 @@ checks:
     # If an external link matches this pattern, the validity check will be skipped.
     # E.g.:
     #   exclude: ['^http://example.com$']
-    exclude: ['^https://www.microsoft.com/']
+    exclude: []
     # A list of file patterns, specified as regular expressions, to exclude from the check.
     # If a file matches this pattern, the links from this file will not be checked.
     # E.g.:
