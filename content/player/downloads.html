@@ -3,18 +3,21 @@ section: player
 title: EasyRPG Player
 ---
 <% # The following variables can be quite handy ;)
-	ver="0.6.2"
-	oldver="0.6.1"
+	ver="0.6.2.1"
+	oldver="0.6.2"
+
+	ver_lcf="0.6.2"
+	oldver_lcf="0.6.1"
 %>
 <div class="info">
 	<h2>Download EasyRPG Player</h2>
-	<h3>EasyRPG Player version <%= ver %> "Pincer Attack"</h3>
-	<p>Release date: 2020-04-26.
-		<a href="https://blog.easyrpg.org/2020/04/easyrpg-player-0-6-2-pincer-attack/">
+	<h3>EasyRPG Player version <%= ver %> "Pincer Attack Patch 1"</h3>
+	<p>Release date: 2020-05-22.
+		<a href="https://blog.easyrpg.org/2020/05/easyrpg-player-0-6-2-1-pincer-attack-patch-1/">
 			Release notes</a>,
 		changes since <%= oldver %>:
 		<a href="https://github.com/EasyRPG/Player/compare/<%= oldver + "..." + ver %>">Player</a>,
-		<a href="https://github.com/EasyRPG/liblcf/compare/<%= oldver + "..." + ver %>">liblcf</a>.
+		<a href="https://github.com/EasyRPG/liblcf/compare/<%= oldver_lcf + "..." + ver_lcf %>">liblcf</a>.
 	</p>
 
 	<div id="downloadtabs-release" class='tab-container'>
@@ -138,13 +141,13 @@ title: EasyRPG Player
 				</p>
 				<p>
 					<!-- Currently not correctly signed cert, but supports https-->
-					<a href="http://bszili.morphos.me/">AROS</a> (0.6.0, update pending)
+					<a href="http://bszili.morphos.me/">AROS</a> (0.6.1)
 				</p>
 				<p>
-					<a href="http://bszili.morphos.me/">AmigaOS4</a> (0.6.0, update pending)
+					<a href="http://bszili.morphos.me/">AmigaOS4</a> (0.6.2, update pending)
 				</p>
 				<p>
-					<a href="http://bszili.morphos.me/">MorphOS</a> (0.6.0, update pending)
+					<a href="http://bszili.morphos.me/">MorphOS</a> (0.6.2, update pending)
 					<br>
 				</p>
 				<p>
@@ -155,7 +158,7 @@ title: EasyRPG Player
 				<h4>Source Code</h4>
 				<a href="https://easyrpg.org/downloads/player/<%= ver %>/easyrpg-player-<%= ver %>.tar.gz">Player source package</a>
 				<br>
-				<a href="https://easyrpg.org/downloads/player/<%= ver %>/liblcf-<%= ver %>.tar.gz">liblcf source package</a>
+				<a href="https://easyrpg.org/downloads/player/<%= ver_lcf %>/liblcf-<%= ver_lcf %>.tar.gz">liblcf source package</a>
 			</div>
 		</div>
 	</div>
@@ -164,7 +167,7 @@ title: EasyRPG Player
 	<p>
 		Changes since <%= ver %>:
 		<a href="https://github.com/EasyRPG/Player/compare/<%= ver %>...HEAD">Player</a>,
-		<a href="https://github.com/EasyRPG/liblcf/compare/<%= ver %>...HEAD">liblcf</a>
+		<a href="https://github.com/EasyRPG/liblcf/compare/<%= ver_lcf %>...HEAD">liblcf</a>
 	</p>
 	<p>
 		Disclaimer: these are the newest builds, representing the current development state.
@@ -248,7 +251,7 @@ title: EasyRPG Player
 				<h4>Source Code</h4>
 				<a href="https://ci.easyrpg.org/job/player-linux/lastSuccessfulBuild/artifact/easyrpg-player-<%= ver %>.tar.gz">Player source package</a>
 				<br>
-				<a href="https://ci.easyrpg.org/job/liblcf-linux/lastSuccessfulBuild/artifact/liblcf-<%= ver %>.tar.gz">liblcf source package</a>
+				<a href="https://ci.easyrpg.org/job/liblcf-linux/lastSuccessfulBuild/artifact/liblcf-<%= ver_lcf %>.tar.gz">liblcf source package</a>
 			</div>
 		</div>
 	</div>
