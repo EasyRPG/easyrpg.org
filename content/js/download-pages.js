@@ -19,18 +19,17 @@ $(document).ready(function() {
 	// setup tabs
 	$('#downloadtabs-snapshot, #downloadtabs-release').easytabs({
 		animate: false,
-		updateHash: false
+		updateHash: true
 	});
 
 	// try to set default tabs
 	pf = navigator.platform.toLowerCase();
 	if (pf.indexOf("win")!=-1)     os = "windows";
-	if (pf.indexOf("mac")!=-1)     os = "macosx";
+	if (pf.indexOf("mac")!=-1)     os = "macos";
 	if (pf.indexOf("x11")!=-1)     os = "linux";
 	if (pf.indexOf("linux")!=-1)   os = "linux";
 	if (pf.indexOf("android")!=-1) os = "android";
-	if (pf.indexOf("wii")!=-1)     os = "other";
-	if (!!os) {
+	if (!!os && location.hash === "") {
 		$('#downloadtabs-snapshot').easytabs('select', '#snapshot-' + os);
 		$('#downloadtabs-release').easytabs('select', '#release-' + os);
 	}
