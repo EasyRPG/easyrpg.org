@@ -16,4 +16,7 @@
   <li><%= link_to_unless_current("Downloads", "/" + @section + "/downloads/") %></li>
   <li><%= link_to_unless_current("Media", "/" + @section + "/media/") %></li>
 <% end %>
+<% if @section == "player" %>
+  <li><%= link_to_unless_current("Guide", "/" + @section + "/guide/") %></li>
+<% end %>
 </ul>
