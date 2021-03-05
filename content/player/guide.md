@@ -7,6 +7,10 @@ title: "EasyRPG Player"
 
 ## Guide
 
+### Features
+
+[Translating games](game_translation/)
+
 ### Installation
 
 [How to set up EasyRPG Player for the Web](webplayer/)
