@@ -15,7 +15,7 @@ You may also try [a real game (Ib)](/play/?game=ib).
 
 ### How it works
 
-Web request are asynchronous. This means that all assets like pictures and music 
+Web requests are asynchronous. This means that all assets like pictures and music 
 must be fetched asynchronously. When the Player wants to display a new graphic 
 it will appear on the desktop versions (Windows, Linux, Android, ...) 
 immediately but on the web it will be invisible while the file is downloaded. 
@@ -33,7 +33,7 @@ this).
 
 Hosting your own games is quite simple. Just follow these steps.
 
-### Deploying the Player on your server
+#### Deploying the Player on your server
 
 For deploying of the EasyRPG Player any website works. There are already many 
 EasyRPG Player powered games on popular gaming sites such as itch.io. Please 
@@ -55,7 +55,7 @@ webserver the simplest way is installing Python and running ``python -m
 http.server``. Then open ``http://localhost:8000/`` in your browser and navigate 
 to your directory.
 
-### Deploying a game on your server
+#### Deploying a game on your server
 
 Because RPG Maker games refer to files without extension and querying the server 
 for every supported extension would be slow, you need to run a small tool to 

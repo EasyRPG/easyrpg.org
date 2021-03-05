@@ -29,7 +29,7 @@ The translation function in EasyRPG Player is similar to variant two, but is eas
 
 First create a new folder called ``languages`` in your game folder. In this folder you can now create further subfolders (one for each translation). The folder name does not matter. In the following we will call the folder ``LANGUAGE_NAME``.
 
-In the folder ``LANGUAGE_NAME`` you must first create a ``Meta.ini`` with the following content:
+In the folder ``LANGUAGE_NAME`` you must first create a file named ``Meta.ini`` with the following content:
 
 	[Language]
 	Name=Name of the Language Here
@@ -101,14 +101,15 @@ If ``lcftrans`` cannot match a translated string, it is written to a ``FILENAME.
 
 Probably ``lcftrans`` has detected the language incorrectly. You can also force the language. Append one of the following numbers at the end of the ``lcftrans`` commandline:
 
-| Code | Language                                        |
-|-----:|-------------------------------------------------|
-| 932  | Japanese                                        |
-| 936  | Chinese (Simplified)                            |
-| 949  | Korean                                          |
-| 950  | Chinese (Traditional)                           |
-| 1251 | Eastern European (Cyrillic)                     |
-| 1252 | Western European (English, German, French, ...) |
+| Code | Language                                |
+|-----:|-----------------------------------------|
+| 932  | Japanese                                |
+| 936  | Chinese (Simplified)                    |
+| 949  | Korean                                  |
+| 950  | Chinese (Traditional)                   |
+| 1250 | Central European (Polish, Czech, ...)   |
+| 1251 | Eastern European (Cyrillic)             |
+| 1252 | Western European (English, German, ...) |
 
 If you want to translate an English game and you still get a parse error, try 932. This is necessary because some game databases still contain Japanese texts.
 
