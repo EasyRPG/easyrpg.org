@@ -1,19 +1,18 @@
 
 source 'https://rubygems.org'
 
-gem 'nanoc'
-gem 'kramdown'
-gem 'builder'
-gem 'sass'
-gem 'rake'
+gem 'nanoc'            # engine
+gem 'kramdown'         # markdown converter
+gem 'builder'          # xml sitemaps
+gem 'sass'             # css conversion
 
-group :development do
-  gem 'guard-nanoc'
-  gem 'adsf'
-  gem 'thin'
+group :nanoc do
+  gem 'guard-nanoc'    # automatic rebuilds
+  gem 'adsf'           # tiny webserver
+  gem 'puma'           # webserver backend
 end
 
 group :test do
-  gem 'nokogiri'
-  gem 'w3c_validators'
+  gem 'nokogiri'       # 
+  gem 'w3c_validators' # link checker
 end
