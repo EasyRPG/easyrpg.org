@@ -46,4 +46,5 @@ end
 
 passthrough '/**/*'
 
-layout '/**/*', :erb
+layout '/**/*.slim', :slim
+layout '/**/*.html', :erb
