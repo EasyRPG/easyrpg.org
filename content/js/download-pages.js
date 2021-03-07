@@ -2,7 +2,7 @@
  * Adds tabs to download pages
  */
 $(document).ready(function() {
-	// add inline popup for OBS links
+	// add inline popup for OBS/snapcraft links
 	$('#obs-link').magnificPopup({
 		type: 'iframe',
 		iframe: {
@@ -11,6 +11,18 @@ $(document).ready(function() {
 					index: '/software.opensuse.org/download.html',
 					id: 'download.html?',
 					src: 'https://software.opensuse.org/download/package.iframe?%id%'
+				}
+			}
+		}
+	});
+	$('#snap-link').magnificPopup({
+		type: 'iframe',
+		iframe: {
+			patterns: {
+				snap: {
+					index: '/snapcraft.io',
+					id: '/',
+					src: 'https://snapcraft.io/%id%/embedded?button=black&channels=true'
 				}
 			}
 		}
