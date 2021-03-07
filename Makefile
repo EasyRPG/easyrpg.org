@@ -1,11 +1,15 @@
 
-.PHONY: default compile all check clean bundler-env install install-devel
+.PHONY: default compile all check clean bundler-env install install-devel install-ci
 
 default: compile
 	bin/nanoc view
 
 compile: .bundle
+ifdef PR
+	bin/nanoc --env=pr compile
+else
 	bin/nanoc compile
+endif
 
 all: clean compile check
 
@@ -40,3 +44,11 @@ install-devel: bundler-env
 	bundle install
 	@echo "Making gems available"
 	bundle binstubs --force nanoc guard
+
+install-ci: bundler-env
+	@echo "Installing main and testing gems, cleaning old gems"
+	@bundle config set --local deployment true
+	@bundle config set --local without nanoc
+	bundle install
+	@echo "Making gems available"
+	bundle binstubs --force nanoc
