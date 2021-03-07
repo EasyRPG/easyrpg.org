@@ -34,6 +34,58 @@ $darkgrey: #202020;
 		border: 0;
 	}
 
+	code {
+		font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	}
+
+	pre {
+		font-family: "Courier 10 Pitch", Courier, monospace;
+	}
+
+	code, pre {
+		font-size: inherit;
+		white-space: pre;
+		white-space: pre-wrap;
+		white-space: -moz-pre-wrap;
+		white-space: -o-pre-wrap;
+		margin: 0;
+	}
+
+	p > code, li > code, dd > code, td > code, {
+		background: #faf8f0;
+		word-wrap: break-word;
+		box-decoration-break: clone;
+		padding: .1rem .3rem .2rem;
+	}
+
+	div.highlight {
+		display: block;
+		background: #faf8f0;
+		max-width: 100%;
+		min-width: 100px;
+		overflow-x: auto;
+		padding: 0.5em 1em;
+		margin: 0;
+		border: 1px solid #bebab0;
+		border-radius: .5rem;
+	}
+
+	table {
+		border-collapse: collapse;
+		border: 2px solid #999;
+	}
+
+	th {
+		border: 1px solid #999;
+		border-bottom: 2px solid #999;
+		padding: 0.2em 0.8em;
+	}
+
+	td {
+		border: 1px solid #999;
+		padding: 0.2em 0.8em;
+	}
+
 	/* Header */
 	#header {
 		background-color: $darkgrey;

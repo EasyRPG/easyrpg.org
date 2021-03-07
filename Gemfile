@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 
 gem 'nanoc'            # engine
 gem 'kramdown'         # markdown converter
+gem 'rouge'            # syntax highlighting
 gem 'slim'             # templates
 gem 'builder'          # xml sitemaps
 gem 'sass'             # css conversion

@@ -31,9 +31,11 @@ First create a new folder called ``languages`` in your game folder. In this fold
 
 In the folder ``LANGUAGE_NAME`` you must first create a file named ``Meta.ini`` with the following content:
 
-	[Language]
-	Name=Name of the Language Here
-	Description=Short Description, e.g. the Author
+~~~ ini
+[Language]
+Name=Name of the Language Here
+Description=Short Description, e.g. the Author
+~~~
 
 You may alter the texts to the right of the "is equal to" (=).
 
@@ -57,8 +59,12 @@ Under Linux or macOS, first open the console/terminal and then navigate to the f
 
 Now execute the following command in your console (assuming ``lcftrans`` is in the current directory):
 
-	.\lcftrans -c ../../ # Windows
-	./lcftrans -c ../../ # Linux and macOS
+~~~ powershell
+.\lcftrans -c ../../ # Windows
+~~~
+~~~ shell
+./lcftrans -c ../../ # Linux and macOS
+~~~
 
 After execution you will see a lot of po-files in the folder. These contain all the strings that can be translated:
 
@@ -88,8 +94,12 @@ For example, the translated version of ``Picture/Intro.png`` is located in ``lan
 
 If you have added new texts to your game, you must run the update mode of ``lcftrans``:
 
-	.\lcftrans -u ../../  # Windows
-	./lcftrans -u ../../  # Linux and macOS
+~~~ powershell
+.\lcftrans -u ../../  # Windows
+~~~
+~~~ shell
+./lcftrans -u ../../  # Linux and macOS
+~~~
 
 The po-files are now updated. Strings that no longer exist are removed and new ones are added.
 
