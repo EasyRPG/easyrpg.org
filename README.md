@@ -8,8 +8,7 @@ Source code of the EasyRPG homepage at https://easyrpg.org
  - [ruby]
  - [nanoc]
  - [tidy-html5]
- - [sass gem]
- - [rake gem] (optional)
+ - [some gems]
 
 
 ## Source code
@@ -22,11 +21,11 @@ https://github.com/EasyRPG/easyrpg.org
 
 ## Building the site
 
-Install needed gems:
+Install needed gems (choose one):
 
 ```bash
-$ bundle install --path=vendor/bundle
-$ bundle binstubs nanoc guard [rake]
+$ make install       # for building the site
+$ make install-devel # for additional development and testing
 ```
 
 This will install all needed gems in the `vendor/bundle` folder and provide
@@ -36,21 +35,22 @@ Alternatively, you may run commands with prefix, i.e. `bin/nanoc`.
 
 ```bash
 $ source helper.bash
-$ nanoc # to build the page
+$ nanoc      # to build the page
+$ guard      # Automatically rebuild website on changes
+$ nanoc view # Make website available at http://localhost:3000
+$ nanoc live # Combination of last two commands
 ```
 
-For convenience there are several rake tasks provided:
+For convenience there is a `Makefile` provided:
 
 ```bash
-$ rake -T
-rake all      # Clear, compile and check website
-rake check    # Check compiled website for problems
-rake clean    # Remove any temporary products
-rake clobber  # Remove any generated files
-rake compile  # Compile website
-rake default  # Compile website and view locally
-rake rebuild  # Automatically rebuild website on changes
-rake view     # Make website available at http://localhost:3000
+$ make           # Compile website and view it
+$ make compile   # Compile website
+$ make all       # Clear, compile and check website
+$ make check     # Check compiled website for problems
+$ make clean     # Remove generated page
+$ make distclean # Remove any generated files and bundled gems
+$ make install   # Install gems and configure environment
 ```
 
 
@@ -91,6 +91,5 @@ Included are the following 3rd party software:
 [ruby]: https://www.ruby-lang.org
 [nanoc]: https://nanoc.ws/
 [tidy-html5]: http://www.html-tidy.org
-[sass gem]: https://github.com/sass/ruby-sass
-[rake gem]: https://ruby.github.io/rake/
+[some gems]: Gemfile
 [issue #5]: https://github.com/EasyRPG/easyrpg.org/issues/5

@@ -5,13 +5,15 @@ preprocess do
 end
 
 compile '/**/*.html' do
-  layout '/default.*'
   filter :erb
+  filter :colorize_syntax, :default_colorizer => :rouge
+  layout '/default.*'
   filter :tidy if ENV['NANOC_ENV'] != 'pr'
 end
 
 compile '/**/*.md' do
-  filter :kramdown
+  filter :kramdown, auto_ids: false
+  filter :colorize_syntax, :default_colorizer => :rouge
   layout '/default.*'
   filter :tidy if ENV['NANOC_ENV'] != 'pr'
 end
@@ -27,7 +29,6 @@ compile '/sitemap.xml' do
 end
 
 compile '/htaccess.txt' do
-  filter :erb
   write '/.htaccess'
 end
 
@@ -46,4 +47,5 @@ end
 
 passthrough '/**/*'
 
-layout '/**/*', :erb
+layout '/**/*.slim', :slim
+layout '/**/*.html', :erb
