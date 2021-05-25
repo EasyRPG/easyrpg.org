@@ -60,7 +60,8 @@ Available options:
 
 * File an issue at https://github.com/EasyRPG/easyrpg.org/issues
 * Open a thread at https://community.easyrpg.org
-* Chat with us via IRC: [#easyrpg at irc.freenode.net]
+* Chat with us via IRC: [#easyrpg at Libera Chat]
+* Contact us at https://easyrpg.org/contact/
 
 
 ## License
@@ -87,7 +88,7 @@ Included are the following 3rd party software:
 * IRC contact page is provided by https://kiwiirc.com
 
 
-[#easyrpg at irc.freenode.net]: https://kiwiirc.com/nextclient/#ircs://irc.freenode.net/#easyrpg?nick=rpgguest??
+[#easyrpg at Libera Chat]: https://kiwiirc.com/nextclient/#ircs://irc.libera.chat/#easyrpg?nick=rpgguest??
 [ruby]: https://www.ruby-lang.org
 [nanoc]: https://nanoc.ws/
 [tidy-html5]: http://www.html-tidy.org
