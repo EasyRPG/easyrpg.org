@@ -2,9 +2,5 @@ User-agent: *
 Disallow: /irc/log/
 Disallow: /rtp/
 Disallow: /player/doxydoc/
-Disallow: /wiki/
-Disallow: /jenkins/
-Disallow: /forums/
-Disallow: /blog/
 
 Sitemap: https://easyrpg.org/sitemap.xml
