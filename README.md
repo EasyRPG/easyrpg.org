@@ -5,8 +5,8 @@ Source code of the EasyRPG homepage at https://easyrpg.org
 
 ## Requirements
 
- - [ruby]
- - [nanoc]
+ - [ruby] >2.4
+ - [nanoc] >4.12
  - [tidy-html5]
  - [some gems]
 

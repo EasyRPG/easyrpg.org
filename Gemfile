@@ -1,7 +1,7 @@
 
 source 'https://rubygems.org'
 
-gem 'nanoc'            # engine
+gem 'nanoc', '~> 4.12' # engine
 gem 'kramdown'         # markdown converter
 gem 'rouge'            # syntax highlighting
 gem 'slim'             # templates
@@ -18,3 +18,6 @@ group :test do
   gem 'nokogiri'       # 
   gem 'w3c_validators' # link checker
 end
+
+# nanoc is incompatible with ancient ruby
+ruby '> 2.4'
