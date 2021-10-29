@@ -7,12 +7,6 @@ title: "EasyRPG Player"
 
 ## Translating games
 
-### Important
-
-**This is a feature of the continuous build and will not work with the stable builds!**
-
-**This feature is still kinda experimental and you will likely encounter bugs**
-
 ### Motivation
 
 Translating RPG Maker games is quite complicated and there are two possibilities:
@@ -104,6 +98,39 @@ If you have added new texts to your game, you must run the update mode of ``lcft
 The po-files are now updated. Strings that no longer exist are removed and new ones are added.
 
 If ``lcftrans`` cannot match a translated string, it is written to a ``FILENAME.stale.po`` file. If you no longer need these translations, you can delete these files.
+
+### Games that were also published in multiple languages
+
+In some cases, the game is already available in multiple languages by directly translating the strings in the database and on the map.
+
+It is difficult to maintain several projects of the same game, especially when making updates.
+
+If you want to move such games to ``lcftrans``, you can use the _merge mode_.
+
+In this mode  ``lcftrans`` can generate po-files containing both the source and the translation string.
+
+Be warned that this will not work when the database items are out of sync, e.g. if the original has more items or skill than the translation. The same applies to messages: When original or translation have a different number of messages, the matching will probably fail.
+
+First generate the po-files of the original and of the translated game as explained above.
+
+Assuming the po-files of the original, untranslated game are in ``original`` and the po-files of the translation are in ``translation`` you can invoke:
+
+~~~ powershell
+.\lcftrans -m translation original # Windows
+~~~
+~~~ shell
+./lcftrans -m translation original # Linux and macOS
+~~~
+
+Afterwards you will see that the strings from the translation were added to the original.
+
+Do not forget to check the matching for correctness. This feature will save a lot of time but the result will contain errors!
+
+### Special commands
+
+Use ``<easyrpg:new_page>`` in your translation to force a page break. The message output will wait for user input and display an animated arrow.
+
+Use ``<easyrpg:delete_page>`` in the first line of a translation to completely remove the message box. This is useful when the translation is shorter than the original.
 
 ### Troubleshooting
 

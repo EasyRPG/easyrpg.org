@@ -3,19 +3,19 @@ section: player
 title: EasyRPG Player
 ---
 <% # The following variables can be quite handy ;)
-	ver="0.6.2.3"
-	oldver="0.6.2.2"
+	ver="0.7.0"
+	oldver="0.6.2.3"
 
-	ver_master="0.6.2"
+	ver_master="0.7.0"
 
-	ver_lcf="0.6.2"
-	oldver_lcf="0.6.1"
+	ver_lcf="0.7.0"
+	oldver_lcf="0.6.2"
 %>
 <div class="info">
 	<h2>Download EasyRPG Player</h2>
-	<h3>EasyRPG Player version <%= ver %> "Pincer Attack Patch 3"</h3>
-	<p>Release date: 2020-10-03.
-		<a href="https://blog.easyrpg.org/2020/10/easyrpg-player-0-6-2-3-pincer-attack-patch-3/">
+	<h3>EasyRPG Player version <%= ver %> "Sword"</h3>
+	<p>Release date: 2021-10-29.
+		<a href="https://blog.easyrpg.org/2021/10/easyrpg-player-0-7-0-sword/">
 			Release notes</a>,
 		changes since <%= oldver %>:
 		<a href="https://github.com/EasyRPG/Player/compare/<%= oldver + "..." + ver %>">Player</a>,
@@ -94,17 +94,17 @@ title: EasyRPG Player
 					Available on the <a href="https://buildbot.libretro.com">libretro buildbot</a>. (or use the RetroArch core downloader)
 					<br>
 					The libretro core can be executed by RetroArch and other libretro frontends.
+					<br>
+					For Windows and macOS we offer our own builds.
 				</p>
 				<p>
 					Supported platforms:
 				</p>
 				<ul>
-					<li>Windows</li>
-					<li>Linux (amd64 and ARM)</li>
-					<li>macOS</li>
+					<li>Windows (<a href="https://easyrpg.org/downloads/player/<%= ver %>/EasyRPG_Player-<%= ver %>-Windows-libretro.zip">Windows 32 bit core</a>, <a href="https://easyrpg.org/downloads/player/<%= ver %>/EasyRPG_Player-<%= ver %>-Windows-libretro-x64.zip">Windows 64 bit core</a>)</li>
+					<li>Linux (amd64)</li>
+					<li>macOS (<a href="https://easyrpg.org/downloads/player/<%= ver %>/EasyRPG-Player-<%= ver %>-macos-libretro.zip">macOS 64-bit (Intel) core</a>)</li>
 					<li>Android</li>
-					<li>iOS</li>
-					<li>SNES Classic Mini &amp; Playstation Classic</li>
 				</ul>
 			</div>
 			<div id="release-other">
@@ -194,6 +194,7 @@ title: EasyRPG Player
 			<li class='tab'><a href="#snapshot-linux">GNU/Linux</a></li>
 			<li class='tab'><a href="#snapshot-macos">macOS</a></li>
 			<li class='tab'><a href="#snapshot-android">Android</a></li>
+			<li class='tab'><a href="#snapshot-libretro">libretro</a></li>
 			<li class='tab'><a href="#snapshot-other">Other</a></li>
 			<li class='tab'><a href="#snapshot-source">Source Code</a></li>
 		</ul>
@@ -228,6 +229,17 @@ title: EasyRPG Player
 					<a href="https://ci.easyrpg.org/job/player-android/lastSuccessfulBuild/artifact/builds/android/app/build/outputs/apk/EasyRpgPlayerActivity.apk">Locally hosted App (.apk)</a>
 					<br>
 					Installing from "unknown sources" must be activated in the Android settings.
+				</p>
+			</div>
+			<div id="snapshot-libretro">
+				<h4>libretro</h4>
+				<p>
+					<a href="https://ci.easyrpg.org/job/player-win32/lastSuccessfulBuild/artifact/bin/easyrpg_libretro.zip">Windows 32 bit core</a>, <a href="https://ci.easyrpg.org/job/player-win64/lastSuccessfulBuild/artifact/bin/easyrpg_libretro_x64.zip">Windows 64 bit core</a>
+					<br>
+					These cores require at least Windows Vista.
+				</p>
+				<p>
+					<a href="https://ci.easyrpg.org/job/player-macos/lastSuccessfulBuild/artifact/osxbuild-libretro/easyrpg_libretro_macos.zip">macOS 64-bit (Intel) core</a>
 				</p>
 			</div>
 			<div id="snapshot-other">
