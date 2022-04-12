@@ -245,6 +245,22 @@ $darkgrey: #202020;
 		}
 	}
 
+	/* Footer */
+	#footer {
+		font-size: 11px;
+		text-align: center;
+		padding: 0.5em;
+
+		a {
+			color: $lightgrey;
+			text-decoration: none;
+
+			&:hover {
+				color: $normalgreen;
+			}
+		}
+	}
+
 	.features {
 		text-align: center;
 
