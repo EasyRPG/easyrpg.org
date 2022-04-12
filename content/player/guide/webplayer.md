@@ -1,5 +1,4 @@
 ---
-section: player
 title: "EasyRPG Player"
 ---
 

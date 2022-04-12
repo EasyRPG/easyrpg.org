@@ -1,5 +1,6 @@
 ---
 title: Contact Us
+no_menu: true
 ---
 
 <div class="info" markdown="1">

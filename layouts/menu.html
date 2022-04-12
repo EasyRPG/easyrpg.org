@@ -1,22 +1,8 @@
-<%
-# To be replaced by a filesystem helper, that generates links from actual files
-# in content/<section> folder
-%>
-<ul class="menu">
-  <li><%= link_to_upper_page("&#x25B2;") %></li>
-<% if @section == "contribute" %>
-  <li><%= link_to_unless_current("Programmers", "/contribute/programmers/") %></li>
-  <li><%= link_to_unless_current("Artists", "/contribute/artists/") %></li>
-  <li><%= link_to_unless_current("Testers", "/contribute/testers/") %></li>
-  <li><%= link_to_unless_current("Translators", "/contribute/translators/") %></li>
-<% else %>
-  <% if @section != "tools" %>
-  <li><%= link_to_unless_current("Progress", "/" + @section + "/progress/") %></li>
+<% if not @item[:no_menu] and not @item[:is_hidden] %>
+  <ul class="menu">
+    <li><%= link_to_upper_page("&#x25B2;") %></li>
+  <% navigation_for(@item).each do |index, target| %>
+    <li><%= link_to_unless_current(target[:text], target[:link]) %></li>
   <% end %>
-  <li><%= link_to_unless_current("Downloads", "/" + @section + "/downloads/") %></li>
-  <li><%= link_to_unless_current("Media", "/" + @section + "/media/") %></li>
+  </ul>
 <% end %>
-<% if @section == "player" %>
-  <li><%= link_to_unless_current("Guide", "/" + @section + "/guide/") %></li>
-<% end %>
-</ul>

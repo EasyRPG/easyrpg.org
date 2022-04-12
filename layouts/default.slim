@@ -41,6 +41,5 @@ html lang="en"
           .clear
       #content
         .maxwidth
-          - if @item[:section]
-            == render '/menu.*', :section => @item[:section]
+          == render '/menu.*'
           == yield
