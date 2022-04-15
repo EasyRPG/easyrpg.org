@@ -2,7 +2,6 @@
 title: "EasyRPG Player"
 menu_weight: 1
 ---
-
 <div class="info" markdown="1">
 
 ## Guide
