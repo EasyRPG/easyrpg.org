@@ -17,12 +17,13 @@ title: About the EasyRPG Homepage
 - Ghabry
 - fdelapena
 - carstene1ns
+- falc
 - (Possibly others) *FIXME*
 
 
 ## Design
 
-- (Original Author) *FIXME*
+- Ben Beltran
 - carstene1ns (additions, modifications, scss port)
 
 ## Techniques used
