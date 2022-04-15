@@ -4,23 +4,18 @@ preprocess do
   hide_items_from_sitemap
 end
 
-compile '/**/*.html' do
+compile '/**/*.{html,md}' do
   filter :erb
+  filter :kramdown, auto_ids: false if item.identifier =~ '/**/*.md'
   filter :colorize_syntax, :default_colorizer => :rouge
   layout '/default.*'
   filter :tidy if ENV['NANOC_ENV'] != 'pr'
-end
-
-compile '/**/*.md' do
-  filter :erb
-  filter :kramdown, auto_ids: false
-  filter :colorize_syntax, :default_colorizer => :rouge
-  layout '/default.*'
-  filter :tidy if ENV['NANOC_ENV'] != 'pr'
+  filter :relativize_paths, :type => :html5 if ENV['NANOC_ENV'] == 'pr'
 end
 
 compile '/**/*.scss' do
   filter :sass, :syntax => :scss
+  filter :relativize_paths, :type => :css if ENV['NANOC_ENV'] == 'pr'
   write item.identifier.without_ext + '.css'
 end
 

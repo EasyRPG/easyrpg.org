@@ -22,6 +22,9 @@ clean:
 distclean: clean
 	rm -rf tmp/ .bundle bin vendor
 
+dev:
+	bin/nanoc live_command
+
 # default installation
 .bundle:
 	@[ -e .bundle ] || $(MAKE) install
