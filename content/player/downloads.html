@@ -202,8 +202,8 @@ menu_weight: 3
 			<div id="snapshot-windows">
 				<h4>Windows</h4>
 				<p>
-					<a href="https://ci.easyrpg.org/job/player-win32/lastSuccessfulBuild/artifact/bin/easyrpg_windows.zip">Windows 32 bit executable</a>,
-					<a href="https://ci.easyrpg.org/job/player-win64/lastSuccessfulBuild/artifact/bin/easyrpg_windows_x64.zip">Windows 64 bit executable</a>
+					<a href="<%= jenkins_link("player-win32", "bin/easyrpg_windows.zip") %>">Windows 32 bit executable</a>,
+					<a href="<%= jenkins_link("player-win64", "bin/easyrpg_windows_x64.zip") %>">Windows 64 bit executable</a>
 					<br>
 					These are meant as a drop-in replacement for the RPG_RT.exe and require at least Windows Vista.
 				</p>
@@ -211,7 +211,7 @@ menu_weight: 3
 			<div id="snapshot-linux">
 				<h4>GNU/Linux</h4>
 				<p>
-					<a href="https://ci.easyrpg.org/job/player-linux/lastSuccessfulBuild/artifact/easyrpg-player-static.tar.gz">Linux amd64 executable</a>
+					<a href="<%= jenkins_link("player-linux", "easyrpg-player-static.tar.gz") %>">Linux amd64 executable</a>
 					<br>
 					This is a debug build, it is not optimized and mainly used to find bugs. You likely want to
 					<a href="https://wiki.easyrpg.org/development/compiling/player/autotools">build Player from source code</a> for faster game play.
@@ -220,13 +220,13 @@ menu_weight: 3
 			<div id="snapshot-macos">
 				<h4>macOS</h4>
 				<p>
-					<a href="https://ci.easyrpg.org/job/player-macos/lastSuccessfulBuild/artifact/osxbuild/EasyRPG-Player-macos.app.zip">macOS 64-bit (Intel) App Bundle</a>
+					<a href="<%= jenkins_link("player-macos", "osxbuild/EasyRPG-Player-macos.app.zip") %>">macOS 64-bit (Intel) App Bundle</a>
 				</p>
 			</div>
 			<div id="snapshot-android">
 				<h4>Android</h4>
 				<p>
-					<a href="https://ci.easyrpg.org/job/player-android/lastSuccessfulBuild/artifact/builds/android/app/build/outputs/apk/EasyRpgPlayerActivity.apk">Locally hosted App (.apk)</a>
+					<a href="<%= jenkins_link("player-android", "builds/android/app/build/outputs/apk/EasyRpgPlayerActivity.apk") %>">Locally hosted App (.apk)</a>
 					<br>
 					Installing from "unknown sources" must be activated in the Android settings.
 				</p>
@@ -234,34 +234,34 @@ menu_weight: 3
 			<div id="snapshot-libretro">
 				<h4>libretro</h4>
 				<p>
-					<a href="https://ci.easyrpg.org/job/player-win32/lastSuccessfulBuild/artifact/bin/easyrpg_libretro.zip">Windows 32 bit core</a>, <a href="https://ci.easyrpg.org/job/player-win64/lastSuccessfulBuild/artifact/bin/easyrpg_libretro_x64.zip">Windows 64 bit core</a>
+					<a href="<%= jenkins_link("player-win32", "bin/easyrpg_libretro.zip") %>">Windows 32 bit core</a>, <a href="<%= jenkins_link("player-win64", "bin/easyrpg_libretro_x64.zip") %>">Windows 64 bit core</a>
 					<br>
 					These cores require at least Windows Vista.
 				</p>
 				<p>
-					<a href="https://ci.easyrpg.org/job/player-macos/lastSuccessfulBuild/artifact/osxbuild-libretro/easyrpg_libretro_macos.zip">macOS 64-bit (Intel) core</a>
+					<a href="<%= jenkins_link("player-macos", "osxbuild-libretro/easyrpg_libretro_macos.zip") %>">macOS 64-bit (Intel) core</a>
 				</p>
 			</div>
 			<div id="snapshot-other">
 				<h4>Other contributed ports</h4>
 				<p>
-					<a href="https://ci.easyrpg.org/job/player-wii/lastSuccessfulBuild/artifact/easyrpg-player-wii.zip">Wii (.dol)</a>
+					<a href="<%= jenkins_link("player-wii", "easyrpg-player-wii.zip") %>">Wii (.dol)</a>
 					<br>
 					This needs a homebrew-enabled console with "Homebrew Channel" installed. Games are searched in the same directory as the dol.
 				</p>
 				<p>
-					<a href="https://ci.easyrpg.org/job/player-3ds/lastSuccessfulBuild/artifact/easyrpg-player-3ds.zip">Nintendo 3DS (3dsx)</a>,
-					<a href="https://ci.easyrpg.org/job/player-3ds/lastSuccessfulBuild/artifact/easyrpg-player.cia">Nintendo 3DS (CIA)</a>
+					<a href="<%= jenkins_link("player-3ds", "easyrpg-player-3ds.zip") %>">Nintendo 3DS (3dsx)</a>,
+					<a href="<%= jenkins_link("player-3ds", "easyrpg-player.cia") %>">Nintendo 3DS (CIA)</a>
 					<br>
 					This needs a homebrew-enabled console with "Homebrew Launcher" (for 3dsx) or a custom firmware (for CIA) installed. The CIA searches for games in sdcard:/3ds/easyrpg-player.
 				</p>
 				<p>
-					<a href="https://ci.easyrpg.org/job/player-vita/lastSuccessfulBuild/artifact/easyrpg-player-psvita.zip">PlayStation Vita</a>
+					<a href="<%= jenkins_link("player-vita", "easyrpg-player-psvita.zip") %>">PlayStation Vita</a>
 					<br>
 					This needs a homebrew-enabled console by running the HENkaku exploit. Games are searched in ux0:/data/easyrpg-player.
 				</p>
 				<p>
-					<a href="https://ci.easyrpg.org/job/player-switch/lastSuccessfulBuild/artifact/easyrpg-player-switch.zip">Nintendo Switch</a>
+					<a href="<%= jenkins_link("player-switch", "easyrpg-player-switch.zip") %>">Nintendo Switch</a>
 					<br>
 					This needs a homebrew-enabled console with "Homebrew Launcher" installed. Games are searched in the same directory as the nro.
 				</p>
@@ -271,9 +271,9 @@ menu_weight: 3
 			</div>
 			<div id="snapshot-source">
 				<h4>Source Code</h4>
-				<a href="https://ci.easyrpg.org/job/player-linux/lastSuccessfulBuild/artifact/easyrpg-player-<%= ver_master %>.tar.gz">Player source package</a>
+				<a href="<%= jenkins_link("player-linux", "easyrpg-player-" + ver_master + ".tar.gz") %>">Player source package</a>
 				<br>
-				<a href="https://ci.easyrpg.org/job/liblcf-linux/lastSuccessfulBuild/artifact/liblcf-<%= ver_lcf %>.tar.gz">liblcf source package</a>
+				<a href="<%= jenkins_link("liblcf-linux", "liblcf-" + ver_lcf + ".tar.gz") %>">liblcf source package</a>
 			</div>
 		</div>
 	</div>
