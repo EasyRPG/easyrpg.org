@@ -39,6 +39,9 @@ route '/**/*.{html,md}' do
   # error page
   elsif item.identifier =~ '/404.html'
     '/404.html'
+  # section home
+  elsif item.identifier =~ '**/index.*'
+    item.identifier.without_ext + ".html"
   # every other page
   else
     item.identifier.without_ext + '/index.html'

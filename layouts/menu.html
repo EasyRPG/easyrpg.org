@@ -1,6 +1,6 @@
 <% if not @item[:no_menu] and not @item[:is_hidden] %>
   <ul class="menu">
-    <li><%= link_to_upper_page("&#x25B2;") %></li>
+    <li><%= link_to_upper_page() %></li>
   <% navigation_for(@item).each do |index, target| %>
     <li><%= link_to_unless_current(target[:text], target[:link]) %></li>
   <% end %>
