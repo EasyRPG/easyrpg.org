@@ -233,7 +233,7 @@ $darkgrey: #202020;
 						}
 					}
 
-					span {
+					span.active {
 						display: inline-block;
 						height: $mheight;
 						padding: 0 1em;
@@ -241,6 +241,22 @@ $darkgrey: #202020;
 						text-decoration: none;
 					}
 				}
+			}
+		}
+	}
+
+	/* Footer */
+	#footer {
+		font-size: 11px;
+		text-align: center;
+		padding: 0.5em;
+
+		a {
+			color: $lightgrey;
+			text-decoration: none;
+
+			&:hover {
+				color: $normalgreen;
 			}
 		}
 	}

@@ -41,6 +41,8 @@ html lang="en"
           .clear
       #content
         .maxwidth
-          - if @item[:section]
-            == render '/menu.*', :section => @item[:section]
+          == render '/menu.*'
           == yield
+    #footer
+      a href="/about/website"
+        | © 2007-#{Date.today.year} The EasyRPG project. Some rights reserved.

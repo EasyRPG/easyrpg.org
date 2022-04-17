@@ -1,31 +1,16 @@
 
-# allow partial layouts (menu/submenu)
-include Nanoc::Helpers::Rendering
-# generate links to specific items
-include Nanoc::Helpers::LinkTo
+def jenkins_link(job, file)
+	return "https://ci.easyrpg.org/job/" + job + "/lastSuccessfulBuild/artifact/" + file
+end
 
-def link_to_upper_page(text, attributes = {})
-  p = @item_rep.path
+def media_img(file, alt)
+	return "[![" + alt + "](/images/thumbs/" + file + ")](/images/" + file + " '" + alt + "')"
+end
 
-  # link from each subsection to section
-  if p =~ /(\/[^\/]*\/)[^\/]*\//
-    target = $1
-
-    if target == "/contribute/"
-      upper = "Introduction"
-    else
-      upper = "Overview"
-    end
-  # link from each section to about page
-  elsif p =~ /\/[^\/]*\//
-    target = "/about/"
-    upper = "About"
-  end
-
-  # set corresponding title, if not set
-  if not attributes.key?(:title) then
-    attributes[:title] = "Back to #{upper} page"
-  end
-
-  link_to(text, target, attributes)
+def media_vid(file, title = nil)
+	thumb = Pathname.new(file).sub_ext(".png").to_s
+	if not title
+		title = "[video]"
+	end
+	return "[![[video]](/videos/thumbs/" + thumb + ")](/videos/" + file + " '" + title + "')"
 end
