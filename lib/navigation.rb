@@ -20,7 +20,7 @@ def link_to_upper_page(attributes = {})
   attributes[:class] = "upper"
   attributes[:title] = "Back to #{upper} page"
 
-  link_to("&orarr; " + upper, target, attributes)
+  link_to("↻ " + upper, target, attributes)
 end
 
 def navigation_for(item)

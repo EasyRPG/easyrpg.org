@@ -26,25 +26,21 @@ title: About the EasyRPG Homepage
 - Ben Beltran
 - carstene1ns (additions, modifications, scss port)
 
-## Techniques used
+## Technologies used
 
-- HTML5
-- CSS3
 - Nanoc static site generator - <https://nanoc.app>
 - kramdown markdown superset converter - <https://kramdown.gettalong.org/>
+- Sass <https://sass-lang.com>
 
 ### 3rd party software
 
 Included are the following 3rd party software:
 
-- jQuery - <https://jquery.com> - Copyright &copy; JS Foundation and other
+- jQuery - <https://jquery.com> - Copyright © JS Foundation and other
   contributors, provided under the MIT license
-
 - Magnific Popup - <https://dimsemenov.com/plugins/magnific-popup/>
-  \- Copyright &copy; 2014-2016 Dmitry Semenov, provided under the MIT license
-
+  \- Copyright © 2014-2016 Dmitry Semenov, provided under the MIT license
 - Favicons have been processed by <https://realfavicongenerator.net>
-
 - IRC contact page is provided by <https://kiwiirc.com>
 
 ### Cookies
@@ -54,7 +50,8 @@ The Homepage itself does not use cookies. However, the external hosted sites
 
 ### Repository
 
-Homepage development is hosted by GitHub, project files are available in this git repository:
+Homepage development is hosted by GitHub, project files are available
+in this git repository:
 
 <https://github.com/EasyRPG/easyrpg.org>
 
