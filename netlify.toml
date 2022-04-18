@@ -1,0 +1,11 @@
+[build]
+  publish = "output/"
+  command = "nanoc"
+  ignore = "bash .netlify/ignore_build.sh"
+
+[build.environment]
+  RUBY_VERSION = "3.0.2"
+  HOMEBREW_BUNDLE_FILE = ".netlify/Brewfile"
+
+[context.master]
+  command = "bash .netlify/build_master.sh"

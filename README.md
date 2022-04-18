@@ -53,6 +53,11 @@ $ make distclean # Remove any generated files and bundled gems
 $ make install   # Install gems and configure environment
 ```
 
+## CI on netlify [![Netlify Status][netlify-img]][netlify-deploy]
+
+Site is available in a namespace at https://easyrpg.netlify.app
+Pull request builds will be linked automatically after CI run.
+
 
 ## Bug reporting
 
@@ -87,10 +92,11 @@ Included are the following 3rd party software:
 
 * IRC contact page is provided by https://kiwiirc.com
 
-
-[#easyrpg at Libera Chat]: https://kiwiirc.com/nextclient/#ircs://irc.libera.chat/#easyrpg?nick=rpgguest??
 [ruby]: https://www.ruby-lang.org
 [nanoc]: https://nanoc.ws/
 [tidy-html5]: http://www.html-tidy.org
 [some gems]: Gemfile
+[netlify-img]: https://api.netlify.com/api/v1/badges/697e9cfb-4ea6-4945-8ddd-9384735e0b0f/deploy-status
+[netlify-deploy]: https://app.netlify.com/sites/easyrpg/deploys
+[#easyrpg at Libera Chat]: https://kiwiirc.com/nextclient/#ircs://irc.libera.chat/#easyrpg?nick=rpgguest??
 [issue #5]: https://github.com/EasyRPG/easyrpg.org/issues/5
