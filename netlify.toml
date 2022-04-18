@@ -1,7 +1,6 @@
 [build]
   publish = "output/"
   command = "nanoc"
-  ignore = "bash .netlify/ignore_build.sh"
 
 [build.environment]
   RUBY_VERSION = "3.0.2"
