@@ -55,7 +55,14 @@ def navigation_for(item)
 
     # special case subsection index
     if subsection == "index"
-      menu_name = "Overview"
+      case section
+      when "/search/"
+        menu_name = "🔍 Site search"
+      when "/contribute/"
+        menu_name = "Introduction"
+      else
+        menu_name = "Overview"
+      end
       link = section
       menu_weight = 100
     end

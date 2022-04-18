@@ -1,7 +1,7 @@
 ---
 title: About EasyRPG
 priority: 0.8
-menu_weight: 5
+menu_weight: 10
 ---
 <div class="info" markdown="1">
 

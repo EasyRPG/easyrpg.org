@@ -30,7 +30,8 @@ title: About the EasyRPG Homepage
 
 - Nanoc static site generator - <https://nanoc.app>
 - kramdown markdown superset converter - <https://kramdown.gettalong.org/>
-- Sass <https://sass-lang.com>
+- Sass - <https://sass-lang.com>
+- lunr client search engine - <https://lunrjs.com>
 
 ### 3rd party software
 
@@ -40,6 +41,8 @@ Included are the following 3rd party software:
   contributors, provided under the MIT license
 - Magnific Popup - <https://dimsemenov.com/plugins/magnific-popup/>
   \- Copyright © 2014-2016 Dmitry Semenov, provided under the MIT license
+- lunr - Copyright © 2013 by Oliver Nightingale, provided under the
+  MIT license
 - Favicons have been processed by <https://realfavicongenerator.net>
 - IRC contact page is provided by <https://kiwiirc.com>
 

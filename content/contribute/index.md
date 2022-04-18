@@ -1,7 +1,7 @@
 ---
-title: How to Contribute
+title: "How to Contribute: Introduction"
 priority: 0.8
-menu_weight: 0
+menu_weight: 1
 ---
 <div class="info" markdown="1">
 

@@ -1,5 +1,5 @@
 ---
-title: How to Contribute
+title: "How to Contribute: Translators"
 menu_weight: 1
 ---
 <div class="info" markdown="1">

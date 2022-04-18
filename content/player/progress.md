@@ -1,5 +1,5 @@
 ---
-title: EasyRPG Player
+title: "EasyRPG Player: Progress"
 menu_weight: 4
 ---
 <div class="info" markdown="1">

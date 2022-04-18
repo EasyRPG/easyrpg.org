@@ -1,7 +1,7 @@
 ---
-title: EasyRPG Tools
+title: "EasyRPG Tools: Overview"
 priority: 0.7
-menu_weight: 2
+menu_weight: 3
 ---
 <div class="info" markdown="1">
 
