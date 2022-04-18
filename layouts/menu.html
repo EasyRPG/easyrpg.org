@@ -4,5 +4,16 @@
   <% navigation_for(@item).each do |index, target| %>
     <li><%= link_to_unless_current(target[:text], target[:link]) %></li>
   <% end %>
+  <% if @item.identifier.components[0] != "search" %>
+    <li><button title="Search Site" id="show-search">🔍</button></li>
+  <% end %>
   </ul>
+  <% if @item.identifier.components[0] != "search" %>
+  <div id="search-overlay" class="hidden">
+    <button id="hide-search">×</button>
+    <div id="search-bar">
+    <%= render '/searchform.*' %>
+    </div>
+  </div>
+  <% end %>
 <% end %>

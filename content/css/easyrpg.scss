@@ -246,25 +246,94 @@ $darkgrey: #202020;
 	}
 
 	/* Search box and results */
-	form#search-form {
-		margin: 1em 0;
 
-		input {
+	form.search, #search-overlay {
+		input, button {
 			border: 2px solid $normalgreen;
-			margin: 4px 2px;
+			margin: 4px 0 2px;
 			padding: 10px 12px;
 			border-radius: 5px;
 		}
+
 		input[type=text] {
 			border-collapse: collapse;
-			width: 300px;
+			width: 400px;
 		}
-		input[type=submit] {
+
+		button {
 			background-color: $lightgrey;
 			color: black;
 			cursor: pointer;
 		}
 	}
+
+	form.search {
+		margin: 1em 0;
+	}
+
+	#show-search {
+		display: inline-block;
+		background-color: $darkgrey;
+		color: $lightgrey;
+		border: none;
+		height: 40px;
+		padding: 0 1em;
+		font-size: 1em;
+		cursor: pointer;
+		opacity: 0.8;
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	#search-overlay {
+		height: 100%;
+		width: 100%;
+		position: fixed;
+		z-index: 2;
+		top: 0;
+		left: 0;
+		background-color: rgba(40, 40, 40, 0.8);
+		transition: opacity 0.5s ease-in-out;
+
+		&.visible {
+			visibility: visible;
+			opacity: 1;
+		}
+
+		&.hidden {
+			position: absolute;
+			visibility: hidden;
+			opacity: 0;
+		}
+
+		&.transitioning {
+			visibility: visible;
+		}
+
+		#search-bar {
+			position: relative;
+			top: 46%;
+			width: 80%;
+			text-align: center;
+			margin: auto;
+		}
+
+		#hide-search {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			opacity: 0.8;
+			&:hover {
+				opacity: 1;
+			}
+		}
+
+		input, button {
+			font-size: 2em;
+		}
+	}
+
 	ul#search-results {
 		// entry height
 		$eheight: 32px;

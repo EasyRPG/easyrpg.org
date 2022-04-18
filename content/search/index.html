@@ -1,12 +1,7 @@
 ---
 title: Search on this site
-menu_name: 🔍 Site search
-menu_weight: -1
 ---
-<form action="/search/" id="search-form" class="search" method="get" >
-  <input name="q" type="text" id="search-input" placeholder="enter search term..." autofocus required>
-  <input type="submit" value="Search">
-</form>
+<%= render '/searchform.*' %>
 <h2 id="search-heading"></h2>
 <ul id="search-results"></ul>
 <script src="/js/vendor/lunr.min.js"></script>
