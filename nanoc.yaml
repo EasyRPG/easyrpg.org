@@ -78,7 +78,3 @@ checks:
 
 # The base url for sitemaps/rss et al.
 base_url: https://easyrpg.org
-
-environments:
-  pr:
-    base_url: https://ci.easyrpg.org/job/website-pr/ws/output
