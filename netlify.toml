@@ -1,0 +1,23 @@
+[build]
+  publish = "output/"
+  command = "nanoc"
+
+[build.environment]
+  RUBY_VERSION = "3.0.2"
+  HOMEBREW_BUNDLE_FILE = ".netlify/Brewfile"
+
+[context.master]
+  command = "bash .netlify/build_master.sh"
+
+[[redirects]]
+  from = "/player/manual"
+  to = "https://easyrpg.org/player/manual"
+[[redirects]]
+  from = "/player/doxydoc"
+  to = "https://easyrpg.org/player/doxydoc"
+[[redirects]]
+  from = "/play"
+  to = "https://easyrpg.org/play"
+[[redirects]]
+  from = "/videos"
+  to = "https://easyrpg.org/videos"
