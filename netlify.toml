@@ -3,7 +3,7 @@
   command = "nanoc"
 
 [build.environment]
-  RUBY_VERSION = "3.0.2"
+  RUBY_VERSION = "3.0.4"
   HOMEBREW_BUNDLE_FILE = ".netlify/Brewfile"
 
 [context.master]
