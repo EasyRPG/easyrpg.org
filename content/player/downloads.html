@@ -7,6 +7,7 @@ menu_weight: 3
 	oldver="0.6.2.3"
 
 	ver_master="0.7.0"
+	ver_pkg="0.7"
 
 	ver_lcf="0.7.0"
 	oldver_lcf="0.6.2"
@@ -45,13 +46,17 @@ menu_weight: 3
 			<div id="release-linux">
 				<h4>GNU/Linux</h4>
 				<p>
+					Some Distributions (Fedora, NixOS, Guix...) provide packages nowadays, so use your distribution's package if possible!
+				<p>
 					<a href="https://easyrpg.org/downloads/player/<%= ver %>/easyrpg-player-<%= ver %>-linux.tar.gz">Linux amd64 executable</a>
 					<br>
-					This is a debug build, it is not optimized and mainly used to find bugs. You likely want to
+					This is a debug build mainly used to find bugs, <b>there are no guarantees</b> it works on your installation.
+					<br>
+					It is not optimized, so you likely want to
 					<a href="https://wiki.easyrpg.org/development/compiling/player/autotools">build Player from source code</a> for faster game play.
 				</p>
 				<p>
-					<a id="obs-link" href="https://software.opensuse.org/download.html?project=home%3Aeasyrpg&amp;package=easyrpg-player&amp;bcolor=ffffff&amp;fcolor=000000&amp;hcolor=3C8025">Arch Linux, Debian, Ubuntu, Fedora and openSUSE packages</a>
+					<a id="obs-link" href="https://software.opensuse.org/download.html?project=home%3Aeasyrpg&amp;package=easyrpg-player&amp;bcolor=ffffff&amp;fcolor=000000&amp;hcolor=3C8025">Arch Linux, Debian, Ubuntu and openSUSE packages</a>
 					<br>
 					These are provided by us on the Open Build Service.
 				</p>
@@ -60,6 +65,9 @@ menu_weight: 3
 					<br>
 					These builds are not directly controlled by us.
 				</p>
+				<!-- <p>
+					<a id="flatpak-link" href="https://flathub.org/apps/details/org.easyrpg.player">Flatpak Linux packages</a>
+				</p> -->
 			</div>
 			<div id="release-macos">
 				<h4>macOS</h4>
@@ -133,16 +141,7 @@ menu_weight: 3
 				<p>
 					<em>The 3DS, PSVita and Switch ports have originally been contributed by <a href="https://rinnegatamante.it/site/" title="Website of Rinnegatamante">Rinnegatamante</a>.</em>
 				</p>
-				<p>
-					<a href="https://easyrpg.org/downloads/player/0.5.3/EasyRPG_Player-0.5.3-Windows-arm.zip">Windows RT (ARM)</a> (0.5.3)
-					<br>
-					This needs a device running in test-signing mode. 0.5.3 is the last release on this deprecated platform.
-				</p>
-				<p>
-					<a href="https://easyrpg.org/downloads/player/0.6.1/EasyRPG_Player-0.6.1-GCW-Zero.opk">GCW Zero (.opk)</a> (0.6.1)
-					<br>
-					0.6.1 is the last release on this platform for now, because the official toolchain is too old. We have built 0.6.2 with an updated toolchain, but this requires non-trivial updates of the device before, so we do not provide this version anymore.
-				</p>
+				<h4>Externally hosted packages</h4>
 				<p>
 					<a href="https://repo.openpandora.org/?page=detail&amp;app=easyrpgplayer_ptitseb">Open Pandora (.pnd)</a>
 					<br>
@@ -165,6 +164,17 @@ menu_weight: 3
 				<p>
 					Other external packages (e.g. BSD/Unix) can be found on
 					<a href="https://repology.org/project/easyrpg-player/versions">Repology</a>.
+				</p>
+				<h4>Deprecated packages, left for courtesy</h4>
+				<p>
+					<a href="https://easyrpg.org/downloads/player/0.5.3/EasyRPG_Player-0.5.3-Windows-arm.zip">Windows RT (ARM)</a> (0.5.3)
+					<br>
+					This needs a device running in test-signing mode. 0.5.3 is the last release on this platform, since it is dead.
+				</p>
+				<p>
+					<a href="https://easyrpg.org/downloads/player/0.6.1/EasyRPG_Player-0.6.1-GCW-Zero.opk">GCW Zero (.opk)</a> (0.6.1)
+					<br>
+					0.6.1 is the last release on this platform, because the official toolchain is too old. Though we have built 0.6.2 with an updated toolchain, this requires non-trivial updates of the device. So we do not provide this version anymore.
 				</p>
 			</div>
 			<div id="release-source">
@@ -202,8 +212,8 @@ menu_weight: 3
 			<div id="snapshot-windows">
 				<h4>Windows</h4>
 				<p>
-					<a href="<%= jenkins_link("player-win32", "bin/easyrpg_windows.zip") %>">Windows 32 bit executable</a>,
-					<a href="<%= jenkins_link("player-win64", "bin/easyrpg_windows_x64.zip") %>">Windows 64 bit executable</a>
+					<a href="https://ci.easyrpg.org/downloads/windows/easyrpg_windows.zip">Windows 32 bit executable</a>,
+					<a href="https://ci.easyrpg.org/downloads/windows/easyrpg_windows_x64.zip">Windows 64 bit executable</a>
 					<br>
 					These are meant as a drop-in replacement for the RPG_RT.exe and require at least Windows Vista.
 				</p>
@@ -211,22 +221,27 @@ menu_weight: 3
 			<div id="snapshot-linux">
 				<h4>GNU/Linux</h4>
 				<p>
-					<a href="<%= jenkins_link("player-linux", "easyrpg-player-static.tar.gz") %>">Linux amd64 executable</a>
+					<a href="https://ci.easyrpg.org/downloads/flatpak/EasyRPG-Player.flatpak">Flatpak (amd64)</a> (recommended)
+				</p>
+				<p>
+					<a href="https://ci.easyrpg.org/downloads/linux/easyrpg-player-static.tar.gz">Linux amd64 executable</a>
 					<br>
-					This is a debug build, it is not optimized and mainly used to find bugs. You likely want to
+					This is a debug build mainly used to find bugs, <b>there are no guarantees</b> it works on your installation.
+					<br>
+					It is not optimized, so you likely want to
 					<a href="https://wiki.easyrpg.org/development/compiling/player/autotools">build Player from source code</a> for faster game play.
 				</p>
 			</div>
 			<div id="snapshot-macos">
 				<h4>macOS</h4>
 				<p>
-					<a href="<%= jenkins_link("player-macos", "osxbuild/EasyRPG-Player-macos.app.zip") %>">macOS 64-bit (Intel) App Bundle</a>
+					<a href="https://ci.easyrpg.org/downloads/macos/EasyRPG-Player-macos.app.zip">macOS 64-bit (Intel) App Bundle</a>
 				</p>
 			</div>
 			<div id="snapshot-android">
 				<h4>Android</h4>
 				<p>
-					<a href="<%= jenkins_link("player-android", "builds/android/app/build/outputs/apk/EasyRpgPlayerActivity.apk") %>">Locally hosted App (.apk)</a>
+					<a href="https://ci.easyrpg.org/downloads/android/EasyRpgPlayerActivity.apk">Locally hosted App (.apk)</a>
 					<br>
 					Installing from "unknown sources" must be activated in the Android settings.
 				</p>
@@ -234,34 +249,36 @@ menu_weight: 3
 			<div id="snapshot-libretro">
 				<h4>libretro</h4>
 				<p>
-					<a href="<%= jenkins_link("player-win32", "bin/easyrpg_libretro.zip") %>">Windows 32 bit core</a>, <a href="<%= jenkins_link("player-win64", "bin/easyrpg_libretro_x64.zip") %>">Windows 64 bit core</a>
+					<a href="https://ci.easyrpg.org/downloads/libretro/easyrpg_libretro_win32.zip">Windows 32 bit core</a>,
+					<a href="https://ci.easyrpg.org/downloads/libretro/easyrpg_libretro_win64.zip">Windows 64 bit core</a>
 					<br>
 					These cores require at least Windows Vista.
 				</p>
 				<p>
-					<a href="<%= jenkins_link("player-macos", "osxbuild-libretro/easyrpg_libretro_macos.zip") %>">macOS 64-bit (Intel) core</a>
+					<a href="https://ci.easyrpg.org/downloads/libretro/easyrpg_libretro_macos.zip">macOS 64-bit (Intel) core</a>
 				</p>
 			</div>
 			<div id="snapshot-other">
 				<h4>Other contributed ports</h4>
 				<p>
-					<a href="<%= jenkins_link("player-wii", "easyrpg-player-wii.zip") %>">Wii (.dol)</a>
+
+					<a href="https://ci.easyrpg.org/downloads/wii/easyrpg-player-wii.zip">Wii (.dol)</a>
 					<br>
 					This needs a homebrew-enabled console with "Homebrew Channel" installed. Games are searched in the same directory as the dol.
 				</p>
 				<p>
-					<a href="<%= jenkins_link("player-3ds", "easyrpg-player-3ds.zip") %>">Nintendo 3DS (3dsx)</a>,
-					<a href="<%= jenkins_link("player-3ds", "easyrpg-player.cia") %>">Nintendo 3DS (CIA)</a>
+					<a href="https://ci.easyrpg.org/downloads/3ds/easyrpg-player-3ds.zip">Nintendo 3DS (3dsx)</a>,
+					<a href="https://ci.easyrpg.org/downloads/3ds/easyrpg-player.cia">Nintendo 3DS (CIA)</a>
 					<br>
 					This needs a homebrew-enabled console with "Homebrew Launcher" (for 3dsx) or a custom firmware (for CIA) installed. The CIA searches for games in sdcard:/3ds/easyrpg-player.
 				</p>
 				<p>
-					<a href="<%= jenkins_link("player-vita", "easyrpg-player-psvita.zip") %>">PlayStation Vita</a>
+					<a href="https://ci.easyrpg.org/downloads/psvita/easyrpg-player-psvita.zip">PlayStation Vita</a>
 					<br>
 					This needs a homebrew-enabled console by running the HENkaku exploit. Games are searched in ux0:/data/easyrpg-player.
 				</p>
 				<p>
-					<a href="<%= jenkins_link("player-switch", "easyrpg-player-switch.zip") %>">Nintendo Switch</a>
+					<a href="https://ci.easyrpg.org/downloads/switch/easyrpg-player-switch.zip">Nintendo Switch</a>
 					<br>
 					This needs a homebrew-enabled console with "Homebrew Launcher" installed. Games are searched in the same directory as the nro.
 				</p>
@@ -271,9 +288,9 @@ menu_weight: 3
 			</div>
 			<div id="snapshot-source">
 				<h4>Source Code</h4>
-				<a href="<%= jenkins_link("player-linux", "easyrpg-player-" + ver_master + ".tar.gz") %>">Player source package</a>
+				<a href="https://ci.easyrpg.org/downloads/source/easyrpg-player-<%= ver_pkg %>.tar.gz">Player source package</a>
 				<br>
-				<a href="<%= jenkins_link("liblcf-linux", "liblcf-" + ver_lcf + ".tar.gz") %>">liblcf source package</a>
+				<a href="https://ci.easyrpg.org/downloads/source/liblcf-<%= ver_lcf %>.tar.gz">liblcf source package</a>
 			</div>
 		</div>
 	</div>
