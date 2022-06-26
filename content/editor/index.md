@@ -1,8 +1,8 @@
 ---
-title: EasyRPG Editor
+title: "EasyRPG Editor: Overview"
 priority: 0.7
 menu_name: EasyRPG Editor
-menu_weight: 1
+menu_weight: 6
 ---
 <div class="info" markdown="1">
 

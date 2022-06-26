@@ -1,9 +1,4 @@
 
-# allow partial layouts (menu/submenu)
-include Nanoc::Helpers::Rendering
-# generate links to specific items
-include Nanoc::Helpers::LinkTo
-
 def link_to_upper_page(attributes = {})
   p = @item_rep.path
 
@@ -45,7 +40,8 @@ def navigation_for(item)
     next if not it.identifier.to_s.end_with?(".html", ".md")
     next if it[:is_hidden] # e.g. 404
     next if it[:no_menu] # e.g. contact
-    next if it.identifier.to_s == "/index.html" # homepage
+    next if it.identifier =~ "/index.*" # homepage
+    next if it.identifier =~ '/search/*' # search
 
     # defaults
     subsection = it.identifier.components[part].split(".")[0]
@@ -55,7 +51,7 @@ def navigation_for(item)
 
     # special case subsection index
     if subsection == "index"
-      menu_name = "Overview"
+      menu_name = it[:title].include?(":") ? it[:title].split(":")[1].strip : "Start"
       link = section
       menu_weight = 100
     end

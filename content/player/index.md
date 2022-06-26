@@ -1,8 +1,8 @@
 ---
-title: EasyRPG Player
+title: "EasyRPG Player: Overview"
 priority: 0.7
 menu_name: EasyRPG Player
-menu_weight: 4
+menu_weight: 8
 ---
 <div class="info" markdown="1">
 

@@ -1,5 +1,5 @@
 ---
-title: EasyRPG Player
+title: "EasyRPG Player: Media"
 menu_weight: 2
 ---
 <div class="info" markdown="1">

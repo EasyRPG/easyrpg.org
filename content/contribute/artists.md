@@ -1,5 +1,5 @@
 ---
-title: How to Contribute
+title: "How to Contribute: Artists"
 menu_weight: 3
 ---
 <div class="info" markdown="1">

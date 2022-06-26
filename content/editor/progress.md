@@ -1,5 +1,5 @@
 ---
-title: EasyRPG Editor
+title: "EasyRPG Editor: Progress"
 menu_weight: 3
 ---
 <div class="info" markdown="1">

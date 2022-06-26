@@ -1,5 +1,5 @@
 ---
-title: EasyRPG Tools
+title: "EasyRPG Tools: Downloads"
 menu_weight: 2
 ---
 <div class="info" markdown="1">

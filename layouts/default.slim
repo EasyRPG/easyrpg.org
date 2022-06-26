@@ -3,7 +3,7 @@ html lang="en"
   head
     meta charset="utf-8"
     - if @item[:title]
-      title EasyRPG: #{@item[:title]}
+      title = @item[:title]
     - else
       title EasyRPG
     meta name="generator" content="Nanoc #{Nanoc::VERSION}"
@@ -20,6 +20,7 @@ html lang="en"
     link rel="stylesheet" href="/css/easyrpg.css"
     link rel="stylesheet" href="/css/rouge-github-dark.css"
     script src="/js/vendor/jquery-2.2.4.min.js"
+    script src="/js/search.js"
   body
     #header
       .maxwidth
@@ -37,7 +38,7 @@ html lang="en"
       #spotlight
         .maxwidth
           #section-title
-            h1 = @item[:title]
+            h1 = @item[:title].split(":")[0]
           .clear
       #content
         .maxwidth

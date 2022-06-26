@@ -88,6 +88,9 @@ Included are the following 3rd party software:
 * Magnific Popup - http://dimsemenov.com/plugins/magnific-popup/ -
   Copyright (c) 2014-2016 Dmitry Semenov, provided under the MIT license
 
+* lunr - https://lunrjs.com - Copyright (c) 2013 by Oliver Nightingale,
+  provided under the MIT license
+
 * Favicons have been processed by https://realfavicongenerator.net
 
 * IRC contact page is provided by https://kiwiirc.com

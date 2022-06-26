@@ -17,9 +17,9 @@ compile '/**/*.scss' do
   write item.identifier.without_ext + '.css'
 end
 
-compile '/sitemap.xml' do
+compile '/{sitemap.xml,js/search-index.js}' do
   filter :erb
-  write '/sitemap.xml'
+  write item.identifier
 end
 
 compile '/htaccess.txt' do

@@ -1,5 +1,5 @@
 ---
-title: "EasyRPG Player"
+title: "EasyRPG Player: Guide webplayer"
 ---
 
 <div class="info" markdown="1">
