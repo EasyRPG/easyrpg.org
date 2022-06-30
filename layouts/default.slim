@@ -23,14 +23,20 @@ html lang="en"
   body
     #header
       .maxwidth
-        h1: a href="/" title="Home" EasyRPG
-        ul
-          li: a href="https://blog.easyrpg.org" Blog
-          li: a href="https://community.easyrpg.org" Community
-          li: a href="https://wiki.easyrpg.org" Wiki
-          li: a href="https://github.com/EasyRPG/" Code
-          li: a href="https://ci.easyrpg.org" CI
-          li: a href="/contact" Contact
+        nav.top-nav
+          a.logo href="/" title="Home" EasyRPG
+          input id="menu-toggle" type="checkbox"
+          label.menu-button-container for="menu-toggle"
+            span.menu-button
+              /! burger
+          ul.menu
+            li: a href="https://blog.easyrpg.org" Blog
+            li: a href="https://community.easyrpg.org" Community
+            li: a href="https://wiki.easyrpg.org" Wiki
+            li: a href="https://github.com/EasyRPG/" Code
+            li: a href="https://ci.easyrpg.org" CI
+            li: a href="/contact" Contact
+    / front page gets special treatment
     - if @item[:has_spotlight]
       == yield
     - else
