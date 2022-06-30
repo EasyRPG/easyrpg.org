@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+ignore '/github/**/*'
+
 preprocess do
   hide_items_from_sitemap
 end
