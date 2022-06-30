@@ -36,4 +36,4 @@ menu_weight: 2
 <%= media_vid("battle.webm", "Battle Test Player vs. RPG_RT") %>
 
 <script src="/js/vendor/jquery.magnific-popup.min.js"></script>
-<script src="/js/media-pages.js"></script>
+<script src="<%= @items['/js/media-pages.js'].path %>"></script>

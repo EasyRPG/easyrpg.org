@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+require 'ruby-xxhash'
+
 preprocess do
   hide_items_from_sitemap
 end
@@ -9,13 +11,32 @@ compile '/**/*.{html,md}' do
   filter :kramdown, auto_ids: false if item.identifier =~ '/**/*.md'
   filter :colorize_syntax, :default_colorizer => :rouge
   layout '/default.*'
-  filter :tidy if ENV['NANOC_ENV'] != 'pr'
+  # enhance quotes and such
+  filter :typogruby
+  # pretty-print, find errors
+  filter :tidy if @config[:prod]
 end
 
-compile '/**/*.scss' do
-  filter :sass, :syntax => :scss
-  write item.identifier.without_ext + '.css'
+compile '/{css/*.scss,js/*.js}' do
+  ext = "." + item.identifier.ext
+  if ext == '.scss'
+    filter :sass, {
+      :syntax => :scss,
+      :style => (@config[:prod] ? :compressed : :compact)
+    }
+    ext = ".css"
+  end
+
+  # compress and use a hash to avoid caching issues
+  if @config[:prod]
+    filter :yui_compressor, :type => :js if ext == ".js"
+    checksum = XXhash.xxh32(File.read(item[:filename]), 0xEA51)
+    write item.identifier.without_ext + '-' + checksum.to_s + ".min" + ext
+  else
+    write item.identifier.without_ext + ext
+  end
 end
+ignore '/css/**/*'
 
 compile '/sitemap.xml' do
   filter :erb
@@ -44,5 +65,8 @@ end
 
 passthrough '/**/*'
 
-layout '/**/*.slim', :slim
+layout '/**/*.slim', :slim, {
+  pretty: (@config[:prod] ? false : true),
+  sort_attrs: false
+}
 layout '/**/*.html', :erb

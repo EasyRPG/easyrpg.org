@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+/*! EasyRPG.org style */
+
 // global variables → color scheme
 $normalgreen: #66A352;
 $backgroundgreen: #3C8025;
@@ -86,6 +88,18 @@ $darkgrey: #202020;
 		padding: 0.2em 0.8em;
 	}
 
+	/* Typogruby enhancements */
+	span.dquo {
+		margin-left: -0.5em;
+	}
+	span.caps {
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+	span.amp {
+		font-style: italic;
+	}
+
 	/* Header */
 	#header {
 		background-color: $darkgrey;
@@ -94,95 +108,6 @@ $darkgrey: #202020;
 		position: relative;
 		z-index: 1;
 		text-align: right;
-
-		/* Menu */
-		.top-nav {
-			box-sizing: border-box;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: space-between;
-			height: 50px;
-
-			/* Logo */
-			a.logo {
-				display: block;
-				padding: 6px;
-				background-image: url(/images/easyrpg-logo.png);
-				background-repeat: no-repeat;
-				background-position: center;
-				text-align: left;
-				text-indent: -200em;
-				overflow: hidden;
-				width: 140px;
-				height: 38px;
-			}
-
-			.menu {
-				display: flex;
-				flex-direction: row;
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-				& > li {
-					overflow: hidden;
-					& > a {
-						color: $lightgrey;
-						text-decoration: none;
-						font-size: 1.1429em;
-						padding: 0.98em 0.5em;
-					}
-				}
-			}
-
-			.menu-button-container {
-				display: none;
-				height: 100%;
-				width: 30px;
-				cursor: pointer;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-			}
-
-			.menu-button, .menu-button::before, .menu-button::after {
-				display: block;
-				background-color: #fff;
-				position: absolute;
-				height: 4px;
-				width: 30px;
-				border-radius: 1px;
-				transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
-			}
-
-			.menu-button::before {
-				content: '';
-				margin-top: -8px;
-			}
-
-			.menu-button::after {
-				content: '';
-				margin-top: 8px;
-			}
-
-			#menu-toggle {
-				display: none;
-
-				&:checked + .menu-button-container {
-					.menu-button::before {
-						margin-top: 0px;
-						transform: rotate(405deg);
-					}
-					.menu-button {
-						background: rgba(255, 255, 255, 0);
-					}
-					.menu-button::after {
-						margin-top: 0px;
-						transform: rotate(-405deg);
-					}
-				}
-			}
-		}
 	}
 
 	/* Spotlight */
@@ -391,114 +316,13 @@ $darkgrey: #202020;
 		clear: both;
 	}
 
-	/* Download page tabs */
-	.tab-container {
-		.panel-container {
-			background: #fff;
-			border: solid #666 1px;
-			padding: 10px;
-			border-radius: 4px;
-			margin-bottom: 10px;
-		}
-
-		ul.tabbar {
-			margin: 0;
-			padding: 0;
-
-			li.tab {
-				display: inline-block;
-				background: #D1D1D1 linear-gradient(to bottom, #ECECEC 50%, #D1D1D1 100%);
-				margin: 0 -5px;
-				border: solid 1px #999;
-				border-bottom: none;
-				border-radius: 4px 4px 0 0;
-				padding: 0 10px;
-
-				&.active {
-					background: #fff;
-					padding-top: 6px;
-					position: relative;
-					top: 1px;
-					border-color: #666;
-				}
-
-				a {
-					font-size: 14px;
-					line-height: 2em;
-					display: block;
-					padding: 0 10px;
-					outline: none;
-					text-decoration: none;
-					color: #333;
-
-					&:hover {
-						text-decoration: underline;
-					}
-
-					&.active {
-						font-weight: bold;
-						color: #000;
-					}
-				}
-			}
-		}
-	}
-
+	@import "bits/download-tabs.scss";
 }
 
-/* Responsiveness */
+@import "bits/burger-menu.scss";
 
-@media (max-width: 700px) {
+/*! End of EasyRPG.org style, imports follow. */
 
-	/* Menu */
-	#header .top-nav {
-		.menu-button-container {
-			margin-right: 0.8em;
-			display: flex;
-		}
 
-		.menu {
-			position: absolute;
-			top: 0;
-			margin-top: 50px;
-			left: 0;
-			flex-direction: column;
-			width: 100%;
-			justify-content: center;
-			align-items: center;
-
-			& > li {
-				display: flex;
-				justify-content: center;
-				margin: 0;
-				padding: 2em 0;
-				width: 100%;
-				color: white;
-				background-color: #222;
-			}
-
-			& > li:not(:last-child) {
-				border-bottom: 1px solid #444;
-			}
-		}
-
-		#menu-toggle ~ .menu li {
-			height: 0;
-			margin: 0;
-			padding: 0;
-			border: 0;
-			transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-			& a {
-				padding: 0.8em 0;
-				text-align: center;
-				width: 100%;
-			}
-		}
-		#menu-toggle:checked ~ .menu li {
-			border: 1px solid #333;
-			border-width: 1px 0;
-			height: auto;
-			transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-		}
-	}
-}
+@import "vendor/magnific-popup.scss";
+@import "vendor/rouge-github-dark.scss";

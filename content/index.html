@@ -67,5 +67,5 @@ has_spotlight: true
 <% # winter easter egg from december to february ;)
    if Date.today.next_month.month <= 3 %>
 <script src="/js/vendor/jquery.flurry.min.js"></script>
-<script src="/js/snowflakes.js"></script>
+<script src="<%= @items['/js/snowflakes.js'].path %>"></script>
 <% end %>

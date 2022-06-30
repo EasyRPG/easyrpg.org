@@ -85,7 +85,8 @@ base_url: https://easyrpg.org
 environments:
   development:
     base_url: http://localhost:3000
-#  production:
+  production:
+    prod: true
 #  pr:
   netlify:
     base_url: DEPLOY_PRIME_URL
