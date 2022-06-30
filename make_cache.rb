@@ -16,7 +16,6 @@ def fetch(repo)
         number: item["number"],
         is_pr: item.key?("pull_request")
       })
-      puts item["title"]
     }
     i += 1
   end
