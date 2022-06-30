@@ -5,11 +5,7 @@ default: compile
 	bin/nanoc view
 
 compile: .bundle
-ifdef PR
-	bin/nanoc --env=pr compile
-else
 	bin/nanoc compile
-endif
 
 all: clean compile check
 

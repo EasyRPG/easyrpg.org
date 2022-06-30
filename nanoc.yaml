@@ -81,3 +81,11 @@ checks:
 
 # The base url for sitemaps/rss et al.
 base_url: https://easyrpg.org
+
+environments:
+  development:
+    base_url: http://localhost:3000
+#  production:
+#  pr:
+  netlify:
+    base_url: DEPLOY_PRIME_URL

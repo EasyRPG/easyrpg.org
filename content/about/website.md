@@ -30,7 +30,7 @@ title: About the EasyRPG Homepage
 
 - Nanoc static site generator - <https://nanoc.app>
 - kramdown markdown superset converter - <https://kramdown.gettalong.org/>
-- Sass <https://sass-lang.com>
+- Sass - <https://sass-lang.com>
 
 ### 3rd party software
 
@@ -38,6 +38,11 @@ Included are the following 3rd party software:
 
 - jQuery - <https://jquery.com> - Copyright © JS Foundation and other
   contributors, provided under the MIT license
+- jQuery EasyTabs plugin - <https://os.alfajango.com/easytabs/> - Copyright ©
+  2010-2011 Steve Schwartz (JangoSteve), dual licensed under the MIT and GPL
+  licenses
+- Flurry jQuery Plugin - <https://github.com/joshmcrty/Flurry> - Copyright ©
+  2016 Josh McCarty, provided under the GPLv2 license
 - Magnific Popup - <https://dimsemenov.com/plugins/magnific-popup/>
   \- Copyright © 2014-2016 Dmitry Semenov, provided under the MIT license
 - Favicons have been processed by <https://realfavicongenerator.net>
