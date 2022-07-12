@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+/*! EasyRPG.org style */
+
 // global variables → color scheme
 $normalgreen: #66A352;
 $backgroundgreen: #3C8025;
@@ -86,6 +88,18 @@ $darkgrey: #202020;
 		padding: 0.2em 0.8em;
 	}
 
+	/* Typogruby enhancements */
+	span.dquo {
+		margin-left: -0.5em;
+	}
+	span.caps {
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+	span.amp {
+		font-style: italic;
+	}
+
 	/* Header */
 	#header {
 		background-color: $darkgrey;
@@ -94,48 +108,6 @@ $darkgrey: #202020;
 		position: relative;
 		z-index: 1;
 		text-align: right;
-
-		h1 {
-			float: left;
-			margin: 0;
-			text-align: left;
-
-			a {
-				display: block;
-				padding: 6px;
-				background-image: url(/images/easyrpg-logo.png);
-				background-repeat: no-repeat;
-				background-position: center;
-				text-indent: -200em;
-				overflow: hidden;
-				width: 140px;
-				height: 38px;
-			}
-		}
-
-		ul {
-			display: inline-block;
-			margin: 0;
-			padding: 0;
-			white-space: nowrap;
-
-			li {
-				display: inline;
-				line-height: 50px;
-				vertical-align: middle;
-
-				a {
-					color: $lightgrey;
-					text-decoration: none;
-					font-size: 1.1429em;
-					padding: 0.98em 0.39em;
-				}
-
-				&:hover {
-					color: $normalgreen;
-				}
-			}
-		}
 	}
 
 	/* Spotlight */
@@ -204,7 +176,7 @@ $darkgrey: #202020;
 				padding-left: 1.5em;
 			}
 
-			&.menu {
+			&.submenu {
 				// menu height
 				$mheight: 40px;
 
@@ -344,57 +316,13 @@ $darkgrey: #202020;
 		clear: both;
 	}
 
-	/* Download page tabs */
-	.tab-container {
-		.panel-container {
-			background: #fff;
-			border: solid #666 1px;
-			padding: 10px;
-			border-radius: 4px;
-			margin-bottom: 10px;
-		}
-
-		ul.tabbar {
-			margin: 0;
-			padding: 0;
-
-			li.tab {
-				display: inline-block;
-				background: #D1D1D1 linear-gradient(to bottom, #ECECEC 50%, #D1D1D1 100%);
-				margin: 0 -5px;
-				border: solid 1px #999;
-				border-bottom: none;
-				border-radius: 4px 4px 0 0;
-				padding: 0 10px;
-
-				&.active {
-					background: #fff;
-					padding-top: 6px;
-					position: relative;
-					top: 1px;
-					border-color: #666;
-				}
-
-				a {
-					font-size: 14px;
-					line-height: 2em;
-					display: block;
-					padding: 0 10px;
-					outline: none;
-					text-decoration: none;
-					color: #333;
-
-					&:hover {
-						text-decoration: underline;
-					}
-
-					&.active {
-						font-weight: bold;
-						color: #000;
-					}
-				}
-			}
-		}
-	}
-
+	@import "bits/download-tabs.scss";
 }
+
+@import "bits/burger-menu.scss";
+
+/*! End of EasyRPG.org style, imports follow. */
+
+
+@import "vendor/magnific-popup.scss";
+@import "vendor/rouge-github-dark.scss";

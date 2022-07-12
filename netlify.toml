@@ -1,13 +1,13 @@
 [build]
   publish = "output/"
-  command = "nanoc"
+  command = "bash .netlify/build.sh"
 
 [build.environment]
-  RUBY_VERSION = "3.0.4"
+#  RUBY_VERSION = "3.0.4"
   HOMEBREW_BUNDLE_FILE = ".netlify/Brewfile"
 
 [context.master]
-  command = "bash .netlify/build_master.sh"
+  command = "bash .netlify/build.sh redirect"
 
 [[redirects]]
   from = "/player/manual"

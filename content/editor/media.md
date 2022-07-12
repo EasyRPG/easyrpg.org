@@ -24,4 +24,4 @@ menu_weight: 1
 <%= media_vid("editor.webm", "Editor demo") %>
 
 <script src="/js/vendor/jquery.magnific-popup.min.js"></script>
-<script src="/js/media-pages.js"></script>
+<script src="<%= @items['/js/media-pages.js'].path %>"></script>
