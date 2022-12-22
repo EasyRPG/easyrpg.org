@@ -217,13 +217,13 @@ body {
     position: relative
 }
 
-#mainBlock,#mainBlock2 {
-    animation: a var(--animTime) linear 0s infinite;
+#mainBlock, #mainBlock2 {
+    /*     animation: a var(--animTime) linear 0s infinite; */
     position: absolute
 }
 
 #mainBlock {
-    background-image: url(/images/newLayout/loopbgA.png);
+    background-image: url(/images/newLayout/loopbgA.gif);
     height: 480px;
     width: 100vw
 }
@@ -235,10 +235,12 @@ body {
 }
 
 #mainBlock2 {
-    background-image: url(/images/newLayout/loopbgB.png);
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    margin: 0 auto
+    background-image: url(/images/newLayout/loopbgB.gif);
+    background-position: 50% 0px;
+    background-repeat: repeat-y;
+    margin: 0 auto;
+    margin-left: 190px;
+    /* opacity: .5; */
 }
 
 #mainBlock3 {
