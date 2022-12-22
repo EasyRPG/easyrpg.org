@@ -8,7 +8,7 @@ $backgroundgreen: #2d631d;
 $lightgrey: #F5F5F5;
 $darkgrey: #202020;
 
-@media screen {
+@media xscreen {
 
 	/* Main */
 	body {
@@ -164,7 +164,7 @@ $darkgrey: #202020;
 
 	/* Content */
 	#content {
-		background-color: $lightgrey;
+		// background-color: $lightgrey;
 		padding: 1px 0;
 
 		ul {
@@ -317,6 +317,9 @@ $darkgrey: #202020;
 	}
 
 	@import "bits/download-tabs.scss";
+
+
+
 }
 
 @import "bits/burger-menu.scss";
@@ -326,3 +329,8 @@ $darkgrey: #202020;
 
 @import "vendor/magnific-popup.scss";
 @import "vendor/rouge-github-dark.scss";
+
+@import "newLayout/modern-normalize.min.scss";
+@import "newLayout/font-awesome.min.css";
+@import "newLayout/main.scss";
+

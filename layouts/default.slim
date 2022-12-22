@@ -1,5 +1,4 @@
-doctype 5
-html lang="en"
+html[lang="en"]
   head
     meta charset="utf-8"
     - if @item[:title]
@@ -19,36 +18,232 @@ html lang="en"
     link rel="stylesheet" href="#{@items['/css/*'].path}"
     script src="/js/vendor/jquery-2.2.4.min.js"
   body
-    #header
-      .maxwidth
-        nav.top-nav
-          a.logo href="/" title="Home" EasyRPG
-          input id="menu-toggle" type="checkbox"
-          label.menu-button-container for="menu-toggle"
-            span.menu-button
-              /! burger
-          ul.menu
-            li: a href="https://blog.easyrpg.org" Blog
-            li: a href="https://community.easyrpg.org" Community
-            li: a href="https://wiki.easyrpg.org" Wiki
-            li: a href="https://github.com/EasyRPG/" Code
-            li: a href="https://ci.easyrpg.org" CI
-            li: a href="https://translate.easyrpg.org" Translate
-            li: a href="/privacy" Privacy
-            li: a href="/contact" Contact
-    / front page gets special treatment
-    - if @item[:has_spotlight]
-      == yield
-    - else
-      #spotlight
-        .maxwidth
-          #section-title
-            h1 = @item[:title]
-          .clear
-      #content
-        .maxwidth
-          == render '/menu.*'
-          == yield
-    #footer
-      a href="/about/website"
-        | © 2007-#{Date.today.year} The EasyRPG project. Some rights reserved.
+    title
+      | EASYRPG
+    link[rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"]
+    link[rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"]
+    == render '/header.*'
+    == render '/spotlight.*'
+      #spacer
+      a#topA[href="#"]
+        img#logo[src="https://raw.githubusercontent.com/jetrotal/OpenRTP-CheckList/gh-page/img/logo.svg"]
+        h1.logoText
+      #topB
+        .mainSubMenu
+          div
+            | Products
+          .menuItems
+            a.dummy
+            a[href="#"]
+              | Overview
+            a[href="#"]
+              | EasyRPG Player
+            a[href="#"]
+              | EasyRPG Editor
+            a[href="#"]
+              | OpenRTP
+            a[href="#"]
+              | Utility tools
+        .mainSubMenu
+          div
+            | Downloads
+          .menuItems
+            a.dummy
+            a[href="#"]
+              | Stable Builds
+            a[href="#"]
+              | Nightly Builds
+            a[href="#"]
+              | Source Code
+        .mainSubMenu
+          div
+            | Community
+          .menuItems
+            a.dummy
+            a[href="#"]
+              | Discussion Board
+            a[href="#"]
+              | Blog
+            a[href="#"]
+              | Twitter
+            a[href="#"]
+              | Instagram
+            a[href="#"]
+              | Facebook
+            a[href="#"]
+              | Wiki
+        .mainSubMenu
+          div
+            | Contact
+          .menuItems
+            a.dummy
+            a[href="#"]
+              | Discord Server
+            a[href="#"]
+              | Matrix
+            a[href="#"]
+              | IRC
+            a[href="#"]
+              | E-mail
+      #topC
+        .search-container
+          form[action="#"]
+            input[type="text" placeholder="Search" name="search"]
+            button[type="submit"]
+              i.fa.fa-search
+      #spacer
+ 
+      #spacer
+      .container
+        img[src="https://jetrotal.github.io/testing-stuff/poweredLogo.png"]
+        h5
+          a.logoText
+          |  is a community project aimed at developing an open source game engine that is compatible with RPG Maker 2000/2003 games. 
+          p
+            a[href="#a"]
+              | About
+            a[href="#b"]
+              | Player
+            a[href="#"]
+              | Editor
+            a[href="#"]
+              | RTP
+            a[href="#"]
+              | Tools
+      #spacer
+    .gallery-container
+      .gallery
+        .gallery-item
+          img.gallery-content[src="https://jetrotal.github.io/testing-stuff/gamesCard.png"]
+          #txt
+            h3
+              | Play Your Favorite Games
+            p
+              a.logoText
+              |  is used by developers all over the world to publish Classic and Modern RetroRPG Games! Check out some of the fantastic games that are available. 
+            h5
+              a[href="#"]
+                | Read More
+        .gallery-item
+          img.gallery-content[src="https://jetrotal.github.io/testing-stuff/portLogos.svg" style="filter: contrast(0.7);"]
+          #txt
+            h3
+              | Port Games from RPG Maker 2000/2003 
+            p
+              | The 
+              a.logoText
+              a.logoPlayer
+              |  supports a growing number of platforms, including Windows, Linux, OSX, Android, Libreretro, Nintendo Switch, PSVita, and Web Player. 
+            h5
+              a[href="#"]
+                | Read More
+        .gallery-item
+          img.gallery-content[src="https://jetrotal.github.io/testing-stuff/editorCard.png"]
+          #txt
+            h3
+              | An Opensource RPG Studio
+            p
+              | The 
+              a.logoText
+              a.logoEditor
+              |  gives you the tools you need to make all kinds of RPG games. It can read data from RPG Maker 2000/2003 games and has a slew of new features. 
+            h5
+              a[href="#"]
+                | Read More
+        .gallery-item
+          img.gallery-content[src="https://jetrotal.github.io/testing-stuff/ArtsCard.png"]
+          #txt
+            h3
+              | Artists Assemble!
+            p
+              | The 
+              a.logoRTP
+              |  Project is a collection of open sourced Video Game assets, created by artists of all types. There are over 200 assets, and the list is constantly expanding! 
+            h5
+              a[href="#"]
+                | Read More
+    br
+    footer
+      br
+      .footerLinks
+
+      .footerColumn
+
+      h3
+        | Products
+      ul
+        li
+      a[href="#"]
+        | Overview
+      li
+      a[href="#"]
+        | EasyRPG Player
+      li
+      a[href="#"]
+        | EasyRPG Editor
+      li
+      a[href="#"]
+        | OpenRTP
+      li
+      a[href="#"]
+        | Utility tools
+      .footerColumn
+
+      h3
+        | Downloads
+      ul
+        li
+      a[href="#"]
+        | Stable Builds
+      li
+      a[href="#"]
+        | Nightly Builds
+      li
+      a[href="#"]
+        | Source Code
+      .footerColumn
+
+      h3
+        | Community
+      ul
+        li
+      a[href="#"]
+        | Discussion Board
+      li
+      a[href="#"]
+        | Blog
+      li
+      a[href="#"]
+        | Twitter
+      li
+      a[href="#"]
+        | Instagram
+      li
+      a[href="#"]
+        | Facebook
+      li
+      a[href="#"]
+        | Wiki
+      .footerColumn
+
+      h3
+        | Contact
+      ul
+        li
+      a[href="#"]
+        | Discord Server
+      li
+      a[href="#"]
+        | Matrix
+      li
+      a[href="#"]
+        | IRC
+      li
+      a[href="#"]
+        | E-mail
+      small.footerLinks
+
+      .sep
+      .footerColumn
+        |  © 2007-#{Date.today.year} The EasyRPG project. Some rights reserved 
+      br
