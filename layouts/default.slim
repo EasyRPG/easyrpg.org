@@ -23,10 +23,15 @@ html[lang="en"]
     link[rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"]
     link[rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"]
     == render '/header.*'
+  - if @item[:has_spotlight]
     == render '/spotlight.*'
+  -else
+    br
+    br
     
+  - if @item[:has_spotlight]
     .gallery-container
-      == yield
+
       .gallery
         .gallery-item
           img.gallery-content[src="https://jetrotal.github.io/testing-stuff/gamesCard.png"]
@@ -77,5 +82,10 @@ html[lang="en"]
             h5
               a[href="#"]
                 | Read More
-    br
-    == render '/footer.*'
+  - else
+    .gallery-container
+      .maxwidth
+        == render '/menu.*'
+        == yield
+  br
+  == render '/footer.*'

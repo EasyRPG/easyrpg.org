@@ -498,3 +498,24 @@ footer {
     opacity: .1;
     width: 100vw
 }
+
+ul.submenu {
+    background-color: #202020;
+    margin-top: -1px;
+    margin-bottom: 0;
+    padding: 0 0.5em;
+    display: inline-block;
+    text-align: center;
+}
+
+ul.submenu li {
+    display: inline;
+    line-height: 40px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.maxwidth {
+    max-width: 980px;
+    margin: 0 auto;
+}
