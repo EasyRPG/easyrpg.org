@@ -1,6 +1,6 @@
 <div id="topBar">
   <div id="spacer"></div>
-  <a id="topA" href="#"><img id="logo" src="/images/newLayout/logo.svg">
+  <a id="topA" href="/"><img id="logo" src="/images/newLayout/logo.svg">
     <h1 class="logoText"></h1>
   </a>
   <div id="topB">
@@ -9,7 +9,12 @@
         Products
       </div>
       <div class="menuItems">
-        <a class="dummy"></a><a href="#">Overview</a><a href="#">EasyRPG Player</a><a href="#">EasyRPG Editor</a><a href="#">OpenRTP</a><a href="#">Utility tools</a>
+        <a class="dummy"></a>
+<a  href=<%= $links[:products][:overview] %>>Overview</a>
+<a  href=<%= $links[:products][:player]   %>>EasyRPG Player</a>
+<a  href=<%= $links[:products][:editor]   %>>EasyRPG Editor</a>
+<a  href=<%= $links[:products][:rtp]      %>>OpenRTP</a>
+<a  href=<%= $links[:products][:tools]    %>>Utility tools</a>
       </div>
     </div>
     <div class="mainSubMenu">
@@ -17,7 +22,10 @@
         Downloads
       </div>
       <div class="menuItems">
-        <a class="dummy"></a><a href="#">Stable Builds</a><a href="#">Nightly Builds</a><a href="#">Source Code</a>
+        <a class="dummy"></a>
+<a href=<%= $links[:downloads][:stable]  %>>Stable Builds</a>
+<a href=<%= $links[:downloads][:nightly] %>>Nightly Builds</a>
+<a href=<%= $links[:downloads][:source]  %>>Source Code</a>
       </div>
     </div>
     <div class="mainSubMenu">
@@ -25,7 +33,13 @@
         Community
       </div>
       <div class="menuItems">
-        <a class="dummy"></a><a href="#">Discussion Board</a><a href="#">Blog</a><a href="#">Twitter</a><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">Wiki</a>
+        <a class="dummy"></a>
+<a href=<%= $links[:community][:board]     %>>Discussion Board</a>
+<a href=<%= $links[:community][:blog]      %>>Blog</a>
+<a href=<%= $links[:community][:twitter]   %>>Twitter</a>
+<a href=<%= $links[:community][:instagram] %>>Instagram</a>
+<a href=<%= $links[:community][:facebook]  %>>Facebook</a>
+<a href=<%= $links[:community][:wiki]      %>>Wiki</a>
       </div>
     </div>
     <div class="mainSubMenu">
@@ -33,7 +47,11 @@
         Contact
       </div>
       <div class="menuItems">
-        <a class="dummy"></a><a href="#">Discord Server</a><a href="#">Matrix</a><a href="#">IRC</a><a href="#">E-mail</a>
+        <a class="dummy"></a>
+<a href=<%= $links[:contact][:discord] %>>Discord Server</a>
+<a href=<%= $links[:contact][:matrix]  %>>Matrix</a>
+<a href=<%= $links[:contact][:irc]     %>>IRC</a>
+<a href=<%= $links[:contact][:email]   %>>E-mail</a>
       </div>
     </div>
   </div>

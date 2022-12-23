@@ -70,3 +70,5 @@ layout '/**/*.slim', :slim, {
   sort_attrs: false
 }
 layout '/**/*.html', :erb
+
+layout '/**/*.rb', :rb

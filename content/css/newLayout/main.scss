@@ -240,6 +240,7 @@ body {
     background-repeat: repeat-y;
     margin: 0 auto;
     margin-left: 190px;
+    -webkit-mask: linear-gradient(90deg, transparent 10%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 70%, transparent 90%);
     /* opacity: .5; */
 }
 

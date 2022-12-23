@@ -1,3 +1,5 @@
+
+- links = Links.new.links
 html[lang="en"]
   head
     meta charset="utf-8"
@@ -18,100 +20,13 @@ html[lang="en"]
     link rel="stylesheet" href="#{@items['/css/*'].path}"
     script src="/js/vendor/jquery-2.2.4.min.js"
   body
-    title
-      | EASYRPG
     link[rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"]
     link[rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"]
     == render '/header.*'
     == render '/spotlight.*'
-      #spacer
-      a#topA[href="#"]
-        img#logo[src="https://raw.githubusercontent.com/jetrotal/OpenRTP-CheckList/gh-page/img/logo.svg"]
-        h1.logoText
-      #topB
-        .mainSubMenu
-          div
-            | Products
-          .menuItems
-            a.dummy
-            a[href="#"]
-              | Overview
-            a[href="#"]
-              | EasyRPG Player
-            a[href="#"]
-              | EasyRPG Editor
-            a[href="#"]
-              | OpenRTP
-            a[href="#"]
-              | Utility tools
-        .mainSubMenu
-          div
-            | Downloads
-          .menuItems
-            a.dummy
-            a[href="#"]
-              | Stable Builds
-            a[href="#"]
-              | Nightly Builds
-            a[href="#"]
-              | Source Code
-        .mainSubMenu
-          div
-            | Community
-          .menuItems
-            a.dummy
-            a[href="#"]
-              | Discussion Board
-            a[href="#"]
-              | Blog
-            a[href="#"]
-              | Twitter
-            a[href="#"]
-              | Instagram
-            a[href="#"]
-              | Facebook
-            a[href="#"]
-              | Wiki
-        .mainSubMenu
-          div
-            | Contact
-          .menuItems
-            a.dummy
-            a[href="#"]
-              | Discord Server
-            a[href="#"]
-              | Matrix
-            a[href="#"]
-              | IRC
-            a[href="#"]
-              | E-mail
-      #topC
-        .search-container
-          form[action="#"]
-            input[type="text" placeholder="Search" name="search"]
-            button[type="submit"]
-              i.fa.fa-search
-      #spacer
- 
-      #spacer
-      .container
-        img[src="https://jetrotal.github.io/testing-stuff/poweredLogo.png"]
-        h5
-          a.logoText
-          |  is a community project aimed at developing an open source game engine that is compatible with RPG Maker 2000/2003 games. 
-          p
-            a[href="#a"]
-              | About
-            a[href="#b"]
-              | Player
-            a[href="#"]
-              | Editor
-            a[href="#"]
-              | RTP
-            a[href="#"]
-              | Tools
-      #spacer
+    
     .gallery-container
+      == yield
       .gallery
         .gallery-item
           img.gallery-content[src="https://jetrotal.github.io/testing-stuff/gamesCard.png"]
@@ -163,87 +78,4 @@ html[lang="en"]
               a[href="#"]
                 | Read More
     br
-    footer
-      br
-      .footerLinks
-
-      .footerColumn
-
-      h3
-        | Products
-      ul
-        li
-      a[href="#"]
-        | Overview
-      li
-      a[href="#"]
-        | EasyRPG Player
-      li
-      a[href="#"]
-        | EasyRPG Editor
-      li
-      a[href="#"]
-        | OpenRTP
-      li
-      a[href="#"]
-        | Utility tools
-      .footerColumn
-
-      h3
-        | Downloads
-      ul
-        li
-      a[href="#"]
-        | Stable Builds
-      li
-      a[href="#"]
-        | Nightly Builds
-      li
-      a[href="#"]
-        | Source Code
-      .footerColumn
-
-      h3
-        | Community
-      ul
-        li
-      a[href="#"]
-        | Discussion Board
-      li
-      a[href="#"]
-        | Blog
-      li
-      a[href="#"]
-        | Twitter
-      li
-      a[href="#"]
-        | Instagram
-      li
-      a[href="#"]
-        | Facebook
-      li
-      a[href="#"]
-        | Wiki
-      .footerColumn
-
-      h3
-        | Contact
-      ul
-        li
-      a[href="#"]
-        | Discord Server
-      li
-      a[href="#"]
-        | Matrix
-      li
-      a[href="#"]
-        | IRC
-      li
-      a[href="#"]
-        | E-mail
-      small.footerLinks
-
-      .sep
-      .footerColumn
-        |  © 2007-#{Date.today.year} The EasyRPG project. Some rights reserved 
-      br
+    == render '/footer.*'
