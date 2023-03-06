@@ -50,8 +50,7 @@ You will get the following files and folder:
 
 If you want to _try it locally_ you need a HTTP server. Just opening the 
 ``index.html`` in your browser will not work. If you don't have a local 
-webserver the simplest way is installing Python and running ``python -m 
-http.server``. Then open ``http://localhost:8000/`` in your browser and navigate 
+webserver the simplest way is installing Python and running ``python -m http.server``. Then open ``http://localhost:8000/`` in your browser and navigate 
 to your directory.
 
 #### Deploying a game on your server
