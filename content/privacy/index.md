@@ -36,7 +36,7 @@ When you contribute to our repository an account is automatically created.
 
 We collect your username from GitHub.
 
-### [communuity.easyrpg.org](https://community.easyrpg.org)
+### [community.easyrpg.org](https://community.easyrpg.org)
 
 This website can contain 3rd party resources provided by user generated content.
 
