@@ -6,6 +6,8 @@ title: "EasyRPG Player"
 
 ## Translating games
 
+**This feature is under active development. Please use a continuous build.**
+
 ### Motivation
 
 Translating RPG Maker games is quite complicated and there are two possibilities:
@@ -20,7 +22,7 @@ The translation function in EasyRPG Player is similar to variant two, but is eas
 
 ### First Steps
 
-First create a new folder called ``languages`` in your game folder. In this folder you can now create further subfolders (one for each translation). The folder name does not matter. In the following we will call the folder ``LANGUAGE_NAME``.
+First create a new folder called ``Language`` in your game folder. In this folder you can create further subfolders (one for each translation). The folder name does not matter. In the following we will call the folder ``LANGUAGE_NAME``.
 
 In the folder ``LANGUAGE_NAME`` you must first create a file named ``Meta.ini`` with the following content:
 
@@ -28,9 +30,27 @@ In the folder ``LANGUAGE_NAME`` you must first create a file named ``Meta.ini`` 
 [Language]
 Name=Name of the Language Here
 Description=Short Description, e.g. the Author
+Code=The language code (IETF tag), e.g. "de_DE" for German
+Term=Translation of the word "Language" in the target language
 ~~~
 
 You may alter the texts to the right of the "is equal to" (=).
+
+``Name`` and ``Description`` are shown on the title screen of your game.
+
+The ``Code`` is required for proper text rendering and displaying the correct name input scene. Currently the Player has special support for the following codes but we recommend that the code is always given so that old translations can also benefit from updates.
+
+| Code      | Language                                |
+|-----------|-----------------------------------------|
+| ``ja_JP`` | Japanese                                |
+| ``ko_KR`` | Korean                                  |
+| ``ru_RU`` | Russian                                 |
+| ``zh_CN`` | Chinese (Simplified)                    |
+| ``zh_TW`` | Chinese (Traditional)                   |
+
+The value after ``Term`` is shown on the title screen for the "Language" menu entry when this translation is active.
+
+Now give it a try: When you run your game, you will see a new "Language" entry on the title screen. In this submenu you will find your entries from the ``Meta.ini``. If this works, you can now start translating.
 
 ### Generating language files
 
@@ -48,9 +68,9 @@ Under Windows navigate to ``LANGUAGE_NAME`` with the Windows Explorer and open a
 
 Under Linux or macOS, first open the console/terminal and then navigate to the folder ``LANGUAGE_NAME`` using ``cd``.
 
-``lcftrans`` has two modes: create (``-c``) and update (``-u``). For new projects you have to create the translations once and afterwards you must update them when you have added new texts to your game. **If you use the create mode again, all changes will be lost!**
+``lcftrans`` has three modes: create (``-c``), update (``-u``) and match (``-m``). For new projects you have to create the translations once and afterwards you must update them when you have added new texts to your game. **If you use the create mode again, all changes will be lost!**
 
-Now execute the following command in your console (assuming ``lcftrans`` is in the current directory):
+Execute the following command in your console (assuming ``lcftrans`` is in the current directory):
 
 ~~~ powershell
 .\lcftrans -c ../../ # Windows
@@ -69,11 +89,9 @@ After execution you will see a lot of po-files in the folder. These contain all 
 
 ### Translating text
 
-These po-files are text files. You can edit them with any text editor or with a special tool like [PoEdit](https://poedit.net/).
+These po-files are text files. You can edit them with any text editor, however we recommend special tools like [PoEdit](https://poedit.net/).
 
 If you use a plain text editor, note that your translations must be in ``msgstr`` and do not forget the ``\n`` at the end of each line.
-
-When you start the game in the player, a new menu item "Translation" will now appear on the title screen.
 
 ### Translating assets
 
@@ -81,7 +99,11 @@ Many games also contain text on graphics, and a few even have voiceover.
 
 These assets can also be translated. All you have to do is mirror the corresponding path in the translation folder.
 
-For example, the translated version of ``Picture/Intro.png`` is located in ``languages/LANGUAGE_NAME/Picture/Intro.png``.
+For example, the translated version of ``Picture/Intro.png`` is located in ``Language/LANGUAGE_NAME/Picture/Intro.png``.
+
+EasyRPG Player already supports the display of many languages, but you can also use your own font. To do so, place the files ``Font.ttf`` or ``Font2.ttf`` in ``Language/LANGUAGE_NAME/Fonts`` (besides ``ttf``, other formats such as ``fon`` or ``bdf`` are also supported). Which of the two files is used depends on the font setting of the system graphic.
+
+If the game already provides custom fonts and they are unsuitable for your translation add ``Font=Builtin`` to the ``Meta.ini`` to force the usage of the font bundled with EasyRPG Player.
 
 ### Updating translations
 
@@ -104,7 +126,7 @@ In some cases, the game is already available in multiple languages by directly t
 
 It is difficult to maintain several projects of the same game, especially when making updates.
 
-If you want to move such games to ``lcftrans``, you can use the _merge mode_.
+If you want to move such games to ``lcftrans``, you can use the _match mode_.
 
 In this mode  ``lcftrans`` can generate po-files containing both the source and the translation string.
 
@@ -125,9 +147,15 @@ Afterwards you will see that the strings from the translation were added to the 
 
 Do not forget to check the matching for correctness. This feature will save a lot of time but the result will contain errors!
 
+### Translating the default terms
+
+The default language of the game is displayed on the title screen as "Default language". These values can also be translated. To do this, create a new folder called ``default`` in the ``Language`` folder. Create a ``Meta.ini`` there as described above. The values of ``Name``, ``Description`` and ``Term`` are then applied to the default language. However, all other options and also the replacement of assets are not supported.
+
 ### Special commands
 
-Use ``<easyrpg:new_page>`` in your translation to force a page break. The message output will wait for user input and display an animated arrow.
+You can use the special commands within your translation. The commands must appear isolated on one line.
+
+Use ``<easyrpg:new_page>`` in your translation to force a page break. The message output will wait for user input and display an animated arrow. This command only works if it is in the middle of a message. It has no effect on the first and last line.
 
 Use ``<easyrpg:delete_page>`` in the first line of a translation to completely remove the message box. This is useful when the translation is shorter than the original.
 
