@@ -53,12 +53,11 @@ We collect:
 
 ### [wiki.easyrpg.org](https://wiki.easyrpg.org)
 
+For contributions an account in [our community](https://community.easyrpg.org) is required.
+
 When you contribute we collect:
 
 - A history of all your edits to pages (obviously)
-- Your username
-- Your name
-- Your e-mail address
 
 ## Our software (Player, Editor, Tools, liblcf and OpenRTP)
 
@@ -96,9 +95,9 @@ We use external service providers for the chat. The chat system is bridged. This
 
 We use external service providers to keep you up to date. By visiting these sites you agree to the terms and conditions:
 
-- [Facebook](https://facebook.com/privacy/policy)
-- [Instagram](https://privacycenter.instagram.com/policy)
-- [Twitter](https://twitter.com/de/privacy)
+- [Facebook Privacy Policy](https://facebook.com/privacy/policy)
+- [Instagram Privacy Policy](https://privacycenter.instagram.com/policy)
+- [Twitter Privacy Policy](https://twitter.com/de/privacy)
 
 ## Information disclosure to outside parties
 
