@@ -60,7 +60,7 @@ checks:
     # If an internal link matches this pattern, the validity check will be skipped.
     # E.g.:
     #   exclude: ['^/server_status']
-    exclude: ['^/player/manual/', '^/player/doxydoc/', '^/play/', '^/videos/' ]
+    exclude: ['^/player/manual/', '^/player/doxydoc/', '^/play/', '^/videos/', '^/discord/' ]
 
   # Configuration for the “external_links” checker, which checks whether all
   # external links are valid.

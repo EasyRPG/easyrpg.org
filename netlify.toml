@@ -21,3 +21,6 @@
 [[redirects]]
   from = "/videos"
   to = "https://easyrpg.org/videos"
+[[redirects]]
+  from = "/discord"
+  to = "https://easyrpg.org/discord"
