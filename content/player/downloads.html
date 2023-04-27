@@ -8,12 +8,18 @@ menu_weight: 3
 
 	ver_lcf="0.8"
 	oldver_lcf="0.7.0"
+
+	reldate="2023-04-29"
+	codename="Paralyze"
+
+	relyear, relmonth, relday=reldate.split("-")
+	verdash=ver.gsub(".", "-")
 %>
 <div class="info">
 	<h2>Download EasyRPG Player</h2>
-	<h3>EasyRPG Player version <%= ver %> "Sword"</h3>
-	<p>Release date: 2023-04-29.
-		<a href="https://blog.easyrpg.org/2023/04/easyrpg-player-0-8-paralyze/">
+	<h3>EasyRPG Player version <%= ver %> "<%= codename %>"</h3>
+	<p>Release date: <%= reldate %>.
+		<a href="https://blog.easyrpg.org/<%= relyear %>/<%= relmonth %>/easyrpg-player-<%= verdash %>-<%= codename.downcase %>/">
 			Release notes</a>,
 		changes since <%= oldver %>:
 		<a href="https://github.com/EasyRPG/Player/compare/<%= oldver + "..." + ver %>">Player</a>,
