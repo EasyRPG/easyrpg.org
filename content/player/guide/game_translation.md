@@ -6,8 +6,6 @@ title: "EasyRPG Player"
 
 ## Translating games
 
-**This feature is under active development. Please use a continuous build.**
-
 ### Motivation
 
 Translating RPG Maker games is quite complicated and there are two possibilities:

@@ -14,18 +14,18 @@ You may also try [a real game (Ib)](/play/?game=ib).
 
 ### How it works
 
-Web requests are asynchronous. This means that all assets like pictures and music 
-must be fetched asynchronously. When the Player wants to display a new graphic 
-it will appear on the desktop versions (Windows, Linux, Android, ...) 
-immediately but on the web it will be invisible while the file is downloaded. 
+Web requests are asynchronous. This means that all assets like pictures and music
+must be fetched asynchronously. When the Player wants to display a new graphic
+it will appear on the desktop versions (Windows, Linux, Android, ...)
+immediately but on the web it will be invisible while the file is downloaded.
 Once the downloaded finishes it is replaced with the real image.
 
-In contrast to images and music some files are important to continue execution. 
-When a map file is pending the Player will halt until the file is downloaded. 
-The first halt is while the Logo is displayed on startup, it downloads the 
-database and the maptree here. Download of map files is blocking, too. But this 
-is usually not noticeable because the download is executed while the fade out 
-animation plays (it will stay black when the map downloading takes longer then 
+In contrast to images and music some files are important to continue execution.
+When a map file is pending the Player will halt until the file is downloaded.
+The first halt is while the Logo is displayed on startup, it downloads the
+database and the maptree here. Download of map files is blocking, too. But this
+is usually not noticeable because the download is executed while the fade out
+animation plays (it will stay black when the map downloading takes longer then
 this).
 
 ### Hosting your own games
@@ -34,11 +34,11 @@ Hosting your own games is quite simple. Just follow these steps.
 
 #### Deploying the Player on your server
 
-For deploying of the EasyRPG Player any website works. There are already many 
-EasyRPG Player powered games on popular gaming sites such as itch.io. Please 
+For deploying of the EasyRPG Player any website works. There are already many
+EasyRPG Player powered games on popular gaming sites such as itch.io. Please
 refer to the documentation of your hoster how to deploy the files.
 
-[Download this archive](https://ci.easyrpg.org/job/player-js/lastSuccessfulBuild/artifact/player-js.tar.gz)
+[Download this archive](https://easyrpg.org/downloads/player/latest/easyrpg-player-latest-js.tar.gz)
 and extract it on your server.
 
 You will get the following files and folder:
@@ -48,17 +48,11 @@ You will get the following files and folder:
   * index.js
   * games/
 
-If you want to _try it locally_ you need a HTTP server. Just opening the 
-``index.html`` in your browser will not work. If you don't have a local 
-webserver the simplest way is installing Python and running ``python -m 
-http.server``. Then open ``http://localhost:8000/`` in your browser and navigate 
-to your directory.
-
 #### Deploying a game on your server
 
-Because RPG Maker games refer to files without extension and querying the server 
-for every supported extension would be slow, you need to run a small tool to 
-generate a file called ``index.json`` (containing a game file list index with 
+Because RPG Maker games refer to files without extension and querying the server
+for every supported extension would be slow, you need to run a small tool to
+generate a file called ``index.json`` (containing a game file list index with
 extensions) for every game before uploading. The tool is called ``gencache``.
 
 You can get the tool here:
@@ -67,42 +61,76 @@ You can get the tool here:
   * [gencache for Linux](https://ci.easyrpg.org/job/tools-linux/lastSuccessfulBuild/artifact/gencache.tar.gz)
   * [gencache for macOS](https://ci.easyrpg.org/job/tools-macos/lastSuccessfulBuild/artifact/bin/gencache)
 
-Place the gencache executable in a game working folder (the folder containing 
-RPG_RT.* files) to generate the ``index.json``. Move the ``gencache`` executable 
-to the all game folders you want to upload and run ``gencache`` again. Once 
-finished you can delete ``gencache`` from any game folder to reduce the upload 
+Place the gencache executable in a game working folder (the folder containing
+RPG_RT.* files) to generate the ``index.json``. Move the ``gencache`` executable
+to the all game folders you want to upload and run ``gencache`` again. Once
+finished you can delete ``gencache`` from any game folder to reduce the upload
 size.
 
-Your games are expected in subdirectories of the ``games`` directory. The 
-default game executed is the one in ``games/default``. You can create further 
+Your games are expected in subdirectories of the ``games`` directory. The
+default game executed is the one in ``games/default``. You can create further
 games by just by putting them in subdirectories of the ``games`` directory.
 
-Now access the ``index.html`` file and your default game should start. To play a 
-different game pass ``?game=folder_name`` as part of the URL (query string) to 
-your index file.
+Now access the ``index.html`` file and your default game should start. To play a
+different game, pass ``?game=folder_name`` as the query string to your index
+file. The query string is added after the URL of your website. For example, if
+you host the web player at ``https://easyrpg.org/play/``, then the URL with the
+query string is ``https://easyrpg.org/play/?game=ib``.
 
-### Troubleshooting
+#### Testing locally
 
-#### My spritesheets look corrupted
+If you want to _try it locally_, you need an HTTP server. Just opening the
+``index.html`` in your browser will not work. If you do not have a local
+web server the simplest solution is to install [Python](https://www.python.org/).
 
-The web player has only a limited automatic engine detection. You must add 
-``engine=rpg2k3e`` to the query string of the URL to enforce spritesheet 
-support.
+Then open a command line window in the directory where the ``index.html`` file
+is located and run the command ``python -m http.server``.
+
+Then open ``http://localhost:8000`` in your web browser and your game will start.
+
+### Configuring language (encoding) and engine
+
+The Web Player has limited automatic encoding and engine detection. Refer to
+the [Player Manual](/player/manual/) for available settings.
+
+You can set the options (without ``--`` as part of the query string in the URL.
+Some game-related options can be configured in ``EasyRPG.ini``.
+
+For example, to make a Japanese game run on RPG Maker 2003 English Edition pass
+``?engine=rpg2k3e&encoding=932`` as the query string. The first component of
+the query string is separated from the URL by a question mark (``?``). All
+other components are delimited by an ampersand (``&``).
+
+Alternatively, add to ``EasyRPG.ini``:
+
+```
+[Game]
+Engine=rpg2k3
+```
+
+And to ``RPG_RT.ini``:
+
+```
+[EasyRPG]
+Encoding=932
+```
+
+Yes, you need to edit two files here for historical reasons.
 
 ### Special files
 
-EasyRPG Player processes the following files on game startup. Just put them in 
+EasyRPG Player processes the following files on game startup. Just put them in
 the game directory and rerun ``gencache``.
 
 #### ExFont.png
 
-The ExFont consists special symbols that can be used in message boxes. If your 
+The ExFont consists special symbols that can be used in message boxes. If your
 game uses a custom ExFont you can provide it here.
 
 #### easyrpg.soundfont
 
-If you are unhappy with the default MIDI acoustics (powered by FmMidi) you can 
-alternatively provide a soundfont in SF2 format. Please use a small file. Some 
+If you are unhappy with the default MIDI acoustics (powered by FmMidi) you can
+alternatively provide a soundfont in SF2 format. Please use a small file. Some
 soundfonts have hundreds of megabytes in size.
 
 </div>
