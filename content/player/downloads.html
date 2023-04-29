@@ -3,20 +3,23 @@ title: EasyRPG Player
 menu_weight: 3
 ---
 <% # The following variables can be quite handy ;)
-	ver="0.7.0"
-	oldver="0.6.2.3"
+	ver="0.8"
+	oldver="0.7.0"
 
-	ver_master="0.7.0"
-	ver_pkg="0.7"
+	ver_lcf="0.8"
+	oldver_lcf="0.7.0"
 
-	ver_lcf="0.7.0"
-	oldver_lcf="0.6.2"
+	reldate="2023-04-29"
+	codename="Paralyze"
+
+	relyear, relmonth, relday=reldate.split("-")
+	verdash=ver.gsub(".", "-")
 %>
 <div class="info">
 	<h2>Download EasyRPG Player</h2>
-	<h3>EasyRPG Player version <%= ver %> "Sword"</h3>
-	<p>Release date: 2021-10-29.
-		<a href="https://blog.easyrpg.org/2021/10/easyrpg-player-0-7-0-sword/">
+	<h3>EasyRPG Player version <%= ver %> "<%= codename %>"</h3>
+	<p>Release date: <%= reldate %>.
+		<a href="https://blog.easyrpg.org/<%= relyear %>/<%= relmonth %>/easyrpg-player-<%= verdash %>-<%= codename.downcase %>/">
 			Release notes</a>,
 		changes since <%= oldver %>:
 		<a href="https://github.com/EasyRPG/Player/compare/<%= oldver + "..." + ver %>">Player</a>,
@@ -37,8 +40,8 @@ menu_weight: 3
 			<div id="release-windows">
 				<h4>Windows</h4>
 				<p>
-					<a href="https://easyrpg.org/downloads/player/<%= ver %>/EasyRPG_Player-<%= ver %>-Windows.zip">Windows 32 bit executable</a>,
-					<a href="https://easyrpg.org/downloads/player/<%= ver %>/EasyRPG_Player-<%= ver %>-Windows-x64.zip">Windows 64 bit executable</a>
+					<a href="https://easyrpg.org/downloads/player/<%= ver %>/easyrpg-player-<%= ver %>-windows.zip">Windows 32 bit executable</a>,
+					<a href="https://easyrpg.org/downloads/player/<%= ver %>/easyrpg-player-<%= ver %>-windows-x64.zip">Windows 64 bit executable</a>
 					<br>
 					These are meant as a drop-in replacement for the RPG_RT.exe and require at least Windows Vista.
 				</p>
@@ -72,7 +75,7 @@ menu_weight: 3
 			<div id="release-macos">
 				<h4>macOS</h4>
 				<p>
-					<a href="https://easyrpg.org/downloads/player/<%= ver %>/EasyRPG-Player-<%= ver %>-macos.app.zip">macOS 64-bit (Intel) App Bundle</a>
+					<a href="https://easyrpg.org/downloads/player/<%= ver %>/easyrpg-player-<%= ver %>-macos.app.zip">macOS 64-bit (Intel) App Bundle</a>
 				</p>
 				<p>
 					Player is also available on <a href="https://brew.sh">homebrew</a>, use this command in your terminal:
@@ -91,7 +94,7 @@ menu_weight: 3
 					<br>
 					<img src="/images/player/qrcode.png" alt="Google Play QRCode">
 					<br>
-					<a href="https://easyrpg.org/downloads/player/<%= ver %>/EasyRpgPlayerActivity-<%= ver %>.apk">Locally hosted App (.apk)</a>
+					<a href="https://easyrpg.org/downloads/player/<%= ver %>/easyrpg-player-<%= ver %>-android.apk">Locally hosted App (.apk)</a>
 					<br>
 					Installing from "unknown sources" must be activated in the Android settings.
 				</p>
@@ -109,32 +112,32 @@ menu_weight: 3
 					Supported platforms:
 				</p>
 				<ul>
-					<li>Windows (<a href="https://easyrpg.org/downloads/player/<%= ver %>/EasyRPG_Player-<%= ver %>-Windows-libretro.zip">Windows 32 bit core</a>, <a href="https://easyrpg.org/downloads/player/<%= ver %>/EasyRPG_Player-<%= ver %>-Windows-libretro-x64.zip">Windows 64 bit core</a>)</li>
+					<li>Windows (<a href="https://easyrpg.org/downloads/player/<%= ver %>/easyrpg-player-<%= ver %>-windows-libretro.zip">Windows 32 bit core</a>, <a href="https://easyrpg.org/downloads/player/<%= ver %>/easyrpg-player-<%= ver %>-windows-libretro-x64.zip">Windows 64 bit core</a>)</li>
 					<li>Linux (amd64)</li>
-					<li>macOS (<a href="https://easyrpg.org/downloads/player/<%= ver %>/EasyRPG-Player-<%= ver %>-macos-libretro.zip">macOS 64-bit (Intel) core</a>)</li>
+					<li>macOS (<a href="https://easyrpg.org/downloads/player/<%= ver %>/easyrpg-player-<%= ver %>-macos-libretro.zip">macOS 64-bit (Intel) core</a>)</li>
 					<li>Android</li>
 				</ul>
 			</div>
 			<div id="release-other">
 				<h4>Other contributed ports</h4>
 				<p>
-					<a href="https://easyrpg.org/downloads/player/<%= ver %>/EasyRPG_Player-<%= ver %>-Wii.zip">Wii (.dol)</a>
+					<a href="https://easyrpg.org/downloads/player/<%= ver %>/easyrpg-player-<%= ver %>-wii.zip">Wii (.dol)</a>
 					<br>
 					This needs a homebrew-enabled console with "Homebrew Channel" installed. Games are searched in the same directory as the dol.
 				</p>
 				<p>
-					<a href="https://easyrpg.org/downloads/player/<%= ver %>/EasyRPG_Player-<%= ver %>-3ds.zip">Nintendo 3DS (3dsx)</a>,
-					<a href="https://easyrpg.org/downloads/player/<%= ver %>/EasyRPG_Player-<%= ver %>-3ds.cia">Nintendo 3DS (CIA)</a>
+					<a href="https://easyrpg.org/downloads/player/<%= ver %>/easyrpg-player-<%= ver %>-3ds.zip">Nintendo 3DS (3dsx)</a>,
+					<a href="https://easyrpg.org/downloads/player/<%= ver %>/easyrpg-player-<%= ver %>-3ds.cia">Nintendo 3DS (CIA)</a>
 					<br>
 					This needs a homebrew-enabled console with "Homebrew Launcher" (for 3dsx) or a custom firmware (for CIA) installed. The CIA searches for games in sdcard:/3ds/easyrpg-player
 				</p>
 				<p>
-					<a href="https://easyrpg.org/downloads/player/<%= ver %>/EasyRPG_Player-<%= ver %>-Vita.vpk">PlayStation Vita</a>
+					<a href="https://easyrpg.org/downloads/player/<%= ver %>/easyrpg-player-<%= ver %>-psvita.vpk">PlayStation Vita</a>
 					<br>
 					This needs a homebrew-enabled console by running the HENkaku exploit. Games are searched in ux0:/data/easyrpg-player.
 				</p>
 				<p>
-					<a href="https://easyrpg.org/downloads/player/<%= ver %>/EasyRPG_Player-<%= ver %>-Switch.zip">Nintendo Switch</a>
+					<a href="https://easyrpg.org/downloads/player/<%= ver %>/easyrpg-player-<%= ver %>-switch.zip">Nintendo Switch</a>
 					<br>
 					This needs a homebrew-enabled console with "Homebrew Launcher" installed. Games are searched in the same directory as the nro.
 				</p>
@@ -149,13 +152,13 @@ menu_weight: 3
 				</p>
 				<p>
 					<!-- Currently not correctly signed cert, but supports https-->
-					<a href="http://bszili.morphos.me/">AROS</a><!-- (0.6.2.1)-->
+					<a href="http://bszili.morphos.me/">AROS</a> (0.6.2.3)
 				</p>
 				<p>
-					<a href="http://bszili.morphos.me/">AmigaOS4</a><!-- (0.6.2.1)-->
+					<a href="http://bszili.morphos.me/">AmigaOS4</a> (0.6.2.3)
 				</p>
 				<p>
-					<a href="http://bszili.morphos.me/">MorphOS</a><!-- (0.6.2.1)-->
+					<a href="http://bszili.morphos.me/">MorphOS</a> (0.6.2.3)
 					<br>
 				</p>
 				<p>
@@ -189,7 +192,7 @@ menu_weight: 3
 	<h3>EasyRPG Player continuous builds</h3>
 	<p>
 		Changes since <%= ver %>:
-		<a href="https://github.com/EasyRPG/Player/compare/<%= ver_master %>...HEAD">Player</a>,
+		<a href="https://github.com/EasyRPG/Player/compare/<%= ver %>...HEAD">Player</a>,
 		<a href="https://github.com/EasyRPG/liblcf/compare/<%= ver_lcf %>...HEAD">liblcf</a>
 	</p>
 	<p>
@@ -215,7 +218,7 @@ menu_weight: 3
 					<a href="https://ci.easyrpg.org/downloads/windows/easyrpg_windows.zip">Windows 32 bit executable</a>,
 					<a href="https://ci.easyrpg.org/downloads/windows/easyrpg_windows_x64.zip">Windows 64 bit executable</a>
 					<br>
-					These are meant as a drop-in replacement for the RPG_RT.exe and require at least Windows Vista.
+					These are meant as a drop-in replacement for the RPG_RT.exe and require at least Windows 7.
 				</p>
 			</div>
 			<div id="snapshot-linux">
@@ -288,7 +291,7 @@ menu_weight: 3
 			</div>
 			<div id="snapshot-source">
 				<h4>Source Code</h4>
-				<a href="https://ci.easyrpg.org/downloads/source/easyrpg-player-<%= ver_pkg %>.tar.gz">Player source package</a>
+				<a href="https://ci.easyrpg.org/downloads/source/easyrpg-player-<%= ver %>.tar.gz">Player source package</a>
 				<br>
 				<a href="https://ci.easyrpg.org/downloads/source/liblcf-<%= ver_lcf %>.tar.gz">liblcf source package</a>
 			</div>

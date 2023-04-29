@@ -18,7 +18,7 @@ group :nanoc do
 end
 
 group :test do
-  gem 'nokogiri'       # 
+  gem 'nokogiri', force_ruby_platform: true # html parser
   gem 'w3c_validators' # link checker
 end
 
