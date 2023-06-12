@@ -37,6 +37,12 @@ Tool to make JSON cache file needed by web Player games.
 ### XYZ Thumbnailer
 Tool to generate previews for XYZ images in your file manager.
 
+### LcfTrans
+Tool to extract text out of LDB, LMT and LMU files and create po files for use in [translations](https://easyrpg.org/player/guide/game_translation/).
+
+### LCFVIZ
+Tool to parse the map tree and create a GraphViz (dot) graph.
+
 </div>
 <div class="info" markdown="1">
 
