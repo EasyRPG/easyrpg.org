@@ -29,7 +29,13 @@ We offer three different ways to connect to our chat. They are all bridged toget
 
 Please follow us! :)
 
-- [Twitter](https://twitter.com/easyrpg/): This is our main social network communication channel.
+Our main communication channels on social networks:
+
+- [Fediverse](https://social.easyrpg.org) (Follow ``@easyrpg@easyrpg.org``)
+- [Twitter](https://twitter.com/easyrpg/)
+
+We also have these accounts, but they are less active:
+
 - [Facebook](https://www.facebook.com/easyrpgofficial/)
 - [Instagram](https://www.instagram.com/easyrpg_org/)
 
