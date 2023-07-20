@@ -2,7 +2,6 @@
     0% {
         background-position: var(--animY)0
     }
-
     to {
         background-position: var(--animY) var(--scrollAnim)
     }
@@ -52,7 +51,10 @@
     width: 3rem
 }
 
-.logoEditor,.logoPlayer,.logoRTP,.logoText {
+.logoEditor,
+.logoPlayer,
+.logoRTP,
+.logoText {
     font-family: koubit001;
     font-size: 2rem;
     font-style: normal;
@@ -66,16 +68,14 @@
     .middleSection p a {
         font-size: x-small
     }
-
     #topBar #logo {
         padding: .3rem;
         width: 2rem
     }
-
-    #topBar .logoText,#topC input {
+    #topBar .logoText,
+    #topC input {
         display: none
     }
-
     #topB * {
         padding: 0 .5vw!important
     }
@@ -87,13 +87,13 @@
         transform: scale(1.19);
         transform-origin: top center
     }
-
     #mainBlock3 .a {
         width: calc(100vw - 530px)!important
     }
 }
 
-.logoText:before,body {
+.logoText:before,
+body {
     color: var(--c-green04);
     overflow-x: hidden
 }
@@ -119,7 +119,8 @@
     content: "RPG"
 }
 
-.logoEditor:before,.logoPlayer:before {
+.logoEditor:before,
+.logoPlayer:before {
     content: " ";
     font-size: 1rem
 }
@@ -137,28 +138,36 @@ body {
     background-color: var(--c-gray03)!important;
     background-image: var(--bgImg);
     background-size: 32px;
-    height: 100vh
+    //height: 100vh
+    height: fit-content;
 }
 
-.logoPlayer:after,a {
+.logoPlayer:after,
+a {
     color: var(--c-white01)
 }
 
-#topBar,#topBar * {
+#topBar,
+#topBar * {
     align-items: center;
     display: flex;
     z-index: 5
 }
 
-*,:after,:before {
+*,
+:after,
+:before {
     box-sizing: border-box
 }
 
-#topBar,.mainSubMenu .menuItems a:hover,.middleSection .container {
+#topBar,
+.mainSubMenu .menuItems a:hover,
+.middleSection .container {
     background-color: var(--c-gray01)!important
 }
 
-#topBar,#topBar * {
+#topBar,
+#topBar * {
     height: 3.25rem;
     margin: 0
 }
@@ -183,11 +192,13 @@ body {
     padding: 1rem 1vw
 }
 
-#topBar a,a {
+#topBar a,
+a {
     text-decoration: none
 }
 
-#topBar a:hover,#topC * {
+#topBar a:hover,
+#topC * {
     background-color: var(--btColor)
 }
 
@@ -207,7 +218,10 @@ body {
     width: 100%
 }
 
-#topC *,#topC button,#topC input,.middleSection p a {
+#topC *,
+#topC button,
+#topC input,
+.middleSection p a {
     background-color: transparent
 }
 
@@ -217,7 +231,8 @@ body {
     position: relative
 }
 
-#mainBlock, #mainBlock2 {
+#mainBlock,
+#mainBlock2 {
     /*     animation: a var(--animTime) linear 0s infinite; */
     position: absolute
 }
@@ -228,7 +243,8 @@ body {
     width: 100vw
 }
 
-#mainBlock2,#mainBlock3 {
+#mainBlock2,
+#mainBlock3 {
     height: 480px;
     overflow: hidden;
     width: 100vw
@@ -240,7 +256,7 @@ body {
     background-repeat: repeat-y;
     margin: 0 auto;
     margin-left: 190px;
-    -webkit-mask: linear-gradient(90deg, transparent 10%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 70%, transparent 90%);
+    -webkit-mask: linear-gradient(90deg, transparent 10%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 1) 70%, transparent 90%);
     /* opacity: .5; */
 }
 
@@ -251,7 +267,8 @@ body {
     z-index: 1
 }
 
-#mainBlock3 .a,#mainBlock3 .c {
+#mainBlock3 .a,
+#mainBlock3 .c {
     background-color: var(--c-gray01);
     height: 480px;
     opacity: .9;
@@ -276,7 +293,8 @@ body {
     z-index: 3
 }
 
-#spotText,.middleSection {
+#spotText,
+.middleSection {
     display: flex;
     position: relative
 }
@@ -312,16 +330,18 @@ body {
     content: "RPG"
 }
 
-.middleSection a,body {
+.middleSection a,
+body {
     margin: 0
 }
 
-.middleSection,footer {
+.middleSection,
+footer {
     background-color: var(--c-gray01)
 }
 
 .middleSection {
-    clip-path: polygon(-100% -100%,100% -100%,100% 70%,0 70%);
+    clip-path: polygon(-100% -100%, 100% -100%, 100% 70%, 0 70%);
     text-align: center;
     z-index: 4
 }
@@ -373,7 +393,7 @@ body {
 .gallery-item {
     background-color: var(--c-green02);
     border-radius: 10px;
-    box-shadow: .3rem .4rem .4rem rgba(0,0,0,.4);
+    box-shadow: .3rem .4rem .4rem rgba(0, 0, 0, .4);
     flex: 1 0 24rem;
     flex-basis: 200px;
     margin: 1.5rem;
@@ -506,6 +526,7 @@ ul.submenu {
     padding: 0 0.5em;
     display: inline-block;
     text-align: center;
+    width: 100%;
 }
 
 ul.submenu li {
@@ -513,6 +534,8 @@ ul.submenu li {
     line-height: 40px;
     vertical-align: middle;
     white-space: nowrap;
+    margin: 5px;
+    font-size: small;
 }
 
 .maxwidth {

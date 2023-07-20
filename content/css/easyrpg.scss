@@ -53,7 +53,7 @@ $darkgrey: #202020;
 		margin: 0;
 	}
 
-	p > code, li > code, dd > code, td > code, {
+	p > code, li > code, dd > code, td > code {
 		background: #faf8f0;
 		word-wrap: break-word;
 		box-decoration-break: clone;
@@ -183,8 +183,8 @@ $darkgrey: #202020;
 				background-color: $darkgrey;
 				margin-top: -1px;
 				margin-bottom: 0;
-				padding: 0 0.5em;
-				display: inline-block;
+				padding: 2em 0.5em;
+				//display: inline-block;
 				text-align: center;
 
 				li {
@@ -192,6 +192,7 @@ $darkgrey: #202020;
 					line-height: $mheight;
 					vertical-align: middle;
 					white-space: nowrap;
+					margin: 10px;
 
 					a {
 						display: inline-block;

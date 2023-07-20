@@ -410,7 +410,7 @@ body {
 }
 .gallery * {
   color: var(--c-white01);
-  align-text: center;
+  text-align: center;
 }
 .gallery-item #txt {
   padding: 0 1.5rem;
@@ -421,9 +421,11 @@ body {
   margin: 0 !important;
 }
 
+/*
 .gallery-item h5 {
-  // margin:100%;
+   margin:100%; 
 }
+*/
 
 .gallery .gamesOverlay {
   position: absolute;
@@ -483,8 +485,10 @@ body {
 }
 
 footer {
-background-color: var(--c-gray01);
+  background-color: var(--c-gray01);
   padding:5px;
+  bottom: 0;
+  position: fixed;
 }
 
 .footerLinks {
