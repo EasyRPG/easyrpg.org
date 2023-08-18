@@ -24,10 +24,11 @@ state, but they might be unusable and not recommended for general use:
 #### Source code:
 
 *   Tools: [source snapshot].
+*   liblcf (library to handle RPG Maker 2000 and 2003 game data; LCF2XML and LCFSTRINGS codes are stored here): [liblcf source snapshot].
 
 ## Code repository
 
-The [Tools repository] is available at GitHub.
+The [Tools repository] and [liblcf repository] are available at GitHub.
 
 [LCF2XML]: <%= jenkins_link("liblcf-win32", "build/bin/lcf2xml.exe") %>
 [LCFSTRINGS]: <%= jenkins_link("liblcf-win32", "build/bin/lcfstrings.exe") %>
@@ -41,6 +42,8 @@ The [Tools repository] is available at GitHub.
 [XYZ Thumbnailer]: <%= jenkins_link("tools-win32", "bin/xyz-thumbnailer.zip") %>
 
 [source snapshot]: https://github.com/EasyRPG/Tools/archive/master.zip
+[liblcf source snapshot]: https://github.com/EasyRPG/liblcf/archive/master.zip
 [Tools repository]: https://github.com/EasyRPG/Tools
+[liblcf repository]: https://github.com/EasyRPG/liblcf
 
 </div>
