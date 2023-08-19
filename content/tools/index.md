@@ -19,6 +19,9 @@ or providing information about them.
 ### LCF2XML
 Tool to convert LMU, LMT, LDB and LSD files into XML and vice-versa.
 
+### LCFSTRINGS
+Tool to list the strings used for the text and filenames from LMU, LMT, LDB and LSD files.
+
 ### LMU2PNG
 Tool to render LMU maps to PNG images with events as tiles support.
 
