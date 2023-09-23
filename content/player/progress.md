@@ -30,12 +30,12 @@ menu_weight: 4
 - Timers
 - Vehicles
 - Weather effects
+- External font support
+- Game controller/Joystick support
 
 **Work in progress:**
 
-- External font support
 - Full savegame compatibility with RPG_RT
-- Game controller/Joystick support
 - Support for more RPG_RT patches
 - Porting to new (and old!) platforms ;-)
 
