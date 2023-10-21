@@ -99,7 +99,7 @@ These assets can also be translated. All you have to do is mirror the correspond
 
 For example, the translated version of ``Picture/Intro.png`` is located in ``Language/LANGUAGE_NAME/Picture/Intro.png``.
 
-EasyRPG Player already supports the display of many languages, but you can also use your own font. To do so, place the files ``Font.ttf`` or ``Font2.ttf`` in ``Language/LANGUAGE_NAME/Fonts`` (besides ``ttf``, other formats such as ``fon`` or ``bdf`` are also supported). Which of the two files is used depends on the font setting of the system graphic.
+EasyRPG Player already supports the display of many languages, but you can also use your own font. To do so, place the files ``Font.ttf`` or ``Font2.ttf`` in ``Language/LANGUAGE_NAME/Font`` (besides ``ttf``, other formats such as ``fon`` or ``bdf`` are also supported). Which of the two files is used depends on the font setting of the system graphic.
 
 If the game already provides custom fonts and they are unsuitable for your translation add ``Font=Builtin`` to the ``Meta.ini`` to force the usage of the font bundled with EasyRPG Player.
 
