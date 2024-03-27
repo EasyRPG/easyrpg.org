@@ -1,0 +1,539 @@
+:root {
+  --bgImg: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 2'%3E%3Cpath d='M1 2V0h1v1H0v1z' fill-opacity='.05'/%3E%3C/svg%3E");
+  --c-black01: #000000;
+  --c-black02: #020302;
+
+  --c-gray01: #181818;
+  --c-gray02: #242529;
+  --c-gray03: #292b2f;
+  --c-gray04: #2c2c30;
+  --c-gray05: #36373a;
+
+  --c-green01: #315526;
+  --c-green02: #3c8025;
+  --c-green03: #87b169;
+  --c-green04: #c2cdbb;
+
+  --c-red01: #9a2720;
+  --c-red02: #ff3c41;
+
+  --c-orange01: #ff5b32;
+
+  --c-yellow01: #fcd000;
+
+  --c-white01: #ffffff;
+
+  --animY: calc(50vw - 245px);
+  --scrollAnim: 94%;
+  --animTime: 30s;
+}
+@-webkit-keyframes a {
+  0% {
+    background-position: var(--animY) 0;
+  }
+
+  to {
+    background-position: var(--animY) var(--scrollAnim);
+  }
+}
+
+@keyframes a {
+  0% {
+    background-position: var(--animY) 0;
+  }
+
+  to {
+    background-position: var(--animY) var(--scrollAnim);
+  }
+}
+
+@font-face {
+  font-family: koubit001;
+  src: url(https://jetrotal.github.io/testing-stuff/koubit001.woff2);
+}
+
+#spacer {
+  margin: auto !important;
+  position: relative;
+}
+
+#spacer2 {
+  width: calc(100vw / 1.2) !important;
+  position: relative;
+}
+
+#logo {
+  padding: 0.3rem;
+  width: 3rem;
+}
+
+.logoText,
+.logoEditor,
+.logoRTP,
+.logoPlayer {
+  text-shadow: 1px 1px #000c;
+  font-family: koubit001;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  height: 2.5rem;
+  line-height: 1rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .middleSection p a {
+    font-size: x-small;
+  }
+  #topBar #logo {
+    padding: 0.3rem;
+    width: 2rem;
+  }
+  #topBar .logoText {
+    display: none;
+  }
+  #topC input {
+    display: none;
+  }
+  #topB * {
+    padding: 0 .5vw !important;
+  }
+}
+
+@media (min-width: 1000px) {
+  body {
+    overflow-x: clip;
+    transform: scale(1.19);
+    transform-origin: top center;
+  }
+
+  #mainBlock3 .a {
+    width: calc(100vw - 530px) !important;
+  }
+}
+
+.logoText:before,
+body {
+  color: var(--c-green04);
+  overflow-x:hidden;
+}
+
+.logoText:before {
+  content: "EASY";
+  overflow:hidden;
+}
+
+.logoRTP:before {
+  color: var(--c-yellow01);
+  content: "OPEN";
+  margin-right: 0.2rem;
+}
+.logoRTP:after {
+  color: var(--c-white01);
+  content: "RTP";
+}
+
+.logoText:after {
+  color: var(--c-green03);
+  content: "RPG";
+}
+
+.logoEditor:before,
+.logoPlayer:before {
+  content: " ";
+  font-size: 1rem;
+}
+.logoEditor:after {
+  content: "EDITOR";
+  color: var(--c-white01);
+}
+
+.logoPlayer:after {
+  content: "PLAYER";
+  color: var(--c-white01);
+}
+
+body {
+  background-color: var(--c-gray03) !important;
+  background-image: var(--bgImg);
+  background-size: 32px;
+  height: 100vh;
+}
+
+a {
+  color: var(--c-white01);
+}
+
+#topBar,
+#topBar * {
+  align-items: center;
+  display: flex;
+  z-index: 5;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+#topBar,
+.middleSection .container {
+  background-color: var(--c-gray01) !important;
+}
+
+#topBar,
+#topBar * {
+  height: 3.25rem;
+  margin: 0;
+}
+
+#topBar {
+  padding: 0;
+  position: relative;
+  width: 100vw;
+}
+
+#topBar * {
+  color: var(--c-green04);
+}
+
+#topB {
+  font-size: small;
+  margin: auto;
+}
+
+#topB * {
+  margin: 0;
+  padding: 1rem 1vw;
+}
+
+#topBar a,
+a {
+  text-decoration: none;
+}
+
+#topBar a:hover,
+#topC * {
+  background-color: var(--btColor);
+}
+
+.middleSection p a:hover {
+  background-color: var(--c-green01);
+}
+
+#topC * {
+  border: 0;
+  font-size: small;
+  height: 2rem;
+  text-align: center;
+  background-color: transparent;
+}
+
+#topC input {
+  width: 100%;
+  border-bottom: 1px solid;
+}
+
+#topC button,
+#topC input,
+.middleSection p a {
+  background-color: transparent;
+}
+
+#spotlight {
+  height: 240px;
+  overflow: hidden;
+  position: relative;
+}
+
+#mainBlock,
+#mainBlock2 {
+  -webkit-animation: a var(--animTime) linear 0s infinite;
+  animation: a var(--animTime) linear 0s infinite;
+  position: absolute;
+}
+
+#mainBlock {
+  background-image: url(https://raw.githubusercontent.com/jetrotal/testing-stuff/main/loopbgA.png);
+  height: 480px;
+  width: 100vw;
+}
+
+#mainBlock2,
+#mainBlock3 {
+  height: 480px;
+  overflow: hidden;
+  width: 100vw;
+}
+
+#mainBlock2 {
+  background-image: url(https://raw.githubusercontent.com/jetrotal/testing-stuff/main/loopbgB.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+#mainBlock3 {
+  display: flex;
+  margin: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+#mainBlock3 .a,
+#mainBlock3 .c {
+  background-color: var(--c-gray01);
+  height: 480px;
+  opacity: 0.9;
+  width: calc(100vw - 500px);
+  z-index: 1;
+}
+
+#mainBlock3 .b {
+  background-color: var(--c-green02);
+  border-radius: 100vw;
+  height: 480px;
+  opacity: 0.5;
+  transform: scaleX(10);
+  width: 1000px;
+  z-index: 2;
+}
+
+#walkingHero {
+  width: 67px;
+  height: 101px;
+  position: relative;
+  z-index: 3;
+}
+
+#spotText,
+.middleSection {
+  display: flex;
+  position: relative;
+}
+
+#spotText {
+  align-items: center;
+  color: var(--c-black01);
+  top: 6.5%;
+  z-index: 2;
+}
+
+#spotText h1 {
+  background: #fffc;
+  font-weight: 400;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 1rem;
+  white-space: nowrap;
+}
+
+#spotTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+#spotTitle:before {
+  content: "RETRO";
+}
+
+#spotTitle:after {
+  color: var(--c-green02);
+  content: "RPG";
+}
+
+.middleSection a,
+body {
+  margin: 0;
+}
+
+.middleSection {
+  background-color: var(--c-gray01);
+  clip-path: polygon(-100% -100%, 100% -100%, 100% 70%, 0 70%);
+  text-align: center;
+  z-index: 4;
+}
+
+.middleSection * {
+  margin: 0.2rem;
+}
+
+.middleSection .container {
+  align-items: center;
+  max-width: 480px;
+  padding: 10px;
+  transform: translateY(-3rem);
+  border-radius: 10px;
+  display: flex;
+}
+
+.middleSection p {
+  max-width: 20rem;
+  border-radius: 5px;
+  display: flex;
+  background-color: var(--c-green02) !important;
+  justify-content: space-around;
+  line-height: 2;
+  margin: 0 0;
+  margin: 0.8rem auto 0;
+}
+
+.middleSection p a {
+  color: var(--c-white01) !important;
+  font-size: smaller;
+  font-weight: 400;
+  margin: 0 0.2rem;
+  padding: inherit;
+  padding-inline: 5px;
+}
+
+.gallery-container {
+  margin: -2rem auto;
+  max-width: 80vw;
+  padding: 0 0 2rem;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0rem;
+}
+
+.gallery-item {
+  background-color: var(--c-green02);
+  border-radius: 10px;
+  min-height: 14rem;
+  box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+  flex: 1 0 24rem;
+  flex-basis: 200px;
+  margin: 1.5rem;
+  overflow: hidden;
+}
+.gallery * {
+  color: var(--c-white01);
+  text-align: center;
+}
+.gallery-item #txt {
+  padding: 0 1.5rem;
+  font-size: small;
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin: 0 !important;
+}
+
+/*
+.gallery-item h5 {
+   margin:100%; 
+}
+*/
+
+.gallery .gamesOverlay {
+  position: absolute;
+  margin: auto;
+}
+
+.gallery-content {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  background-color: var(--c-green04);
+}
+
+.mainSubMenu {
+  padding:0 !important; 
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+}
+
+.mainSubMenu .menuItems {
+  display: none !important;
+  position: absolute;
+  padding:0 !important;
+  margin:0;
+  width:2px;
+  background-color: var(--c-green03) !important;
+  z-index: 1000 !important;
+}
+
+.mainSubMenu .menuItems a {
+  margin: 0 !important;
+  color: black;
+  text-decoration: none;
+  display: block !important;
+   background-color: var(--c-gray02) !important;
+  min-width:8.6rem;
+}
+
+.mainSubMenu .menuItems a:hover {
+  background-color: var(--c-gray01) !important;
+}
+
+.mainSubMenu:hover .menuItems {
+  display: block !important;
+}
+
+.dummy {
+  opacity:0;
+  pointer-events:none;
+}
+
+.mainSubMenu:hover >div {
+  background-color: var(--c-gray02) !important;
+  color:var(--c-green03) !important;
+}
+
+footer {
+  background-color: var(--c-gray01);
+  padding:5px;
+  bottom: 0;
+  position: fixed;
+}
+
+.footerLinks {
+display: flex;
+flex-wrap: wrap;
+width: 50%;
+margin: 0 auto;
+}
+
+.footerColumn {
+display: flex;
+flex-direction: column;
+margin:0 auto;
+}
+
+.footerColumn h3 {
+font-size:small;
+font-weight: bold;
+margin: 10px 0;
+}
+
+.footerColumn ul {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.footerColumn li {
+margin-bottom: 5px;
+}
+
+.footerColumn a {
+color: #fff;
+text-decoration: none;
+font-size: 0.8em;
+}
+
+.footerColumn a:hover {
+color: #ccc;
+}
+
+.sep{
+     width: 100vw;
+    display: flex;
+    border-bottom: solid 1px;
+  margin:15px 0 20px 0;
+  opacity:.1;
+}

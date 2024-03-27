@@ -1,0 +1,52 @@
+doctype 5
+html lang="en"
+  head
+    meta charset="utf-8"
+    - if @item[:title]
+      title EasyRPG: #{@item[:title]}
+    - else
+      title EasyRPG
+    meta name="generator" content="Nanoc #{Nanoc::VERSION}"
+    meta name="description" content="Free and open source role playing game interpreter and editor compatible with RPG Maker 2000 and 2003"
+    meta name="viewport" content="width=device-width"
+    meta http-equiv="X-UA-Compatible" content="IE=edge"
+    link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"
+    link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"
+    link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"
+    link rel="manifest" href="/manifest.json"
+    link rel="mask-icon" href="/safari-pinned-tab.svg" colorimage.png="#3c8025"
+    meta name="theme-color" content="#3c8025"
+    link rel="stylesheet" href="#{@items['/css/*'].path}"
+    script src="/js/vendor/jquery-2.2.4.min.js"
+  body
+    #header
+      .maxwidth
+        nav.top-nav
+          a.logo href="/" title="Home" EasyRPG
+          input id="menu-toggle" type="checkbox"
+          label.menu-button-container for="menu-toggle"
+            span.menu-button
+              /! burger
+          ul.menu
+            li: a href="https://blog.easyrpg.org" Blog
+            li: a href="https://community.easyrpg.org" Community
+            li: a href="https://wiki.easyrpg.org" Wiki
+            li: a href="https://github.com/EasyRPG/" Code
+            li: a href="https://ci.easyrpg.org" CI
+            li: a href="/contact" Contact
+    / front page gets special treatment
+    - if @item[:has_spotlight]
+      == yield
+    - else
+      #spotlight
+        .maxwidth
+          #section-title
+            h1 = @item[:title]
+          .clear
+      #content
+        .maxwidth
+          == render '/menu.*'
+          == yield
+    #footer
+      a href="/about/website"
+        | © 2007-#{Date.today.year} The EasyRPG project. Some rights reserved.

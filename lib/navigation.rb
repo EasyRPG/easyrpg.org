@@ -66,3 +66,5 @@ def navigation_for(item)
   # sort by weight, default = 0 puts at end
   return h.sort_by { |k, v| v[:weight] }.reverse
 end
+
+require_relative 'links.rb'
