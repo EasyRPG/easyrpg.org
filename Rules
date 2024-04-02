@@ -20,9 +20,9 @@ end
 compile '/{css/*.scss,js/*.js}' do
   ext = "." + item.identifier.ext
   if ext == '.scss'
-    filter :sass, {
+    filter :dart_sass, {
       :syntax => :scss,
-      :style => (@config[:prod] ? :compressed : :compact)
+      :style => (@config[:prod] ? :compressed : :expanded)
     }
     ext = ".css"
   end

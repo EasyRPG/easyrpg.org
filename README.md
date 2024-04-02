@@ -5,7 +5,7 @@ Source code of the EasyRPG homepage at https://easyrpg.org
 
 ## Requirements
 
- - [ruby] >=2.5, version 3 is recommended
+ - [ruby] >=2.7, version 3 is recommended
  - [nanoc] >=4.12
  - [tidy-html5]
  - [some gems]
@@ -36,10 +36,10 @@ Alternatively, you may run commands with prefix, i.e. `bin/nanoc`.
 
 ```bash
 $ source helper.bash
-$ nanoc              # to build the page
-$ guard              # Automatically rebuild website on changes
-$ nanoc view         # Make website available at http://localhost:3000
-$ nanoc live_command # Combination of last two commands
+$ nanoc                 # to build the page
+$ nanoc compile --watch # Automatically rebuild website on changes
+$ nanoc view            # Make website available at http://localhost:3000
+$ nanoc live            # Combination of last two commands
 ```
 
 For convenience there is a `Makefile` provided:

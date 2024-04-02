@@ -3,7 +3,7 @@
   command = "bash .netlify/build.sh"
 
 [build.environment]
-#  RUBY_VERSION = "3.0.4"
+  RUBY_VERSION = "3.0.6"
   HOMEBREW_BUNDLE_FILE = ".netlify/Brewfile"
 
 [context.master]
