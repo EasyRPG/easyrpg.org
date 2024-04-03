@@ -19,11 +19,17 @@ distclean: clean
 	rm -rf tmp/ .bundle bin vendor
 
 dev:
-	bin/nanoc live_command
+	bin/nanoc live
 
 # default installation
 .bundle:
 	@[ -e .bundle ] || $(MAKE) install
+
+define install_with_stubs
+	bundle install
+	@echo "Making gems available"
+	bundle binstubs --force nanoc
+endef
 
 bundler-env:
 	@echo "Configuring bundler environment"
@@ -32,22 +38,16 @@ bundler-env:
 
 install: bundler-env
 	@echo "Installing only main gems, cleaning old gems"
-	@bundle config set --local without nanoc,test
-	bundle install
-	@echo "Making gems available"
-	bundle binstubs --force nanoc
+	@bundle config set --local without development,test
+	$(install_with_stubs)
 
 install-devel: bundler-env
 	@echo "Installing all gems, cleaning old gems"
 	@bundle config unset --local without
-	bundle install
-	@echo "Making gems available"
-	bundle binstubs --force nanoc guard
+	$(install_with_stubs)
 
 install-ci: bundler-env
 	@echo "Installing main and testing gems, cleaning old gems"
 	@bundle config set --local deployment true
-	@bundle config set --local without nanoc
-	bundle install
-	@echo "Making gems available"
-	bundle binstubs --force nanoc
+	@bundle config set --local without development
+	$(install_with_stubs)
