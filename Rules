@@ -3,7 +3,7 @@
 require 'ruby-xxhash'
 
 preprocess do
-  hide_items_from_sitemap
+  write_sitemap_file
 end
 
 compile '/**/*.{html,md}' do
