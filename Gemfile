@@ -7,7 +7,7 @@ gem 'typogruby'         # text enhancements
 gem 'rouge'             # syntax highlighting
 gem 'slim'              # templates
 gem 'builder'           # xml sitemaps
-gem 'yuicompressor'     # css/js uglifying
+gem 'terser'            # js uglifying
 gem 'ruby-xxHash'       # for cache busting
 
 group :nanoc do

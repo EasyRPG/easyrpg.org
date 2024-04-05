@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'ruby-xxhash'
-
 preprocess do
   write_sitemap_file
 end
@@ -17,26 +15,25 @@ compile '/**/*.{html,md}' do
   filter :tidy if @config[:prod]
 end
 
-compile '/{css/*.scss,js/*.js}' do
-  ext = "." + item.identifier.ext
-  if ext == '.scss'
-    filter :dart_sass, {
-      :syntax => :scss,
-      :style => (@config[:prod] ? :compressed : :expanded)
-    }
-    ext = ".css"
-  end
+ignore '/css/{vendor,bits}/*'
+compile '/css/*.scss' do
+  filter :dart_sass, :style => (@config[:prod] ? :compressed : :expanded)
+end
 
-  # compress and use a hash to avoid caching issues
+compile '/js/*.js' do
   if @config[:prod]
-    filter :yui_compressor, :type => :js if ext == ".js"
-    checksum = XXhash.xxh32(File.read(item[:filename]), 0xEA51)
-    write item.identifier.without_ext + '-' + checksum.to_s + ".min" + ext
-  else
-    write item.identifier.without_ext + ext
+    filter :terser
   end
 end
-ignore '/css/**/*'
+
+route '/{js/*.js,css/*.scss}' do
+  ext = item.identifier.ext == 'scss' ? '.css' : '.' + item.identifier.ext
+  if @config[:prod]
+    item.identifier.without_ext + '-' + asset_hash(item) + '.min' + ext
+  else
+    item.identifier.without_ext + ext
+  end
+end
 
 compile '/sitemap.xml' do
   filter :erb
