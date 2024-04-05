@@ -3,15 +3,11 @@
 set -e
 
 if [ "x$1" == "xredirect" ]; then
-  # remove content
-  rm -rf content
+  # remove pages content
+  find content/ -type f -a \( -name '*.md' -o -name '*.html' \) --delete
 
   # make redirect page default
-  mkdir content
   cp .netlify/redirect.md content/index.md
-
-  # relocate assets
-  sed -r 's#(href|src)="/#\1="https://easyrpg.org/#g' -i layouts/default.slim
 fi
 
 # correct url
