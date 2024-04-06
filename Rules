@@ -56,6 +56,13 @@ route '/**/*.{html,md}' do
   end
 end
 
+# duplicate some files
+compile '/ads.txt' do
+  write item.identifier
+  write "/app-ads.txt"
+end
+
+# copy the rest over
 passthrough '/**/*'
 
 layout '/**/*.slim', :slim, {
