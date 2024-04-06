@@ -40,10 +40,6 @@ compile '/sitemap.xml' do
   write '/sitemap.xml'
 end
 
-compile '/htaccess.txt' do
-  write '/.htaccess'
-end
-
 route '/**/*.{html,md}' do
   # homepage
   if item.identifier =~ '/index.*'
