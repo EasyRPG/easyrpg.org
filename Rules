@@ -4,6 +4,7 @@ preprocess do
   write_sitemap_file
 end
 
+# all pages
 compile '/**/*.{html,md}' do
   filter :erb
   filter :kramdown, auto_ids: false if item.identifier =~ '/**/*.md'
@@ -13,6 +14,21 @@ compile '/**/*.{html,md}' do
   filter :typogruby
   # pretty-print, find errors
   filter :tidy if @config[:prod]
+end
+
+# home and error page
+route '/*.{html,md}' do
+  item.identifier.without_ext + '.html'
+end
+
+route '/**/*.{html,md}' do
+  # section home
+  if item.identifier =~ '**/index.*'
+    item.identifier.without_ext + ".html"
+  # every other page
+  else
+    item.identifier.without_ext + '/index.html'
+  end
 end
 
 ignore '/css/{vendor,bits}/*'
@@ -38,22 +54,6 @@ end
 compile '/sitemap.xml' do
   filter :erb
   write '/sitemap.xml'
-end
-
-route '/**/*.{html,md}' do
-  # homepage
-  if item.identifier =~ '/index.*'
-    '/index.html'
-  # error page
-  elsif item.identifier =~ '/404.*'
-    '/404.html'
-  # section home
-  elsif item.identifier =~ '**/index.*'
-    item.identifier.without_ext + ".html"
-  # every other page
-  else
-    item.identifier.without_ext + '/index.html'
-  end
 end
 
 # duplicate some files
