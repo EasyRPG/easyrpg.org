@@ -1,11 +1,10 @@
 #!/usr/bin/env ruby
 
-require 'ruby-xxhash'
-
 preprocess do
-  hide_items_from_sitemap
+  write_sitemap_file
 end
 
+# all pages
 compile '/**/*.{html,md}' do
   filter :erb
   filter :kramdown, auto_ids: false if item.identifier =~ '/**/*.md'
@@ -17,45 +16,14 @@ compile '/**/*.{html,md}' do
   filter :tidy if @config[:prod]
 end
 
-compile '/{css/*.scss,js/*.js}' do
-  ext = "." + item.identifier.ext
-  if ext == '.scss'
-    filter :dart_sass, {
-      :syntax => :scss,
-      :style => (@config[:prod] ? :compressed : :expanded)
-    }
-    ext = ".css"
-  end
-
-  # compress and use a hash to avoid caching issues
-  if @config[:prod]
-    filter :yui_compressor, :type => :js if ext == ".js"
-    checksum = XXhash.xxh32(File.read(item[:filename]), 0xEA51)
-    write item.identifier.without_ext + '-' + checksum.to_s + ".min" + ext
-  else
-    write item.identifier.without_ext + ext
-  end
-end
-ignore '/css/**/*'
-
-compile '/sitemap.xml' do
-  filter :erb
-  write '/sitemap.xml'
-end
-
-compile '/htaccess.txt' do
-  write '/.htaccess'
+# home and error page
+route '/*.{html,md}' do
+  item.identifier.without_ext + '.html'
 end
 
 route '/**/*.{html,md}' do
-  # homepage
-  if item.identifier =~ '/index.*'
-    '/index.html'
-  # error page
-  elsif item.identifier =~ '/404.*'
-    '/404.html'
   # section home
-  elsif item.identifier =~ '**/index.*'
+  if item.identifier =~ '**/index.*'
     item.identifier.without_ext + ".html"
   # every other page
   else
@@ -63,6 +31,38 @@ route '/**/*.{html,md}' do
   end
 end
 
+ignore '/css/{vendor,bits}/*'
+compile '/css/*.scss' do
+  filter :dart_sass, :style => (@config[:prod] ? :compressed : :expanded)
+end
+
+compile '/js/*.js' do
+  if @config[:prod]
+    filter :terser
+  end
+end
+
+route '/{js/*.js,css/*.scss}' do
+  ext = item.identifier.ext == 'scss' ? '.css' : '.' + item.identifier.ext
+  if @config[:prod]
+    item.identifier.without_ext + '-' + asset_hash(item) + '.min' + ext
+  else
+    item.identifier.without_ext + ext
+  end
+end
+
+compile '/sitemap.xml' do
+  filter :erb
+  write '/sitemap.xml'
+end
+
+# duplicate some files
+compile '/ads.txt' do
+  write item.identifier
+  write "/app-ads.txt"
+end
+
+# copy the rest over
 passthrough '/**/*'
 
 layout '/**/*.slim', :slim, {
