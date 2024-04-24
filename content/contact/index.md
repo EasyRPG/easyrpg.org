@@ -42,7 +42,7 @@ We also have these accounts, but they are less active:
 [#easyrpg @ IRC]: ircs://irc.libera.chat/easyrpg "#easyrpg IRC"
 [#openrtp @ IRC]: ircs://irc.libera.chat/openrtp "#openrtp IRC"
 [#easyrpg:matrix.easyrpg.org]: https://app.element.io/#/room/%23easyrpg:matrix.easyrpg.org "#easyrpg Matrix"
-[#openrtp:matrix.easyrpg.org]: https://app.element.io/#/room/%23openrtp:matrix.openrtp.org "#openrtp Matrix"
+[#openrtp:matrix.easyrpg.org]: https://app.element.io/#/room/%23openrtp:matrix.easyrpg.org "#openrtp Matrix"
 [Invite Link]: /discord/ "Discord Chat"
 
 </div>
