@@ -80,9 +80,7 @@ menu_weight: 3
 				<p>
 					Player is also available on <a href="https://brew.sh">homebrew</a>, use this command in your terminal:
 					<br>
-					<code>
-						brew install easyrpg-player
-					</code>
+					<code>brew install easyrpg-player</code>
 				</p>
 			</div>
 			<div id="release-android">
@@ -104,7 +102,7 @@ menu_weight: 3
 				<p>
 					Available on the <a href="https://buildbot.libretro.com">libretro buildbot</a>. (or use the RetroArch core downloader)
 					<br>
-					The libretro core can be executed by RetroArch and other libretro frontends.
+					The libretro core can be executed by RetroArch and other libretro frontends. The RTP is searched in the <code>rtp</code> subdirectory of the libretro system and the libretro asset directory.
 					<br>
 					For Windows and macOS we offer our own builds.
 				</p>
@@ -123,29 +121,29 @@ menu_weight: 3
 				<p>
 					<a href="https://easyrpg.org/downloads/player/<%= ver %>/easyrpg-player-<%= ver %>-wii.zip">Wii (.dol)</a>
 					<br>
-					This needs a homebrew-enabled console with "Homebrew Channel" installed. Games are searched in the same directory as the dol.
+					This needs a homebrew-enabled console with "Homebrew Channel" installed. Games are searched in the same directory as the dol. The RTP is searched in <code>/data/rtp/</code> on both SD card and USB.
 				</p>
 				<!--<p>
 
 					<a href="https://easyrpg.org/downloads/player/<%= ver %>/easyrpg-player-<%= ver %>-wiiu.wuhb">WiiU (.wuhb)</a>
 					<br>
-					This needs a homebrew-enabled console with "Aroma" installed. Games are searched in the same directory as the wuhb.
+					This needs a homebrew-enabled console with "Aroma" installed. Games and the RTP are searched in the same directory as the wuhb. Alternatively the RTP is searched in <code>/wiiu/data/easyrpg-player/rtp</code> on the SD card.
 				</p>-->
 				<p>
 					<a href="https://easyrpg.org/downloads/player/<%= ver %>/easyrpg-player-<%= ver %>-3ds.zip">Nintendo 3DS (3dsx)</a>,
 					<a href="https://easyrpg.org/downloads/player/<%= ver %>/easyrpg-player-<%= ver %>-3ds.cia">Nintendo 3DS (CIA)</a>
 					<br>
-					This needs a homebrew-enabled console with "Homebrew Launcher" (for 3dsx) or a custom firmware (for CIA) installed. The CIA searches for games in sdcard:/3ds/easyrpg-player
+					This needs a homebrew-enabled console with "Homebrew Launcher" (for 3dsx) or a custom firmware (for CIA) installed. The CIA searches for games in <code>sdmc:/3ds/easyrpg-player</code>. The RTP is searched in <code>sdmc:/data/rtp</code>.
 				</p>
 				<p>
 					<a href="https://easyrpg.org/downloads/player/<%= ver %>/easyrpg-player-<%= ver %>-psvita.vpk">PlayStation Vita</a>
 					<br>
-					This needs a homebrew-enabled console by running the HENkaku exploit. Games are searched in ux0:/data/easyrpg-player.
+					This needs a homebrew-enabled console by running the HENkaku exploit. Games are searched in <code>ux0:/data/easyrpg-player</code> and the RTP in <code>ux0:/data/easyrpg-player/rtp</code>.
 				</p>
 				<p>
 					<a href="https://easyrpg.org/downloads/player/<%= ver %>/easyrpg-player-<%= ver %>-switch.zip">Nintendo Switch</a>
 					<br>
-					This needs a homebrew-enabled console with "Homebrew Launcher" installed. Games are searched in the same directory as the nro.
+					This needs a homebrew-enabled console with "Homebrew Launcher" installed. Games and the RTP are searched in the same directory as the nro. Alternatively the RTP is searched in <code>/switch/easyrpg-player/rtp</code>.
 				</p>
 				<p>
 					<em>The 3DS, PSVita and Switch ports have originally been contributed by <a href="https://rinnegatamante.it/site/" title="Website of Rinnegatamante">Rinnegatamante</a>.</em>
@@ -261,7 +259,9 @@ menu_weight: 3
 					<a href="https://ci.easyrpg.org/downloads/libretro/easyrpg_libretro_win32.zip">Windows 32 bit core</a>,
 					<a href="https://ci.easyrpg.org/downloads/libretro/easyrpg_libretro_win64.zip">Windows 64 bit core</a>
 					<br>
-					These cores require at least Windows Vista.
+					The libretro core can be executed by RetroArch and other libretro frontends. The RTP is searched in the <code>rtp</code> subdirectory of the libretro system and the libretro asset directory.
+					<br>
+					These cores require at least Windows 7.
 				</p>
 				<p>
 					<a href="https://ci.easyrpg.org/downloads/libretro/easyrpg_libretro_macos.zip">macOS 64-bit (Intel) core</a>
@@ -273,29 +273,29 @@ menu_weight: 3
 
 					<a href="https://ci.easyrpg.org/downloads/wii/easyrpg-player-wii.zip">Wii (.dol)</a>
 					<br>
-					This needs a homebrew-enabled console with "Homebrew Channel" installed. Games are searched in the same directory as the dol.
+					This needs a homebrew-enabled console with "Homebrew Channel" installed. Games are searched in the same directory as the dol. The RTP is searched in <code>/data/rtp/</code> on both SD card and USB.
 				</p>
 				<p>
 
 					<a href="https://ci.easyrpg.org/downloads/wiiu/easyrpg-player.wuhb">WiiU (.wuhb)</a>
 					<br>
-					This needs a homebrew-enabled console with "Aroma" installed. Games are searched in the same directory as the wuhb.
+					This needs a homebrew-enabled console with "Aroma" installed. Games and the RTP are searched in the same directory as the wuhb. Alternatively the RTP is searched in <code>/wiiu/data/easyrpg-player/rtp</code> on the SD card.
 				</p>
 				<p>
 					<a href="https://ci.easyrpg.org/downloads/3ds/easyrpg-player-3ds.zip">Nintendo 3DS (3dsx)</a>,
 					<a href="https://ci.easyrpg.org/downloads/3ds/easyrpg-player.cia">Nintendo 3DS (CIA)</a>
 					<br>
-					This needs a homebrew-enabled console with "Homebrew Launcher" (for 3dsx) or a custom firmware (for CIA) installed. The CIA searches for games in sdcard:/3ds/easyrpg-player.
+					This needs a homebrew-enabled console with "Homebrew Launcher" (for 3dsx) or a custom firmware (for CIA) installed. The CIA searches for games in <code>sdmc:/3ds/easyrpg-player</code>. The RTP is searched in <code>sdmc:/data/rtp</code>.
 				</p>
 				<p>
 					<a href="https://ci.easyrpg.org/downloads/psvita/easyrpg-player-psvita.zip">PlayStation Vita</a>
 					<br>
-					This needs a homebrew-enabled console by running the HENkaku exploit. Games are searched in ux0:/data/easyrpg-player.
+					This needs a homebrew-enabled console by running the HENkaku exploit. Games are searched in <code>ux0:/data/easyrpg-player</code> and the RTP in <code>ux0:/data/easyrpg-player/rtp</code>.
 				</p>
 				<p>
 					<a href="https://ci.easyrpg.org/downloads/switch/easyrpg-player-switch.zip">Nintendo Switch</a>
 					<br>
-					This needs a homebrew-enabled console with "Homebrew Launcher" installed. Games are searched in the same directory as the nro.
+					This needs a homebrew-enabled console with "Homebrew Launcher" installed. Games and the RTP are searched in the same directory as the nro. Alternatively the RTP is searched in <code>/switch/easyrpg-player/rtp</code>.
 				</p>
 				<p>
 					<em>The 3DS, PSVita and Switch Ports have originally been contributed by <a href="https://rinnegatamante.it/site/" title="Website of Rinnegatamante">Rinnegatamante</a>.</em>
