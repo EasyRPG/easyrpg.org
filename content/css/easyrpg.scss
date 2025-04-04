@@ -117,6 +117,31 @@ $darkgrey: #202020;
 		text-align: center;
 		padding: 1.5em 0;
 
+		#play-overlay {
+			position: relative;
+			display: inline-block;
+
+			a {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				color: $lightgrey;
+				background: rgba(0, 0, 0, 0.6);
+				font-size: 24px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				opacity: 0;
+				transition: opacity 0.3s ease;
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+
 		img {
 			vertical-align: middle;
 		}
