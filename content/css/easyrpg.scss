@@ -53,7 +53,7 @@ $darkgrey: #202020;
 		margin: 0;
 	}
 
-	p > code, li > code, dd > code, td > code, {
+	p > code, li > code, dd > code, td > code {
 		background: #faf8f0;
 		word-wrap: break-word;
 		box-decoration-break: clone;
@@ -117,6 +117,31 @@ $darkgrey: #202020;
 		text-align: center;
 		padding: 1.5em 0;
 
+		#play-overlay {
+			position: relative;
+			display: inline-block;
+
+			a {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				color: $lightgrey;
+				background: rgba(0, 0, 0, 0.6);
+				font-size: 24px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				opacity: 0;
+				transition: opacity 0.3s ease;
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+
 		img {
 			vertical-align: middle;
 		}
@@ -136,21 +161,8 @@ $darkgrey: #202020;
 				line-height: 1.5em;
 				text-align: justify;
 
-				&#learn-more {
+				&.button {
 					text-align: center;
-
-					a {
-						display: inline-block;
-						padding: 0.5em 1.5em;
-						background-color: #303030;
-						color: $lightgrey;
-						text-decoration: none;
-						border-bottom: 0.2em solid $darkgrey;
-
-						&:hover {
-							background-color: $darkgrey;
-						}
-					}
 				}
 			}
 		}
@@ -166,6 +178,12 @@ $darkgrey: #202020;
 	#content {
 		background-color: $lightgrey;
 		padding: 1px 0;
+
+		p {
+			&.button {
+				text-align: center;
+			}
+		}
 
 		ul {
 			margin-top: -0.5em;
@@ -304,6 +322,24 @@ $darkgrey: #202020;
 
 	.maxwidth img, .maxwidth iframe, .maxwidth video {
 		max-width: 100%;
+	}
+
+
+	.button {
+		text-align: center;
+
+		a {
+			display: inline-block;
+			padding: 0.5em 1.5em;
+			background-color: #303030;
+			color: $lightgrey;
+			text-decoration: none;
+			border-bottom: 0.2em solid $darkgrey;
+
+			&:hover {
+				background-color: $darkgrey;
+			}
+		}
 	}
 
 	/* Misc */
