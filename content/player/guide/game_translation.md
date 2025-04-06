@@ -27,6 +27,7 @@ In the folder ``LANGUAGE_NAME`` you must first create a file named ``Meta.ini`` 
 ~~~ ini
 [Language]
 Name=Name of the Language Here
+GameTitle=Translated Title of the Game
 Description=Short Description, e.g. the Author
 Code=The language code (IETF tag), e.g. "de_DE" for German
 Term=Translation of the word "Language" in the target language
@@ -34,7 +35,7 @@ Term=Translation of the word "Language" in the target language
 
 You may alter the texts to the right of the "is equal to" (=).
 
-``Name`` and ``Description`` are shown on the title screen of your game.
+``Name`` and ``Description`` are shown on the title screen of your game, while ``GameTitle`` is diplayed in the name of the window of the game.
 
 The ``Code`` is required for proper text rendering and displaying the correct name input scene. Currently the Player has special support for the following codes but we recommend that the code is always given so that old translations can also benefit from updates.
 
@@ -48,7 +49,7 @@ The ``Code`` is required for proper text rendering and displaying the correct na
 
 The value after ``Term`` is shown on the title screen for the "Language" menu entry when this translation is active.
 
-Now give it a try: When you run your game, you will see a new "Language" entry on the title screen. In this submenu you will find your entries from the ``Meta.ini``. If this works, you can now start translating.
+Now give it a try: When you run your game, you will see a new "Language" entry on the title screen. In this submenu you will find your entries from the ``Meta.ini``. If this works, you can now start translating. Additionally, when opening the settings menu of the Player while in-game, a Language option should be displayed, allowing it to be changed on the fly. It is especially useful for games skipping entirely the title screen.
 
 ### Generating language files
 
