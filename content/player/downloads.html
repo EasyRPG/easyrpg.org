@@ -3,14 +3,14 @@ title: EasyRPG Player
 menu_weight: 3
 ---
 <% # The following variables can be quite handy ;)
-	ver="0.8"
-	oldver="0.7.0"
+	ver="0.8.1"
+	oldver="0.8"
 
-	ver_lcf="0.8"
-	oldver_lcf="0.7.0"
+	ver_lcf="0.8.1"
+	oldver_lcf="0.8"
 
-	reldate="2023-04-29"
-	codename="Paralyze"
+	reldate="2025-04-07"
+	codename="Stun"
 
 	relyear, relmonth, relday=reldate.split("-")
 	verdash=ver.gsub(".", "-")
@@ -33,6 +33,7 @@ menu_weight: 3
 			<li class='tab'><a href="#release-macos">macOS</a></li>
 			<li class='tab'><a href="#release-android">Android</a></li>
 			<li class='tab'><a href="#release-libretro">libretro</a></li>
+			<li class='tab'><a href="#release-homebrew">Homebrew</a></li>
 			<li class='tab'><a href="#release-other">Other</a></li>
 			<li class='tab'><a href="#release-source">Source Code</a></li>
 		</ul>
@@ -64,13 +65,13 @@ menu_weight: 3
 					These are provided by us on the Open Build Service.
 				</p>
 				<p>
+					<a id="flatpak-link" href="https://flathub.org/apps/details/org.easyrpg.player">Flatpak Linux packages</a>
+				</p>
+				<p>
 					<a id="snap-link" href="https://snapcraft.io/easyrpg-player">Snapcraft Linux packages</a>
 					<br>
 					These builds are not directly controlled by us.
 				</p>
-				<!-- <p>
-					<a id="flatpak-link" href="https://flathub.org/apps/details/org.easyrpg.player">Flatpak Linux packages</a>
-				</p> -->
 			</div>
 			<div id="release-macos">
 				<h4>macOS</h4>
@@ -114,21 +115,23 @@ menu_weight: 3
 					<li>Linux (amd64)</li>
 					<li>macOS (<a href="https://easyrpg.org/downloads/player/<%= ver %>/easyrpg-player-<%= ver %>-macos-libretro.zip">macOS 64-bit (Intel) core</a>)</li>
 					<li>Android</li>
+					<li>iOS</li>
+					<li>tvOS</li>
 				</ul>
 			</div>
-			<div id="release-other">
-				<h4>Other contributed ports</h4>
+			<div id="release-homebrew">
+				<h4>Homebrew platforms</h4>
 				<p>
 					<a href="https://easyrpg.org/downloads/player/<%= ver %>/easyrpg-player-<%= ver %>-wii.zip">Wii (.dol)</a>
 					<br>
 					This needs a homebrew-enabled console with "Homebrew Channel" installed. Games are searched in the same directory as the dol. The RTP is searched in <code>/data/rtp/</code> on both SD card and USB.
 				</p>
-				<!--<p>
+				<p>
 
 					<a href="https://easyrpg.org/downloads/player/<%= ver %>/easyrpg-player-<%= ver %>-wiiu.wuhb">WiiU (.wuhb)</a>
 					<br>
 					This needs a homebrew-enabled console with "Aroma" installed. Games and the RTP are searched in the same directory as the wuhb. Alternatively the RTP is searched in <code>/wiiu/data/easyrpg-player/rtp</code> on the SD card.
-				</p>-->
+				</p>
 				<p>
 					<a href="https://easyrpg.org/downloads/player/<%= ver %>/easyrpg-player-<%= ver %>-3ds.zip">Nintendo 3DS (3dsx)</a>,
 					<a href="https://easyrpg.org/downloads/player/<%= ver %>/easyrpg-player-<%= ver %>-3ds.cia">Nintendo 3DS (CIA)</a>
@@ -148,6 +151,8 @@ menu_weight: 3
 				<p>
 					<em>The 3DS, PSVita and Switch ports have originally been contributed by <a href="https://rinnegatamante.it/site/" title="Website of Rinnegatamante">Rinnegatamante</a>.</em>
 				</p>
+			</div>
+			<div id="release-other">
 				<h4>Externally hosted packages</h4>
 				<p>
 					<a href="https://repo.openpandora.org/?page=detail&amp;app=easyrpgplayer_ptitseb">Open Pandora (.pnd)</a>
@@ -212,7 +217,7 @@ menu_weight: 3
 			<li class='tab'><a href="#snapshot-macos">macOS</a></li>
 			<li class='tab'><a href="#snapshot-android">Android</a></li>
 			<li class='tab'><a href="#snapshot-libretro">libretro</a></li>
-			<li class='tab'><a href="#snapshot-other">Other</a></li>
+			<li class='tab'><a href="#snapshot-homebrew">Homebrew</a></li>
 			<li class='tab'><a href="#snapshot-source">Source Code</a></li>
 		</ul>
 		<div class='panel-container'>
@@ -267,10 +272,9 @@ menu_weight: 3
 					<a href="https://ci.easyrpg.org/downloads/libretro/easyrpg_libretro_macos.zip">macOS 64-bit (Intel) core</a>
 				</p>
 			</div>
-			<div id="snapshot-other">
-				<h4>Other contributed ports</h4>
+			<div id="snapshot-homebrew">
+				<h4>Homebrew platforms</h4>
 				<p>
-
 					<a href="https://ci.easyrpg.org/downloads/wii/easyrpg-player-wii.zip">Wii (.dol)</a>
 					<br>
 					This needs a homebrew-enabled console with "Homebrew Channel" installed. Games are searched in the same directory as the dol. The RTP is searched in <code>/data/rtp/</code> on both SD card and USB.
