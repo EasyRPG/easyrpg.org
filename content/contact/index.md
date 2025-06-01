@@ -31,7 +31,8 @@ Please follow us! :)
 
 Our main communication channels on social networks:
 
-- [Fediverse](https://social.easyrpg.org) (Follow ``@easyrpg@easyrpg.org``)
+- [Bluesky](https://bsky.app/profile/easyrpg.org)
+- [Fediverse](https://fed.brid.gy/bsky/easyrpg.org) (Follow ``@easyrpg.org@bsky.brid.gy``)
 - [Twitter](https://twitter.com/easyrpg/)
 
 We also have these accounts, but they are less active:
