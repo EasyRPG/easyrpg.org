@@ -3,23 +3,24 @@ title: EasyRPG Player
 menu_weight: 3
 ---
 <% # The following variables can be quite handy ;)
-	ver="0.8.1"
-	oldver="0.8"
+	ver="0.8.1.1"
+	oldver="0.8.1"
 
 	ver_lcf="0.8.1"
 	oldver_lcf="0.8"
 
-	reldate="2025-04-07"
-	codename="Stun"
+	reldate="2025-06-01"
+	codename="Stun - Patch 1"
 
 	relyear, relmonth, relday=reldate.split("-")
 	verdash=ver.gsub(".", "-")
+	codenamedash=codename.gsub(" ", "-").gsub(/\-+/, "-")
 %>
 <div class="info">
 	<h2>Download EasyRPG Player</h2>
 	<h3>EasyRPG Player version <%= ver %> "<%= codename %>"</h3>
 	<p>Release date: <%= reldate %>.
-		<a href="https://blog.easyrpg.org/<%= relyear %>/<%= relmonth %>/easyrpg-player-<%= verdash %>-<%= codename.downcase %>/">
+		<a href="https://blog.easyrpg.org/<%= relyear %>/<%= relmonth %>/easyrpg-player-<%= verdash %>-<%= codenamedash.downcase %>/">
 			Release notes</a>,
 		changes since <%= oldver %>:
 		<a href="https://github.com/EasyRPG/Player/compare/<%= oldver + "..." + ver %>">Player</a>,
@@ -149,7 +150,7 @@ menu_weight: 3
 					This needs a homebrew-enabled console with "Homebrew Launcher" installed. Games and the RTP are searched in the same directory as the nro. Alternatively the RTP is searched in <code>/switch/easyrpg-player/rtp</code>.
 				</p>
 				<p>
-					<em>The 3DS, PSVita and Switch ports have originally been contributed by <a href="https://rinnegatamante.it/site/" title="Website of Rinnegatamante">Rinnegatamante</a>.</em>
+					<em>The 3DS, PSVita and Switch ports have originally been contributed by <a href="https://www.rinnegatamante.eu/site/" title="Website of Rinnegatamante">Rinnegatamante</a>.</em>
 				</p>
 			</div>
 			<div id="release-other">
@@ -302,7 +303,7 @@ menu_weight: 3
 					This needs a homebrew-enabled console with "Homebrew Launcher" installed. Games and the RTP are searched in the same directory as the nro. Alternatively the RTP is searched in <code>/switch/easyrpg-player/rtp</code>.
 				</p>
 				<p>
-					<em>The 3DS, PSVita and Switch Ports have originally been contributed by <a href="https://rinnegatamante.it/site/" title="Website of Rinnegatamante">Rinnegatamante</a>.</em>
+					<em>The 3DS, PSVita and Switch Ports have originally been contributed by <a href="https://www.rinnegatamante.eu/site/" title="Website of Rinnegatamante">Rinnegatamante</a>.</em>
 				</p>
 			</div>
 			<div id="snapshot-source">
