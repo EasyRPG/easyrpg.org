@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+ignore '/github/**/*'
+
 preprocess do
   write_sitemap_file
 end
@@ -7,6 +9,7 @@ end
 # all pages
 compile '/**/*.{html,md}' do
   filter :erb
+  filter :github_issues
   filter :kramdown, auto_ids: false if item.identifier =~ '/**/*.md'
   filter :colorize_syntax, :default_colorizer => :rouge
   layout '/default.*'
