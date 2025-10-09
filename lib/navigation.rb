@@ -1,8 +1,8 @@
 
 # allow partial layouts (menu/submenu)
-include Nanoc::Helpers::Rendering
+use_helper Nanoc::Helpers::Rendering
 # generate links to specific items
-include Nanoc::Helpers::LinkTo
+use_helper Nanoc::Helpers::LinkTo
 
 def link_to_upper_page(attributes = {})
   p = @item_rep.path

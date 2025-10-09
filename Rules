@@ -1,33 +1,25 @@
 #!/usr/bin/env ruby
 
 preprocess do
-  write_sitemap_file
+  write_ad_files
 end
+
+ignore '/blog/**/*' # TODO
 
 # all pages
 compile '/**/*.{html,md}' do
-  filter :erb
-  filter :kramdown, auto_ids: false if item.identifier =~ '/**/*.md'
+  filter :erubi
+  filter :kramdown, auto_ids: false if item[:extension] == 'md'
   filter :colorize_syntax, :default_colorizer => :rouge
   layout '/default.*'
-  # enhance quotes and such
-  filter :typogruby
-  # pretty-print, find errors
-  filter :tidy if @config[:prod]
-end
+  filter :typogruby # enhance quotes and such
+  filter :tidy if @config[:prod] # pretty-print, find errors
 
-# home and error page
-route '/*.{html,md}' do
-  item.identifier.without_ext + '.html'
-end
-
-route '/**/*.{html,md}' do
-  # section home
-  if item.identifier =~ '**/index.*'
-    item.identifier.without_ext + ".html"
-  # every other page
-  else
-    item.identifier.without_ext + '/index.html'
+  # section home or toplevel page(404)
+  if item.identifier =~ '**/index.*' || item.identifier =~ '/*.{html,md}'
+    write ext: ".html"
+  else # every other page
+    write item.identifier.without_ext + '/index.html'
   end
 end
 
@@ -43,7 +35,7 @@ compile '/js/*.js' do
 end
 
 route '/{js/*.js,css/*.scss}' do
-  ext = item.identifier.ext == 'scss' ? '.css' : '.' + item.identifier.ext
+  ext = item[:extension] == 'scss' ? '.css' : '.' + item[:extension]
   if @config[:prod]
     item.identifier.without_ext + '-' + asset_hash(item) + '.min' + ext
   else
@@ -51,15 +43,9 @@ route '/{js/*.js,css/*.scss}' do
   end
 end
 
-compile '/sitemap.xml' do
-  filter :erb
-  write '/sitemap.xml'
-end
-
-# duplicate some files
-compile '/ads.txt' do
+compile '/{sitemap.xml,robots.txt}' do
+  filter :erubi
   write item.identifier
-  write "/app-ads.txt"
 end
 
 # copy the rest over
@@ -69,4 +55,4 @@ layout '/**/*.slim', :slim, {
   pretty: (@config[:prod] ? false : true),
   sort_attrs: false
 }
-layout '/**/*.html', :erb
+layout '/**/*.html', :erubi
