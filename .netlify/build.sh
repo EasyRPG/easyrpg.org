@@ -4,7 +4,8 @@ set -e
 
 if [ "x$1" == "xredirect" ]; then
   # remove pages content
-  find content/ -type f -a \( -name '*.md' -o -name '*.html' \) --delete
+  find content/ -type f -a -name '*.md' -delete
+  rm content/index.html
 
   # make redirect page default
   cp .netlify/redirect.md content/index.md
