@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 preprocess do
+  check_webpack_js
   write_ad_files
 end
 
@@ -25,22 +26,18 @@ end
 
 ignore '/css/{vendor,bits}/*'
 compile '/css/*.scss' do
-  filter :dart_sass, :style => (@config[:prod] ? :compressed : :expanded)
+  if @config[:prod]
+    filter :dart_sass, :style => :compressed
+    write item.identifier.without_ext + '-' + asset_hash(item) + '.min.css'
+  else
+    filter :dart_sass, :style => :expanded
+    write item.identifier.without_ext + '.css'
+  end
 end
 
 compile '/js/*.js' do
-  if @config[:prod]
-    filter :terser
-  end
-end
-
-route '/{js/*.js,css/*.scss}' do
-  ext = item[:extension] == 'scss' ? '.css' : '.' + item[:extension]
-  if @config[:prod]
-    item.identifier.without_ext + '-' + asset_hash(item) + '.min' + ext
-  else
-    item.identifier.without_ext + ext
-  end
+  filter :erubi
+  write item.identifier
 end
 
 compile '/{sitemap.xml,robots.txt}' do

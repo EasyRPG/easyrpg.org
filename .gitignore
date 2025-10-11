@@ -9,3 +9,7 @@
 /bin/
 /vendor/
 /.bundle/
+
+# npm/yarn
+/node_modules/
+/content/js/

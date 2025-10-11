@@ -8,7 +8,6 @@ gem 'rouge'             # syntax highlighting
 gem 'slim'              # templates
 gem 'erubi'             # templates
 gem 'builder'           # xml sitemaps
-gem 'terser'            # js uglifying
 gem 'ruby-xxHash'       # for cache busting
 
 group :nanoc do

@@ -61,7 +61,6 @@ GEM
       http_parser.rb (~> 0)
     erubi (1.13.1)
     eventmachine (1.2.7)
-    execjs (2.10.0)
     falcon (0.52.3)
       async
       async-container (~> 0.20)
@@ -199,8 +198,6 @@ GEM
       set (~> 1.0)
     string-format (0.2.0)
     temple (0.10.4)
-    terser (1.2.6)
-      execjs (>= 0.3.0, < 3)
     tilt (2.6.1)
     traces (0.18.2)
     tty-color (0.6.0)
@@ -224,7 +221,7 @@ DEPENDENCIES
   erubi
   falcon
   kramdown
-  nanoc (~> 4.12)
+  nanoc (~> 4.13)
   nanoc-dart-sass
   nanoc-external
   nanoc-live
@@ -232,7 +229,6 @@ DEPENDENCIES
   rouge
   ruby-xxHash
   slim
-  terser
   typogruby
   w3c_validators
 
