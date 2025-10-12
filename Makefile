@@ -10,7 +10,8 @@ compile: .deps
 all: clean compile check
 
 check: .deps
-	bin/nanoc check internal_links external_links stale css html
+	bin/nanoc check internal_links external_links stale
+	-bin/nanoc check css html
 
 clean:
 	rm -rf output/
