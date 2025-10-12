@@ -8,10 +8,8 @@ gem 'rouge'             # syntax highlighting
 gem 'slim'              # templates
 gem 'erubi'             # templates
 gem 'builder'           # xml sitemaps
-gem 'ruby-xxHash'       # for cache busting
 
 group :nanoc do
-  gem 'nanoc-dart-sass' # css conversion
   gem 'nanoc-live'      # automatic rebuilds
   gem 'nanoc-external'  # tidy filter
 end
