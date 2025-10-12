@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack')
 const TerserPlugin = require('terser-webpack-plugin')
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   mode: 'none', /* set by cli */
@@ -19,6 +20,12 @@ module.exports = {
       banner: `EasyRPG.org javascript, bundled by webpack - https://webpack.js.org
 For license information visit <%= @config[:base_url] + @items['/about/website.*'].path %>
 `,
+    }),
+    new CopyPlugin({
+      patterns: [
+        { context: 'node_modules/', from: 'glightbox/dist/css/glightbox.css',
+          to: path.resolve(__dirname, '../content/css/vendor') },
+      ],
     }),
   ],
   optimization: {

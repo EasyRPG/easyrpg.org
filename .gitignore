@@ -13,3 +13,5 @@
 # npm/yarn
 /node_modules/
 /content/js/
+/content/css/vendor/
+!/content/css/vendor/rouge-github-dark.scss
