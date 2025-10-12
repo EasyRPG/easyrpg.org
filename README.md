@@ -6,7 +6,7 @@ Source code of the EasyRPG homepage at https://easyrpg.org
 ## Requirements
 
  - [ruby] >=3.2, a recent version is recommended
- - [nanoc] >=4.12
+ - [nanoc] >=4.13
  - [tidy-html5]
  - [some gems]
  - [yarn]

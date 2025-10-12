@@ -13,5 +13,8 @@ fi
 # correct url
 sed "s#DEPLOY_PRIME_URL#${DEPLOY_PRIME_URL}#" -i nanoc.yaml
 
+# build js
+yarn build
+
 # build site
 nanoc --env=netlify
