@@ -1,8 +1,8 @@
 
 # allow partial layouts (menu/submenu)
-include Nanoc::Helpers::Rendering
+use_helper Nanoc::Helpers::Rendering
 # generate links to specific items
-include Nanoc::Helpers::LinkTo
+use_helper Nanoc::Helpers::LinkTo
 
 def link_to_upper_page(attributes = {})
   p = @item_rep.path
@@ -21,6 +21,17 @@ def link_to_upper_page(attributes = {})
   attributes[:title] = "Back to #{upper} page"
 
   link_to("↻ " + upper, target, attributes)
+end
+
+def link_to_and_activate(text, target, attributes = {})
+  # Find path
+  path = target.is_a?(String) ? target : target.path
+
+  if @item_rep&.path == path
+    attributes[:class] = "active" # FIXME: append class
+  end
+
+  link_to(text, target, attributes)
 end
 
 def navigation_for(item)

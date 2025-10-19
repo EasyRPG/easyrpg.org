@@ -5,10 +5,11 @@ Source code of the EasyRPG homepage at https://easyrpg.org
 
 ## Requirements
 
- - [ruby] >=2.7, version 3 is recommended
- - [nanoc] >=4.12
+ - [ruby] >=3.2, a recent version is recommended
+ - [nanoc] >=4.13
  - [tidy-html5]
  - [some gems]
+ - [yarn]
 
 
 ## Source code
@@ -21,7 +22,7 @@ https://github.com/EasyRPG/easyrpg.org
 
 ## Building the site
 
-Install needed gems (choose one):
+Install needed gems and node packages (choose one):
 
 ```bash
 $ make install       # for building the site
@@ -87,17 +88,14 @@ and designers (see [issue #5] for reference).
 
 Included are the following 3rd party software:
 
-* jQuery - https://jquery.com - Copyright (c) JS Foundation and other contributors,
-  provided under the MIT license
+* cash-dom - https://github.com/fabiospampinato/cash - Copyright (c) 2014-2020
+  Ken Wheeler, 2020-present Fabio Spampinato, provided under MIT license
 
-* jQuery EasyTabs plugin - https://os.alfajango.com/easytabs/ - Copyright (c)
-  2010-2011 Steve Schwartz (JangoSteve), dual licensed under the MIT and GPL licenses
+* GLightbox - https://github.com/biati-digital/glightbox - Copyright (c) 2018
+  Biati Digital, provided under MIT license
 
-* Flurry jQuery Plugin - https://github.com/joshmcrty/Flurry - Copyright (c)
-  2016 Josh McCarty, provided under the GPLv2 license
-
-* Magnific Popup - http://dimsemenov.com/plugins/magnific-popup/ -
-  Copyright (c) 2014-2016 Dmitry Semenov, provided under the MIT license
+* magic-snowflakes - https://github.com/hcodes/snowflakes - Copyright (c) 2023
+  Denis Seleznev, provided under MIT license
 
 * Favicons have been processed by https://realfavicongenerator.net
 
@@ -107,6 +105,7 @@ Included are the following 3rd party software:
 [nanoc]: https://nanoc.ws/
 [tidy-html5]: http://www.html-tidy.org
 [some gems]: Gemfile
+[yarn]: https://yarnpkg.com
 [netlify-img]: https://api.netlify.com/api/v1/badges/697e9cfb-4ea6-4945-8ddd-9384735e0b0f/deploy-status
 [netlify-deploy]: https://app.netlify.com/sites/easyrpg/deploys
 [#easyrpg at Libera Chat]: https://kiwiirc.com/nextclient/#ircs://irc.libera.chat/#easyrpg?nick=rpgguest??

@@ -1,0 +1,5 @@
+- if not @item[:no_menu] and not @item[:is_hidden]
+  ul.submenu
+    li == link_to_upper_page()
+    - navigation_for(@item).each do |index, target|
+      li == link_to_and_activate(target[:text], target[:link])

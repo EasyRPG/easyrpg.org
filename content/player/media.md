@@ -35,5 +35,5 @@ menu_weight: 2
 <%= media_vid("player-0.2.1-gcw-zero.webm", "Player on GCW0") %>
 <%= media_vid("battle.webm", "Battle Test Player vs. RPG_RT") %>
 
-<script src="/js/vendor/jquery.magnific-popup.min.js"></script>
-<script src="<%= @items['/js/media-pages.js'].path %>"></script>
+<script src="<%= @items['/static/js/commons.*'].path %>"></script>
+<script src="<%= @items['/static/js/media.*'].path %>"></script>

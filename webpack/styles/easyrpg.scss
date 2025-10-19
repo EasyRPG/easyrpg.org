@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+/*! EasyRPG.org style */
+
+@use 'bits/variables' as *;
+@use 'bits/main';
+@use 'bits/download-tabs.scss';
+@use 'bits/burger-menu.scss';
+
+/*! End of EasyRPG.org style, imports follow. */
+
+@use 'vendor/rouge-github-dark.scss';
+
+/*! GLightbox */
+@use 'glightbox/dist/css/glightbox.css';
+
+/*! End of EasyRPG.org imports */

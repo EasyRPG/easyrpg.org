@@ -1,3 +1,6 @@
+
+@use 'variables' as *;
+
 /* burger icon menu */
 
 @media screen {
@@ -93,7 +96,6 @@
 /* Responsiveness */
 
 @media screen and (max-width: 700px) {
-
 	/* Menu */
 	#header .top-nav {
 		.menu-button-container {

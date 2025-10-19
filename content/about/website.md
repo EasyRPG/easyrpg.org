@@ -36,15 +36,12 @@ title: About the EasyRPG Homepage
 
 Included are the following 3rd party software:
 
-- jQuery - <https://jquery.com> - Copyright © JS Foundation and other
-  contributors, provided under the MIT license
-- jQuery EasyTabs plugin - <https://os.alfajango.com/easytabs/> - Copyright ©
-  2010-2011 Steve Schwartz (JangoSteve), dual licensed under the MIT and GPL
-  licenses
-- Flurry jQuery Plugin - <https://github.com/joshmcrty/Flurry> - Copyright ©
-  2016 Josh McCarty, provided under the GPLv2 license
-- Magnific Popup - <https://dimsemenov.com/plugins/magnific-popup/>
-  \- Copyright © 2014-2016 Dmitry Semenov, provided under the MIT license
+- cash-dom - <https://github.com/fabiospampinato/cash> - Copyright © 2014-2020
+  Ken Wheeler, 2020-present Fabio Spampinato, provided under MIT license
+- GLightbox - <https://github.com/biati-digital/glightbox> - Copyright © 2018
+  Biati Digital <https://www.biati.digital>, provided under MIT license
+- magic-snowflakes - <https://github.com/hcodes/snowflakes> - Copyright © 2023
+  Denis Seleznev <hcodes@yandex.ru>, provided under MIT license
 - Favicons have been processed by <https://realfavicongenerator.net>
 - IRC contact page is provided by <https://kiwiirc.com>
 

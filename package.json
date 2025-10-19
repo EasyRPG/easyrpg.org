@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "sass": "^1.93.2",
+    "sass-embedded": "^1.93.2",
+    "sass-loader": "^16.0.5",
+    "terser-webpack-plugin": "^5.3.14",
+    "webpack": "^5.102.1",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "cash-dom": "^8.1.5",
+    "glightbox": "^3.3.1",
+    "magic-snowflakes": "^7.0.1"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production yarn webpack --config ./webpack/webpack.config.js --mode=production",
+    "build:dev": "yarn webpack --config ./webpack/webpack.config.js --mode=development"
+  }
+}

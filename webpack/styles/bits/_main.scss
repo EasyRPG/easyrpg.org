@@ -1,16 +1,9 @@
-@charset "utf-8";
 
-/*! EasyRPG.org style */
+@use 'variables' as *;
 
-// global variables → color scheme
-$normalgreen: #66A352;
-$backgroundgreen: #2d631d;
-$lightgrey: #F5F5F5;
-$darkgrey: #202020;
+/* Main */
 
 @media screen {
-
-	/* Main */
 	body {
 		background-color: $darkgrey;
 		font-family: Ubuntu, "Droid Sans", "Trebuchet MS", sans-serif;
@@ -218,17 +211,9 @@ $darkgrey: #202020;
 						color: $lightgrey;
 						text-decoration: none;
 
-						&:hover {
+						&:hover,&.active {
 							color: $normalgreen;
 						}
-					}
-
-					span.active {
-						display: inline-block;
-						height: $mheight;
-						padding: 0 1em;
-						color: $normalgreen;
-						text-decoration: none;
 					}
 				}
 			}
@@ -351,14 +336,4 @@ $darkgrey: #202020;
 	.clear {
 		clear: both;
 	}
-
-	@import "bits/download-tabs.scss";
 }
-
-@import "bits/burger-menu.scss";
-
-/*! End of EasyRPG.org style, imports follow. */
-
-
-@import "vendor/magnific-popup.scss";
-@import "vendor/rouge-github-dark.scss";
