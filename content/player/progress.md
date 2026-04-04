@@ -18,7 +18,6 @@ menu_weight: 4
 - Games from any region run without additional configuration
 - Inelukis MP3 Patch
 - Interpreter quirks
-- Maniac patch
 - Map looping
 - Map rendering
 - Menus
@@ -42,6 +41,8 @@ menu_weight: 4
 - Accurate RNG
 - Expanded support for currently supported RPG_RT patches
 - Expanded support for RPG Maker 2003 battle system
+- Hardware acceleration
+- [Many Maniac patch features](https://github.com/EasyRPG/Player/issues/1818)
 - Movie playback
 - Porting to new (and old!) platforms ;-)
 - Support for more RPG_RT patches
@@ -49,7 +50,6 @@ menu_weight: 4
 **Still unimplemented:**
 
 - Dungeon generation support
-- Hardware acceleration
 
 
 </div>
