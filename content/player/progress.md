@@ -39,6 +39,7 @@ menu_weight: 4
 
 **Work in progress:**
 
+- Accurate RNG
 - Expanded support for currently supported RPG_RT patches
 - Expanded support for RPG Maker 2003 battle system
 - Movie playback
