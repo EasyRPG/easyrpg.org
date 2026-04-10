@@ -8,40 +8,48 @@ menu_weight: 4
 
 **Already done:**
 
-- Battle animations
 - All event commands except movie playback
+- Audio panning
+- Battle animations
 - Built-in font for most languages
+- External font support
+- Full savegame compatibility with RPG_RT
+- Game controller/Joystick support
 - Games from any region run without additional configuration
 - Inelukis MP3 Patch
 - Interpreter quirks
-- Mouse/Touch support
 - Map looping
 - Map rendering
 - Menus
-- Most load/save works
+- Mouse/Touch support
 - Move commands
 - PicPointerPatch
 - RPG Maker 2000 battle system
 - RPG Maker 2003 1.12 features (changed Picture behaviour)
 - RPG Maker 2003 battle system
 - Sound and Music output
+- Soundfont support
 - Support for all known RTPs
 - Support for game translations
 - Timers
 - Vehicles
 - Weather effects
-- External font support
-- Game controller/Joystick support
+- zip and lzh archives support
 
 **Work in progress:**
 
-- Full savegame compatibility with RPG_RT
-- Support for more RPG_RT patches
+- Accurate RNG
+- Expanded support for currently supported RPG_RT patches
+- Expanded support for RPG Maker 2003 battle system
+- Hardware acceleration
+- [Many Maniac patch features](https://github.com/EasyRPG/Player/issues/1818)
+- Movie playback
 - Porting to new (and old!) platforms ;-)
+- Support for more RPG_RT patches
 
 **Still unimplemented:**
 
-- Hardware acceleration
-- Movie playback
+- Dungeon generation support
+
 
 </div>
