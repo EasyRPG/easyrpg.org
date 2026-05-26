@@ -43,7 +43,7 @@ Included are the following 3rd party software:
 - magic-snowflakes - <https://github.com/hcodes/snowflakes> - Copyright © 2023
   Denis Seleznev <hcodes@yandex.ru>, provided under MIT license
 - Favicons have been processed by <https://realfavicongenerator.net>
-- IRC contact page is provided by <https://kiwiirc.com>
+- IRC contact page is provided by <https://libera.chat>
 
 ### Cookies
 
