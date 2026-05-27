@@ -88,7 +88,7 @@ After execution you will see a lot of po-files in the folder. These contain all 
 
 ### Translating text
 
-These po-files are text files. You can edit them with any text editor, however we recommend special tools like [PoEdit](https://poedit.net/).
+These po-files are text files. You can edit them with any text editor, however we recommend special tools like [PoEdit](https://poedit.com/).
 
 If you use a plain text editor, note that your translations must be in ``msgstr`` and do not forget the ``\n`` at the end of each line.
 

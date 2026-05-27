@@ -39,9 +39,9 @@ Included are the following 3rd party software:
 - cash-dom - <https://github.com/fabiospampinato/cash> - Copyright © 2014-2020
   Ken Wheeler, 2020-present Fabio Spampinato, provided under MIT license
 - GLightbox - <https://github.com/biati-digital/glightbox> - Copyright © 2018
-  Biati Digital <https://www.biati.digital>, provided under MIT license
+  Biati Digital, provided under MIT license
 - magic-snowflakes - <https://github.com/hcodes/snowflakes> - Copyright © 2023
-  Denis Seleznev <hcodes@yandex.ru>, provided under MIT license
+  Denis Seleznev, provided under MIT license
 - Favicons have been processed by <https://realfavicongenerator.net>
 - IRC contact page is provided by <https://libera.chat>
 
