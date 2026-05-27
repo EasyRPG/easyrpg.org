@@ -71,7 +71,6 @@ Available options:
 
 * File an issue at https://github.com/EasyRPG/easyrpg.org/issues
 * Open a thread at https://community.easyrpg.org
-* Chat with us via IRC: [#easyrpg at Libera Chat]
 * Contact us at https://easyrpg.org/contact/
 
 
@@ -99,7 +98,7 @@ Included are the following 3rd party software:
 
 * Favicons have been processed by https://realfavicongenerator.net
 
-* IRC contact page is provided by https://kiwiirc.com
+* IRC contact page is provided by https://libera.chat
 
 [ruby]: https://www.ruby-lang.org
 [nanoc]: https://nanoc.ws/
@@ -108,5 +107,4 @@ Included are the following 3rd party software:
 [yarn]: https://yarnpkg.com
 [netlify-img]: https://api.netlify.com/api/v1/badges/697e9cfb-4ea6-4945-8ddd-9384735e0b0f/deploy-status
 [netlify-deploy]: https://app.netlify.com/sites/easyrpg/deploys
-[#easyrpg at Libera Chat]: https://kiwiirc.com/nextclient/#ircs://irc.libera.chat/#easyrpg?nick=rpgguest??
 [issue #5]: https://github.com/EasyRPG/easyrpg.org/issues/5

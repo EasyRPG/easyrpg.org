@@ -4,7 +4,7 @@ is_hidden: true
 ---
 <%
   # DRY
-  link = "https://kiwiirc.com/nextclient/#ircs://irc.libera.chat/easyrpg?nick=rpgguest??"
+  link = "https://web.libera.chat/gamja/?nick=rpg_*#easyrpg"
 %>
 <div class="info" markdown="1">
 
